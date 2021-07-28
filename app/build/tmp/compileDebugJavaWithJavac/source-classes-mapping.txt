@@ -1,0 +1,52 @@
+uz/texnopos/mybuilderapp/BuildConfig.java
+ uz.texnopos.mybuilderapp.BuildConfig
+uz/texnopos/mybuilderapp/databinding/FragmentPersonalInfo0Binding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentPersonalInfo0Binding
+uz/texnopos/mybuilderapp/databinding/ItemSpinnerProfessionBinding.java
+ uz.texnopos.mybuilderapp.databinding.ItemSpinnerProfessionBinding
+uz/texnopos/mybuilderapp/databinding/ItemBuilderCardBinding.java
+ uz.texnopos.mybuilderapp.databinding.ItemBuilderCardBinding
+uz/texnopos/mybuilderapp/databinding/FragmentFavoriteBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentFavoriteBinding
+uz/texnopos/mybuilderapp/databinding/DialogSelectProfessionBinding.java
+ uz.texnopos.mybuilderapp.databinding.DialogSelectProfessionBinding
+uz/texnopos/mybuilderapp/databinding/FragmentInformationBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentInformationBinding
+uz/texnopos/mybuilderapp/databinding/ItemTradeBinding.java
+ uz.texnopos.mybuilderapp.databinding.ItemTradeBinding
+uz/texnopos/mybuilderapp/databinding/DialogAddressBinding.java
+ uz.texnopos.mybuilderapp.databinding.DialogAddressBinding
+uz/texnopos/mybuilderapp/databinding/FragmentHomeBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentHomeBinding
+uz/texnopos/mybuilderapp/databinding/FragmentHomeMainBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentHomeMainBinding
+uz/texnopos/mybuilderapp/databinding/FragmentLoginBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentLoginBinding
+uz/texnopos/mybuilderapp/databinding/ImageBinding.java
+ uz.texnopos.mybuilderapp.databinding.ImageBinding
+uz/texnopos/mybuilderapp/databinding/FragmentProfileBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentProfileBinding
+uz/texnopos/mybuilderapp/databinding/PagerSignPhoneBinding.java
+ uz.texnopos.mybuilderapp.databinding.PagerSignPhoneBinding
+uz/texnopos/mybuilderapp/databinding/ActivityVerifyBinding.java
+ uz.texnopos.mybuilderapp.databinding.ActivityVerifyBinding
+uz/texnopos/mybuilderapp/databinding/DialogPersonalInfoBinding.java
+ uz.texnopos.mybuilderapp.databinding.DialogPersonalInfoBinding
+uz/texnopos/mybuilderapp/databinding/CustomDialogBinding.java
+ uz.texnopos.mybuilderapp.databinding.CustomDialogBinding
+uz/texnopos/mybuilderapp/databinding/SelectableJobItemCheckboxBinding.java
+ uz.texnopos.mybuilderapp.databinding.SelectableJobItemCheckboxBinding
+uz/texnopos/mybuilderapp/databinding/ActivityCreateRezyumeBinding.java
+ uz.texnopos.mybuilderapp.databinding.ActivityCreateRezyumeBinding
+uz/texnopos/mybuilderapp/databinding/FragmentSelfBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentSelfBinding
+uz/texnopos/mybuilderapp/databinding/AppBarMainBinding.java
+ uz.texnopos.mybuilderapp.databinding.AppBarMainBinding
+uz/texnopos/mybuilderapp/databinding/PagerSignGmailBinding.java
+ uz.texnopos.mybuilderapp.databinding.PagerSignGmailBinding
+uz/texnopos/mybuilderapp/databinding/ActivityMainBinding.java
+ uz.texnopos.mybuilderapp.databinding.ActivityMainBinding
+uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java
+ uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
+uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java
+ uz.texnopos.mybuilderapp.databinding.SelectableJobItemRadiobuttonBinding
