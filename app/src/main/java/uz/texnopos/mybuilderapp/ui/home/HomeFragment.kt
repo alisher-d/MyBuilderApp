@@ -18,7 +18,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home),HomeView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentHomeBinding.bind(view)
-        bind.rvBuilders.adapter = adapter
+//        bind.rvBuilders.adapter = adapter
 //        presenter.getJobList()
     }
 

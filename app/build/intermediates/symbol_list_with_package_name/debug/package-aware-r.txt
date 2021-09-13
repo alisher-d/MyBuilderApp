@@ -1128,6 +1128,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gray
+color grey_background
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1247,7 +1248,6 @@ color teal_200
 color teal_700
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
-color toolbar_color
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -1975,7 +1975,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2060,10 +2059,12 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editCity
+id editCountry
+id editState
 id edit_address
 id edit_data_navigation
 id edit_description
-id edit_personal_info
 id edit_profession
 id edit_query
 id elastic
@@ -2119,12 +2120,14 @@ id ignore
 id ignoreRequest
 id image
 id info
+id inputCity
 id inputCountry
 id inputEmail
 id inputFullName
 id inputPassword
 id inputPhone
 id inputProfession
+id inputState
 id invisible
 id inward
 id italic
@@ -2243,6 +2246,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id personal_data
 id phone
 id pin
 id position
@@ -2262,7 +2266,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id rvBuilders
 id rv_jobs_list
 id rv_resumes
 id rv_trade
@@ -2380,16 +2383,18 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv1
-id tvAddress
 id tvCountFeedback
 id tvCountResponse
 id tvCountView
+id tvCountry
 id tvDescription
 id tvEmail
 id tvFullName
 id tvPhone
 id tvProfession
 id tvPublish
+id tvRegion
+id tvState
 id tvTrade
 id tv_progress_msg
 id unchecked
@@ -2484,6 +2489,7 @@ layout abc_tooltip
 layout activity_create_rezyume
 layout activity_main
 layout activity_verify
+layout add_title_text
 layout app_bar_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -2506,6 +2512,11 @@ layout design_text_input_start_icon
 layout dialog_address
 layout dialog_personal_info
 layout dialog_select_profession
+layout dialog_self
+layout edit_item_address
+layout edit_item_porfolio
+layout edit_item_profession
+layout edit_item_self
 layout fragment_favorite
 layout fragment_home
 layout fragment_home_main
@@ -2514,7 +2525,6 @@ layout fragment_login
 layout fragment_personal_info_0
 layout fragment_profile
 layout fragment_self
-layout image
 layout item_builder_card
 layout item_resume
 layout item_spinner_profession
@@ -2570,6 +2580,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout pager_sign_gmail
 layout pager_sign_phone
+layout personal_data
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2625,6 +2636,10 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_address
+string add_description
+string add_portfolio
+string add_profession
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2653,6 +2668,9 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string default_country_text
+string default_region_text
+string default_state_text
 string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -2736,6 +2754,7 @@ string title_favorite
 string title_home
 string title_information
 string title_profile
+string tv_address
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

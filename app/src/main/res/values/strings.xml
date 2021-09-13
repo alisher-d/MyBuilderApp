@@ -5,4 +5,12 @@
     <string name="title_profile">Profil</string>
     <string name="title_information">Information</string>
     <string name="google_icon">google icon</string>
+    <string name="default_country_text">*Select country</string>
+    <string name="default_region_text">*Select city or region</string>
+    <string name="default_state_text">*Select state</string>
+    <string name="tv_address">%1$s\10%2$s\10%3$s</string>
+    <string name="add_address">Add your address</string>
+    <string name="add_description">Write about yourself</string>
+    <string name="add_portfolio">Add portfolio</string>
+    <string name="add_profession">Add your profession</string>
 </resources>

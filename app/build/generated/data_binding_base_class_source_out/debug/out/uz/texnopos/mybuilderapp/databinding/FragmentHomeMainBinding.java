@@ -4,16 +4,13 @@ package uz.texnopos.mybuilderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,16 +21,16 @@ public final class FragmentHomeMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final LinearLayout addAddress;
+  public final AddTitleTextBinding addAddress;
 
   @NonNull
-  public final LinearLayout addDescription;
+  public final AddTitleTextBinding addDescription;
 
   @NonNull
-  public final LinearLayout addPortfolio;
+  public final AddTitleTextBinding addPortfolio;
 
   @NonNull
-  public final LinearLayout addProfession;
+  public final AddTitleTextBinding addProfession;
 
   @NonNull
   public final MaterialButton btnPublish;
@@ -42,70 +39,34 @@ public final class FragmentHomeMainBinding implements ViewBinding {
   public final MaterialButton btnSave;
 
   @NonNull
-  public final ImageView editAddress;
+  public final EditItemProfessionBinding ln2;
 
   @NonNull
-  public final ImageView editDescription;
+  public final EditItemAddressBinding ln3;
 
   @NonNull
-  public final ImageView editPersonalInfo;
+  public final EditItemSelfBinding ln4;
 
   @NonNull
-  public final ImageView editProfession;
+  public final EditItemPorfolioBinding ln5;
 
   @NonNull
-  public final ConstraintLayout ln1;
+  public final PersonalDataBinding personalData;
 
   @NonNull
-  public final LinearLayout ln2;
+  public final AppBarLayout toolbar;
 
   @NonNull
-  public final LinearLayout ln3;
+  public final TextView toolbarTitle;
 
-  @NonNull
-  public final LinearLayout ln4;
-
-  @NonNull
-  public final LinearLayout ln5;
-
-  @NonNull
-  public final TextView professionName;
-
-  @NonNull
-  public final RecyclerView rvTrade;
-
-  @NonNull
-  public final AppBarMainBinding toolbar;
-
-  @NonNull
-  public final TextView tvAddress;
-
-  @NonNull
-  public final TextView tvDescription;
-
-  @NonNull
-  public final TextView tvEmail;
-
-  @NonNull
-  public final TextView tvFullName;
-
-  @NonNull
-  public final TextView tvPhone;
-
-  @NonNull
-  public final CircleImageView userImage;
-
-  private FragmentHomeMainBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout addAddress,
-      @NonNull LinearLayout addDescription, @NonNull LinearLayout addPortfolio,
-      @NonNull LinearLayout addProfession, @NonNull MaterialButton btnPublish,
-      @NonNull MaterialButton btnSave, @NonNull ImageView editAddress,
-      @NonNull ImageView editDescription, @NonNull ImageView editPersonalInfo,
-      @NonNull ImageView editProfession, @NonNull ConstraintLayout ln1, @NonNull LinearLayout ln2,
-      @NonNull LinearLayout ln3, @NonNull LinearLayout ln4, @NonNull LinearLayout ln5,
-      @NonNull TextView professionName, @NonNull RecyclerView rvTrade,
-      @NonNull AppBarMainBinding toolbar, @NonNull TextView tvAddress,
-      @NonNull TextView tvDescription, @NonNull TextView tvEmail, @NonNull TextView tvFullName,
-      @NonNull TextView tvPhone, @NonNull CircleImageView userImage) {
+  private FragmentHomeMainBinding(@NonNull LinearLayout rootView,
+      @NonNull AddTitleTextBinding addAddress, @NonNull AddTitleTextBinding addDescription,
+      @NonNull AddTitleTextBinding addPortfolio, @NonNull AddTitleTextBinding addProfession,
+      @NonNull MaterialButton btnPublish, @NonNull MaterialButton btnSave,
+      @NonNull EditItemProfessionBinding ln2, @NonNull EditItemAddressBinding ln3,
+      @NonNull EditItemSelfBinding ln4, @NonNull EditItemPorfolioBinding ln5,
+      @NonNull PersonalDataBinding personalData, @NonNull AppBarLayout toolbar,
+      @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
     this.addAddress = addAddress;
     this.addDescription = addDescription;
@@ -113,24 +74,13 @@ public final class FragmentHomeMainBinding implements ViewBinding {
     this.addProfession = addProfession;
     this.btnPublish = btnPublish;
     this.btnSave = btnSave;
-    this.editAddress = editAddress;
-    this.editDescription = editDescription;
-    this.editPersonalInfo = editPersonalInfo;
-    this.editProfession = editProfession;
-    this.ln1 = ln1;
     this.ln2 = ln2;
     this.ln3 = ln3;
     this.ln4 = ln4;
     this.ln5 = ln5;
-    this.professionName = professionName;
-    this.rvTrade = rvTrade;
+    this.personalData = personalData;
     this.toolbar = toolbar;
-    this.tvAddress = tvAddress;
-    this.tvDescription = tvDescription;
-    this.tvEmail = tvEmail;
-    this.tvFullName = tvFullName;
-    this.tvPhone = tvPhone;
-    this.userImage = userImage;
+    this.toolbarTitle = toolbarTitle;
   }
 
   @Override
@@ -161,28 +111,32 @@ public final class FragmentHomeMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.add_address;
-      LinearLayout addAddress = rootView.findViewById(id);
+      View addAddress = rootView.findViewById(id);
       if (addAddress == null) {
         break missingId;
       }
+      AddTitleTextBinding binding_addAddress = AddTitleTextBinding.bind(addAddress);
 
       id = R.id.add_description;
-      LinearLayout addDescription = rootView.findViewById(id);
+      View addDescription = rootView.findViewById(id);
       if (addDescription == null) {
         break missingId;
       }
+      AddTitleTextBinding binding_addDescription = AddTitleTextBinding.bind(addDescription);
 
       id = R.id.add_portfolio;
-      LinearLayout addPortfolio = rootView.findViewById(id);
+      View addPortfolio = rootView.findViewById(id);
       if (addPortfolio == null) {
         break missingId;
       }
+      AddTitleTextBinding binding_addPortfolio = AddTitleTextBinding.bind(addPortfolio);
 
       id = R.id.add_profession;
-      LinearLayout addProfession = rootView.findViewById(id);
+      View addProfession = rootView.findViewById(id);
       if (addProfession == null) {
         break missingId;
       }
+      AddTitleTextBinding binding_addProfession = AddTitleTextBinding.bind(addProfession);
 
       id = R.id.btnPublish;
       MaterialButton btnPublish = rootView.findViewById(id);
@@ -196,119 +150,57 @@ public final class FragmentHomeMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.edit_address;
-      ImageView editAddress = rootView.findViewById(id);
-      if (editAddress == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_description;
-      ImageView editDescription = rootView.findViewById(id);
-      if (editDescription == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_personal_info;
-      ImageView editPersonalInfo = rootView.findViewById(id);
-      if (editPersonalInfo == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_profession;
-      ImageView editProfession = rootView.findViewById(id);
-      if (editProfession == null) {
-        break missingId;
-      }
-
-      id = R.id.ln1;
-      ConstraintLayout ln1 = rootView.findViewById(id);
-      if (ln1 == null) {
-        break missingId;
-      }
-
       id = R.id.ln2;
-      LinearLayout ln2 = rootView.findViewById(id);
+      View ln2 = rootView.findViewById(id);
       if (ln2 == null) {
         break missingId;
       }
+      EditItemProfessionBinding binding_ln2 = EditItemProfessionBinding.bind(ln2);
 
       id = R.id.ln3;
-      LinearLayout ln3 = rootView.findViewById(id);
+      View ln3 = rootView.findViewById(id);
       if (ln3 == null) {
         break missingId;
       }
+      EditItemAddressBinding binding_ln3 = EditItemAddressBinding.bind(ln3);
 
       id = R.id.ln4;
-      LinearLayout ln4 = rootView.findViewById(id);
+      View ln4 = rootView.findViewById(id);
       if (ln4 == null) {
         break missingId;
       }
+      EditItemSelfBinding binding_ln4 = EditItemSelfBinding.bind(ln4);
 
       id = R.id.ln5;
-      LinearLayout ln5 = rootView.findViewById(id);
+      View ln5 = rootView.findViewById(id);
       if (ln5 == null) {
         break missingId;
       }
+      EditItemPorfolioBinding binding_ln5 = EditItemPorfolioBinding.bind(ln5);
 
-      id = R.id.profession_name;
-      TextView professionName = rootView.findViewById(id);
-      if (professionName == null) {
+      id = R.id.personal_data;
+      View personalData = rootView.findViewById(id);
+      if (personalData == null) {
         break missingId;
       }
-
-      id = R.id.rv_trade;
-      RecyclerView rvTrade = rootView.findViewById(id);
-      if (rvTrade == null) {
-        break missingId;
-      }
+      PersonalDataBinding binding_personalData = PersonalDataBinding.bind(personalData);
 
       id = R.id.toolbar;
-      View toolbar = rootView.findViewById(id);
+      AppBarLayout toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
-      AppBarMainBinding binding_toolbar = AppBarMainBinding.bind(toolbar);
 
-      id = R.id.tvAddress;
-      TextView tvAddress = rootView.findViewById(id);
-      if (tvAddress == null) {
+      id = R.id.toolbar_title;
+      TextView toolbarTitle = rootView.findViewById(id);
+      if (toolbarTitle == null) {
         break missingId;
       }
 
-      id = R.id.tvDescription;
-      TextView tvDescription = rootView.findViewById(id);
-      if (tvDescription == null) {
-        break missingId;
-      }
-
-      id = R.id.tvEmail;
-      TextView tvEmail = rootView.findViewById(id);
-      if (tvEmail == null) {
-        break missingId;
-      }
-
-      id = R.id.tvFullName;
-      TextView tvFullName = rootView.findViewById(id);
-      if (tvFullName == null) {
-        break missingId;
-      }
-
-      id = R.id.tvPhone;
-      TextView tvPhone = rootView.findViewById(id);
-      if (tvPhone == null) {
-        break missingId;
-      }
-
-      id = R.id.userImage;
-      CircleImageView userImage = rootView.findViewById(id);
-      if (userImage == null) {
-        break missingId;
-      }
-
-      return new FragmentHomeMainBinding((LinearLayout) rootView, addAddress, addDescription,
-          addPortfolio, addProfession, btnPublish, btnSave, editAddress, editDescription,
-          editPersonalInfo, editProfession, ln1, ln2, ln3, ln4, ln5, professionName, rvTrade,
-          binding_toolbar, tvAddress, tvDescription, tvEmail, tvFullName, tvPhone, userImage);
+      return new FragmentHomeMainBinding((LinearLayout) rootView, binding_addAddress,
+          binding_addDescription, binding_addPortfolio, binding_addProfession, btnPublish, btnSave,
+          binding_ln2, binding_ln3, binding_ln4, binding_ln5, binding_personalData, toolbar,
+          toolbarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

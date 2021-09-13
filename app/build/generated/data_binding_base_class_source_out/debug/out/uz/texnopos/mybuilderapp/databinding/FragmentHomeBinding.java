@@ -7,28 +7,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 import uz.texnopos.mybuilderapp.R;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  @NonNull
-  public final RecyclerView rvBuilders;
-
-  @NonNull
-  public final AppBarMainBinding toolbar;
-
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView rvBuilders,
-      @NonNull AppBarMainBinding toolbar) {
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView) {
     this.rootView = rootView;
-    this.rvBuilders = rvBuilders;
-    this.toolbar = toolbar;
   }
 
   @Override
@@ -54,26 +43,10 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public static FragmentHomeBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    int id;
-    missingId: {
-      id = R.id.rvBuilders;
-      RecyclerView rvBuilders = rootView.findViewById(id);
-      if (rvBuilders == null) {
-        break missingId;
-      }
-
-      id = R.id.toolbar;
-      View toolbar = rootView.findViewById(id);
-      if (toolbar == null) {
-        break missingId;
-      }
-      AppBarMainBinding binding_toolbar = AppBarMainBinding.bind(toolbar);
-
-      return new FragmentHomeBinding((ConstraintLayout) rootView, rvBuilders, binding_toolbar);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    String missingId = rootView.getResources().getResourceName(id);
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    return new FragmentHomeBinding((ConstraintLayout) rootView);
   }
 }

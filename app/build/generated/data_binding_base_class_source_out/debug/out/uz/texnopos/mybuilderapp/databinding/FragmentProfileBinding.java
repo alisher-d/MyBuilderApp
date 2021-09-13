@@ -28,9 +28,6 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final LinearLayout allResumes;
 
   @NonNull
-  public final ImageView back;
-
-  @NonNull
   public final MaterialCardView createNewResume;
 
   @NonNull
@@ -70,15 +67,14 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final CircleImageView userImage;
 
   private FragmentProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout allResumes, @NonNull ImageView back,
-      @NonNull MaterialCardView createNewResume, @NonNull MaterialCardView firstCreateResume,
-      @NonNull ImageView icAdd, @NonNull ConstraintLayout ln1, @NonNull RecyclerView rvResumes,
-      @NonNull ImageView settings, @NonNull AppBarLayout toolbar, @NonNull TextView toolbarTitle,
-      @NonNull TextView tv1, @NonNull TextView tvEmail, @NonNull TextView tvFullName,
-      @NonNull TextView tvPhone, @NonNull CircleImageView userImage) {
+      @NonNull LinearLayout allResumes, @NonNull MaterialCardView createNewResume,
+      @NonNull MaterialCardView firstCreateResume, @NonNull ImageView icAdd,
+      @NonNull ConstraintLayout ln1, @NonNull RecyclerView rvResumes, @NonNull ImageView settings,
+      @NonNull AppBarLayout toolbar, @NonNull TextView toolbarTitle, @NonNull TextView tv1,
+      @NonNull TextView tvEmail, @NonNull TextView tvFullName, @NonNull TextView tvPhone,
+      @NonNull CircleImageView userImage) {
     this.rootView = rootView;
     this.allResumes = allResumes;
-    this.back = back;
     this.createNewResume = createNewResume;
     this.firstCreateResume = firstCreateResume;
     this.icAdd = icAdd;
@@ -124,12 +120,6 @@ public final class FragmentProfileBinding implements ViewBinding {
       id = R.id.allResumes;
       LinearLayout allResumes = rootView.findViewById(id);
       if (allResumes == null) {
-        break missingId;
-      }
-
-      id = R.id.back;
-      ImageView back = rootView.findViewById(id);
-      if (back == null) {
         break missingId;
       }
 
@@ -211,9 +201,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((ConstraintLayout) rootView, allResumes, back,
-          createNewResume, firstCreateResume, icAdd, ln1, rvResumes, settings, toolbar,
-          toolbarTitle, tv1, tvEmail, tvFullName, tvPhone, userImage);
+      return new FragmentProfileBinding((ConstraintLayout) rootView, allResumes, createNewResume,
+          firstCreateResume, icAdd, ln1, rvResumes, settings, toolbar, toolbarTitle, tv1, tvEmail,
+          tvFullName, tvPhone, userImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

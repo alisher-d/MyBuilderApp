@@ -15,7 +15,6 @@ import uz.texnopos.mybuilderapp.repository.UserRepository
 import uz.texnopos.mybuilderapp.ui.login.LoginViewModel
 import uz.texnopos.mybuilderapp.ui.profile.ProfileViewModel
 import uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeViewModel
-import uz.texnopos.mybuilderapp.ui.resume.personalInfo.PersonalInfoViewModel
 import uz.texnopos.mybuilderapp.ui.resume.professions.JobsViewModel
 import uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoViewModel
 
@@ -25,7 +24,6 @@ val viewModelModule = module {
     viewModel { ShortInfoViewModel(get()) }
     viewModel { ResumeViewModel(get()) }
     viewModel { JobsViewModel(get()) }
-    viewModel { PersonalInfoViewModel(get()) }
 }
 val repositoryModule = module {
     single { UserRepository(get()) }

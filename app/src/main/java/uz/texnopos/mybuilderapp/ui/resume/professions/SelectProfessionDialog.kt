@@ -46,8 +46,8 @@ class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
 
         bind.rvJobsList.adapter = tradeAdapter
         tradeAdapter.remoteModels = mFragment.tradeAdapter.models
-        if (mFragment.bind.professionName.textToString().isNotEmpty())
-            bind.autoComplete.setText(mFragment.bind.professionName.textToString())
+//        if (mFragment.bind.professionName.textToString().isNotEmpty())
+//            bind.autoComplete.setText(mFragment.bind.professionName.textToString())
 
         bind.btClose.onClick {
             dismiss()
