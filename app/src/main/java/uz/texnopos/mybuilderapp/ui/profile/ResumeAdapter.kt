@@ -38,4 +38,17 @@ class ResumeAdapter : RecyclerView.Adapter<ResumeAdapter.ItemViewHolder>() {
     }
 
     override fun getItemCount() = models.size
+
+    fun add(resume:ResumeModel){
+        models.add(0,resume)
+        notifyItemInserted(0)
+    }
+    fun modifiy(resume: ResumeModel){
+        val index=models.indexOf(resume.resumeID)
+        models[index]=resume
+        notifyItemChanged(index,resume)
+    }
+    fun remove(){
+
+    }
 }

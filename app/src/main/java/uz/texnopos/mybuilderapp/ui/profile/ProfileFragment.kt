@@ -30,7 +30,6 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         bind = FragmentProfileBinding.bind(view)
-        setUpObserver()
         intent = Intent(requireActivity(), BuilderActivity::class.java)
         setHasOptionsMenu(true)
         bind.settings.onClick {
@@ -55,12 +54,12 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
             intent.putExtra("resume",it)
             startActivity(intent)
         }
+
     }
 
     override fun onStart() {
         super.onStart()
         (activity as MainActivity).navView.visibility = View.VISIBLE
-        viewModel.getUserData(auth.currentUser!!.uid)
     }
 
 
@@ -80,22 +79,5 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
         }
     }
 
-    fun setUpObserver() {
-        viewModel.userData.observe(requireActivity(), {
-            when (it.status) {
-                LoadingState.LOADING -> {
-                    showProgress()
-                }
-                LoadingState.SUCCESS -> {
-                    manageResumeViews(it.data!!.data)
-                    hideProgress()
-                }
-                LoadingState.ERROR -> {
-                    hideProgress()
-                    toast(it.message!!)
-                }
-            }
-        }
-        )
+
     }
-}

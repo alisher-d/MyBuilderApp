@@ -21,18 +21,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_marginStart="16dp"
-                android:text="The better way \10to find a builder"
-                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:text="The better way \nto find a builder"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:textColor="@color/white"
                 android:fontFamily="serif"
                 android:textSize="26sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/logo"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
