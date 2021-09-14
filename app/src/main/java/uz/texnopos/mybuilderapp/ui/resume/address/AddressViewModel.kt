@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import uz.texnopos.mybuilderapp.core.callApi
 import uz.texnopos.mybuilderapp.data.Resource
 import uz.texnopos.mybuilderapp.data.models.Country
-import uz.texnopos.mybuilderapp.repository.Repository
+import uz.texnopos.mybuilderapp.data.repository.Repository
 
 class AddressViewModel(private val repo: Repository) : ViewModel() {
     private var _places = MutableLiveData<Resource<List<Country>>>()

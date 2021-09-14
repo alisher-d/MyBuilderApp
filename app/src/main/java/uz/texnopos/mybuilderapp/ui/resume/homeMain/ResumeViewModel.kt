@@ -24,11 +24,13 @@ class ResumeViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() 
 
     fun removeResume(
         resumeId: String,
+        isRemoved:()->Unit
     ) {
         _request.value = Resource.loading()
         firebaseHelper.removeResume(resumeId,
             {
                 _request.value = Resource.success(it)
+                isRemoved()
             },
             {
                 _request.value = Resource.error(it)

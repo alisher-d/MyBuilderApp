@@ -49,6 +49,9 @@
             android:id="@+id/action_navigation_profile_to_navigation_login"
             app:destination="@id/navigation_login"
             app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_profile_to_fragmentResume"
+            app:destination="@id/homeMainFragment2" />
     </fragment>
     <fragment
         android:id="@+id/navigation_username"
@@ -60,6 +63,11 @@
             app:destination="@id/navigation_profile"
             app:popUpTo="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/homeMainFragment2"
+        android:name="uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeFragment"
+        android:label="ResumeFragment"
+        tools:layout="@layout/fragment_resume"/>
 
 
 </navigation>

@@ -139,7 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="16dp"
-                    android:text="Want to find a job faster?\10Fill out your resume. \10The employers themselves will \10start offering you vacancies."
+                    android:text="Want to find a job faster?\nFill out your resume. \nThe employers themselves will \nstart offering you vacancies."
                     android:textColor="@color/black" />
             </com.google.android.material.card.MaterialCardView>
 

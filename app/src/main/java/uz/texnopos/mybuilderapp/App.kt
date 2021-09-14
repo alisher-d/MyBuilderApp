@@ -8,7 +8,7 @@ import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import uz.texnopos.mybuilderapp.core.SharedPrefUtils
-import uz.texnopos.mybuilderapp.di.*
+import uz.texnopos.mybuilderapp.data.di.*
 
 class App : MultiDexApplication() {
     private val modules = listOf(

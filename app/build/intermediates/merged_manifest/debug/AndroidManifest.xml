@@ -29,10 +29,6 @@
             android:theme="@style/Theme.MyBuilderApp" >
         </activity>
         <activity
-            android:name="uz.texnopos.mybuilderapp.ui.resume.BuilderActivity"
-            android:theme="@style/Theme.MyBuilderApp" >
-        </activity>
-        <activity
             android:name="uz.texnopos.mybuilderapp.ui.MainActivity"
             android:theme="@style/Theme.MyBuilderApp" >
             <intent-filter>

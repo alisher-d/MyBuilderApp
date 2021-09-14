@@ -3,6 +3,7 @@ package uz.texnopos.mybuilderapp.ui.profile
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -14,7 +15,6 @@ import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.databinding.FragmentProfileBinding
 import uz.texnopos.mybuilderapp.ui.MainActivity
-import uz.texnopos.mybuilderapp.ui.resume.BuilderActivity
 
 
 class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
@@ -23,66 +23,68 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
     private val resumeAdapter = ResumeAdapter()
     private val auth: FirebaseAuth by inject()
     private val viewModel by viewModel<ProfileViewModel>()
-    private lateinit var intent: Intent
     private val resumeIsEmpty=MutableLiveData<Boolean>()
+    val bundle=Bundle()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         bind = FragmentProfileBinding.bind(view)
-        intent = Intent(requireActivity(), BuilderActivity::class.java)
         setHasOptionsMenu(true)
-
-        bind.tvFullName.text= getFullName()
-        bind.tvPhone.text= getPhoneNumber()
-        bind.tvEmail.text= getEmail()
-        bind.settings.onClick {
-            auth.signOut()
-            getSharedPreferences().removeKey("succes")
-            clearLoginPref()
-            navController.navigate(R.id.action_navigation_profile_to_navigation_login)
-        }
-
-        bind.firstCreateResume.onClick {
-            intent.removeExtra("resume")
-            startActivity(intent)
-        }
-
-        bind.createNewResume.onClick {
-            intent.removeExtra("resume")
-            startActivity(intent)
-        }
-        bind.rvResumes.adapter = resumeAdapter
-
-        resumeAdapter.resumeCardOnClickListener {
-            intent.putExtra("resume",it)
-            startActivity(intent)
-        }
-    viewModel.getUserResumes(
-        {
-            resumeAdapter.add(it)
-            resumeIsEmpty.value=resumeAdapter.models.isEmpty()
-        },
-        {
-            resumeAdapter.modify(it)
-        },
-        {
-            resumeAdapter.remove(it)
-            resumeIsEmpty.value=resumeAdapter.models.isEmpty()
-        },
-        {
-            toast(it!!)
-        }
-    )
-        resumeIsEmpty.observe(requireActivity(),{
-            if (it){
-                bind.firstCreateResume.visibility = View.VISIBLE
-                bind.createNewResume.visibility = View.GONE
+        bind.apply {
+            tvFullName.text= getFullName()
+            tvPhone.text= getPhoneNumber()
+            tvEmail.text= getEmail()
+            settings.onClick {
+                auth.signOut()
+                getSharedPreferences().removeKey("succes")
+                clearLoginPref()
+                navController.navigate(R.id.action_navigation_profile_to_navigation_login)
             }
-            else{
-                bind.allResumes.visibility = View.VISIBLE
-                bind.firstCreateResume.visibility = View.GONE
+
+            firstCreateResume.onClick {
+                bundle.clear()
+                navController.navigate(R.id.action_navigation_profile_to_fragmentResume)
             }
-        })
+
+            createNewResume.onClick {
+                bundle.clear()
+                navController.navigate(R.id.action_navigation_profile_to_fragmentResume)
+            }
+            rvResumes.adapter = resumeAdapter
+
+            resumeAdapter.resumeCardOnClickListener {
+                bundle.putParcelable("resume",it)
+                navController.navigate(R.id.action_navigation_profile_to_fragmentResume,bundle)
+            }
+
+            resumeIsEmpty.observe(requireActivity(),{
+                firstCreateResume.isVisible=it
+                allResumes.isVisible=!it
+            })
+        }
+
+
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.getUserResumes(
+            {
+                resumeAdapter.add(it)
+            },
+            {
+                resumeAdapter.modify(it)
+            },
+            {
+                resumeAdapter.remove(it)
+            },
+            {
+                resumeIsEmpty.value=it==0
+            },
+            {
+                toast(it!!)
+            }
+        )
     }
 
     override fun onStart() {

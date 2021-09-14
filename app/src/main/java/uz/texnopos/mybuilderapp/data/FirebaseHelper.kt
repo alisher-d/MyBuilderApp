@@ -1,9 +1,11 @@
 package uz.texnopos.mybuilderapp.data
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import uz.texnopos.mybuilderapp.core.Constants.TAG
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.data.models.UserModel
@@ -76,17 +78,19 @@ class FirebaseHelper(
     }
 
     fun getUserResumes(
-        onResumeAdded: (resume: ResumeModel) -> Unit,
-        onResumeModified: (resume: ResumeModel) -> Unit,
-        onResumeRemoved: (resumeId: String) -> Unit,
-        onFailure: (msg: String?) -> Unit
+        onResumeAdded: (ResumeModel) -> Unit,
+        onResumeModified: (ResumeModel) -> Unit,
+        onResumeRemoved: (String) -> Unit,
+        onResumesSize:(Int)->Unit,
+        onFailure: (String?) -> Unit
     ) {
         db.collection("users/${auth.currentUser!!.uid}/resumes")
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     onFailure.invoke(e.localizedMessage)
                 } else {
-                    for (cv in snapshot!!.documentChanges) {
+                    onResumesSize.invoke(snapshot?.documents!!.size)
+                    for (cv in snapshot.documentChanges) {
                         val resume = cv.document.toObject(ResumeModel::class.java)
                         when (cv.type) {
                             DocumentChange.Type.ADDED -> onResumeAdded.invoke(resume)

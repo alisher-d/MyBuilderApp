@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_delete.xml" value="0.221025641025641" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/settings_24.xml" value="0.21203703703703702" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_create_rezyume.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
@@ -20,7 +21,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/edit_item_self.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_favorite.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home_main.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home_main.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_information.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_personal_info_0.xml" value="0.1537037037037037" />

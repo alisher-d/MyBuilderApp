@@ -17,6 +17,7 @@ class ProfileViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel()
         onResumeAdded: (resume: ResumeModel) -> Unit,
         onResumeModified: (resume: ResumeModel) -> Unit,
         onResumeRemoved: (resumeId: String) -> Unit,
+        onResumesSize:(Int)->Unit,
         onFailure: (msg: String?) -> Unit
     ){
         firebaseHelper.getUserResumes(
@@ -28,6 +29,9 @@ class ProfileViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel()
             },
             {
                onResumeRemoved.invoke(it)
+            },
+            {
+                onResumesSize.invoke(it)
             },
             {
                 onFailure.invoke(it!!)

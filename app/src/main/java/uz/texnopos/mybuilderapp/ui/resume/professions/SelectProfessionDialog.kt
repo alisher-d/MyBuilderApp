@@ -50,8 +50,11 @@ class SelectProfessionDialog(fragmentManager: FragmentManager) :
             dismiss()
         }
         bind.btSave.onClick {
-            onClickSave.invoke(profession, sendList)
-            dismiss()
+            if (sendList.size>0){
+                onClickSave.invoke(profession, sendList)
+                dismiss()
+            } else toast("Minimum 1 trade!")
+
         }
 
         bind.autoComplete.setOnItemClickListener { _, _, position, _ ->

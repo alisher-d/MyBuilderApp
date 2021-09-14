@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:gravity="center"
+                android:text="My resume"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/btn_remove"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:src="@drawable/ic_delete"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/personal_data"
+                layout="@layout/personal_data" />
+
+            <include
+                android:id="@+id/add_profession"
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/ln2"
+                layout="@layout/edit_item_profession"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/add_address"
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/ln3"
+                layout="@layout/edit_item_address"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/add_description"
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/ln4"
+                layout="@layout/edit_item_self"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/add_portfolio"
+                layout="@layout/add_title_text"
+                android:visibility="gone"
+                 />
+
+            <include
+                android:id="@+id/ln5"
+                layout="@layout/edit_item_porfolio"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginVertical="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="110dp"
+                    android:id="@+id/btnSave"
+                    android:text="Save"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnPublish"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="110dp"
+                    android:id="@+id/btnPublish"
+                    android:backgroundTint="#58bfe6"
+                    android:layout_height="wrap_content"
+                    android:text="Publish"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnSave"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

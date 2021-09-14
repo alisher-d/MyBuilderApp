@@ -30,7 +30,7 @@
         <item name="errorEnabled">true</item>
     </style>
     <style name="Theme.QaraqalpaqJazıwshıları.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
-    <style name="FullScreenDialogTheme" parent="Theme.MaterialComponents.DayNight.DialogWhenLarge">
+    <style name="FullScreenDialogTheme" parent="Theme.MaterialComponents.Light.DialogWhenLarge">
         <item name="android:statusBarColor">#ffff</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>

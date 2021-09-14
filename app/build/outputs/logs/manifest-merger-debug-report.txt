@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.databinding:viewbinding:4.2.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\127c1954807c62e36020ec1d0096b3c3\jetified-viewbinding-4.2.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\8c69bc41fc0f847fe48f4429550e06d9\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\fe8b9eede8f9f0a28ce4ca9b2d1a796b\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -108,20 +108,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Админ\.gradle\caches\tran
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\b68238e8012735ac3be49a28caac7cf1\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\19a8fb8562095a7b6db92db241af2a33\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\fb7d7f5ca18dcf053acca4b4b889da5d\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -176,7 +176,7 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Us
 	android:name
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:8:5-35:19
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:8:5-30:19
 MERGED from [io.insert-koin:koin-android:3.1.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\ddc6d0f2154c5d9404514a85e7650856\jetified-koin-android-3.1.2\AndroidManifest.xml:7:5-20
 MERGED from [io.insert-koin:koin-android:3.1.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\ddc6d0f2154c5d9404514a85e7650856\jetified-koin-android-3.1.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\5e4a3098b085a54d9ef975c7941fb272\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -277,28 +277,22 @@ ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:16:9-20:20
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:18:13-54
 	android:name
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:17:13-54
-activity#uz.texnopos.mybuilderapp.ui.resume.BuilderActivity
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:21:9-25:20
-	android:theme
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:23:13-54
-	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:13-54
 activity#uz.texnopos.mybuilderapp.ui.MainActivity
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:21:9-29:20
 	android:theme
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:27:13-54
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:13-54
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:26:19-50
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:21:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:29:13-33:29
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:27:27-74
 uses-sdk
 INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml

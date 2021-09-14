@@ -18,11 +18,6 @@
             android:theme="@style/Theme.MyBuilderApp">
 
         </activity>
-        <activity
-            android:name=".ui.resume.BuilderActivity"
-            android:theme="@style/Theme.MyBuilderApp">
-
-        </activity>
         <activity android:name=".ui.MainActivity"
             android:theme="@style/Theme.MyBuilderApp"
             >

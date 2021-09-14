@@ -1412,6 +1412,7 @@ dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen margin_16
+dimen margin_8
 dimen material_bottom_sheet_max_width
 dimen material_clock_display_padding
 dimen material_clock_face_margin_top
@@ -1944,6 +1945,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_navigation_login_to_navigation_profile
 id action_navigation_login_to_navigation_username
+id action_navigation_profile_to_fragmentResume
 id action_navigation_profile_to_navigation_login
 id action_navigation_username_to_navigation_profile
 id action_text
@@ -2106,6 +2108,7 @@ id hideable
 id home
 id homeAsUp
 id homeMainFragment
+id homeMainFragment2
 id honorRequest
 id ic_add
 id icon
@@ -2515,11 +2518,11 @@ layout edit_item_profession
 layout edit_item_self
 layout fragment_favorite
 layout fragment_home
-layout fragment_home_main
 layout fragment_information
 layout fragment_login
 layout fragment_personal_info_0
 layout fragment_profile
+layout fragment_resume
 layout fragment_self
 layout item_builder_card
 layout item_resume

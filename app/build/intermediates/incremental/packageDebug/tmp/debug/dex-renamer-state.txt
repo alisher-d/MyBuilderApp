@@ -1,12 +1,11 @@
-#Wed Sep 15 00:26:19 UZT 2021
+#Wed Sep 15 03:19:57 UZT 2021
 path.4=13/classes.dex
 path.3=11/classes.dex
-path.2=10/classes.dex
+path.2=classes3.dex
 renamed.9=classes10.dex
 path.1=0/classes.dex
 renamed.8=classes9.dex
 path.8=5/classes.dex
-renamed.14=classes15.dex
 path.7=4/classes.dex
 renamed.13=classes14.dex
 path.6=3/classes.dex
@@ -14,11 +13,10 @@ renamed.12=classes13.dex
 path.5=1/classes.dex
 renamed.11=classes12.dex
 renamed.10=classes11.dex
-base.14=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 base.4=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.3=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.2=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.2=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.1=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.0=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
@@ -37,7 +35,6 @@ renamed.6=classes7.dex
 base.7=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 renamed.5=classes6.dex
 base.6=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-path.14=classes3.dex
 renamed.4=classes5.dex
 base.5=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
 base.13=D\:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
