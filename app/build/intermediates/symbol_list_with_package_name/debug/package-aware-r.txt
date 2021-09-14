@@ -1925,7 +1925,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id action_addressFragment_to_homeMainFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1936,8 +1935,6 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_homeMainFragment_to_addressFragment
-id action_homeMainFragment_to_selfFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -1948,7 +1945,6 @@ id action_navigation_login_to_navigation_profile
 id action_navigation_login_to_navigation_username
 id action_navigation_profile_to_navigation_login
 id action_navigation_username_to_navigation_profile
-id action_selfFragment_to_homeMainFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1957,7 +1953,6 @@ id add_address
 id add_description
 id add_portfolio
 id add_profession
-id addressFragment
 id adjust_height
 id adjust_width
 id alertTitle
@@ -2152,6 +2147,7 @@ id ln2
 id ln3
 id ln4
 id ln5
+id logo
 id masked
 id material_clock_display
 id material_clock_face
@@ -2292,7 +2288,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id selfFragment
 id settings
 id shortcut
 id showCustom
@@ -2396,7 +2391,6 @@ id tvPublish
 id tvRegion
 id tvState
 id tvTrade
-id tv_progress_msg
 id unchecked
 id uniform
 id unlabeled
@@ -2527,7 +2521,7 @@ layout fragment_profile
 layout fragment_self
 layout item_builder_card
 layout item_resume
-layout item_spinner_profession
+layout item_spinner
 layout item_trade
 layout material_chip_input_combo
 layout material_clock_display
@@ -2581,6 +2575,7 @@ layout notification_template_part_time
 layout pager_sign_gmail
 layout pager_sign_phone
 layout personal_data
+layout progress_dialog
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

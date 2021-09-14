@@ -36,6 +36,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\custom_dialog.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\progress_dialog.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\progress_dialog.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_builder_card.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_builder_card.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\edit_item_address.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\edit_item_address.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_spinner.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_spinner.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\selectable_job_item_checkbox.xml",

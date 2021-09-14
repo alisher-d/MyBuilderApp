@@ -7,7 +7,6 @@ import com.google.firebase.firestore.SetOptions
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.data.models.UserModel
-import uz.texnopos.mybuilderapp.data.models.UserModel2
 
 class FirebaseHelper(
     private val auth: FirebaseAuth,
@@ -15,7 +14,7 @@ class FirebaseHelper(
 ) {
 
     fun addNewUser(
-        user: UserModel2,
+        user: Map<String,String>,
         onSuccess: (msg: String) -> Unit,
         onFailure: (msg: String?) -> Unit
     ) {
@@ -50,7 +49,7 @@ class FirebaseHelper(
         onFailure: (msg: String?) -> Unit
     ) {
         db.collection("users/${auth.currentUser?.uid}/resumes")
-            .document(resume.resumeID).set(resume, SetOptions.merge())
+            .document(resume.resumeID!!).set(resume, SetOptions.merge())
             .addOnSuccessListener {
                 onSuccess.invoke("Saved")
             }
@@ -92,7 +91,7 @@ class FirebaseHelper(
                         when (cv.type) {
                             DocumentChange.Type.ADDED -> onResumeAdded.invoke(resume)
                             DocumentChange.Type.MODIFIED -> onResumeModified.invoke(resume)
-                            DocumentChange.Type.REMOVED->onResumeRemoved.invoke(resume.resumeID)
+                            DocumentChange.Type.REMOVED->onResumeRemoved.invoke(resume.resumeID!!)
                         }
                     }
                 }

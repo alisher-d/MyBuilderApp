@@ -1,87 +1,120 @@
 package uz.texnopos.mybuilderapp.ui.resume.homeMain
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.core.view.isVisible
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.BaseFragment
-import uz.texnopos.mybuilderapp.core.toast
+import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.data.LoadingState
-import uz.texnopos.mybuilderapp.data.models.ResumeModel
-import uz.texnopos.mybuilderapp.data.models.UserModel2
+import uz.texnopos.mybuilderapp.data.models.Address
 import uz.texnopos.mybuilderapp.databinding.FragmentHomeMainBinding
+import uz.texnopos.mybuilderapp.ui.resume.address.AddressDialog
 import uz.texnopos.mybuilderapp.ui.resume.professions.SelectProfessionDialog
+import java.util.*
+import uz.texnopos.mybuilderapp.data.models.ResumeModel
+
+import kotlin.jvm.internal.Intrinsics
+
+
+
 
 
 class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
-     lateinit var bind: FragmentHomeMainBinding
+    lateinit var bind: FragmentHomeMainBinding
     private lateinit var navController: NavController
-     val tradeAdapter = TradeAdapter()
-    private val professionDialog = SelectProfessionDialog(this)
-//    private val personalInfoDialog = PersonalInfoDialog()
+    private val tradeAdapter = TradeAdapter()
+    private var resume: ResumeModel? = null
     private val viewModel by viewModel<ResumeViewModel>()
+    private val tvProfession = MutableLiveData<String?>()
+    private val rvTrades = MutableLiveData<MutableList<String>?>()
+    private val tvAddress = MutableLiveData<Address?>()
+    private val tvDescription = MutableLiveData<String?>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentHomeMainBinding.bind(view)
         navController = Navigation.findNavController(view)
-//        bind.rvTrade.adapter = tradeAdapter
+        bind.ln2.rvTrade.adapter = tradeAdapter
         setUpObserves()
 
-        val resume2 = requireActivity().intent.getParcelableExtra<ResumeModel>("resume")
-//        if (resume2!=null) manageViews(resume2)
+        resume = requireActivity().intent.getParcelableExtra("resume")?: ResumeModel()
+        manageViews(resume)
 
-        val userInfo = requireActivity().intent.getParcelableExtra<UserModel2>("user_info")!!
-//        bind.tvFullName.text=userInfo.fullname
-//        bind.tvEmail.text=userInfo.email
-//        bind.tvPhone.text=userInfo.phone
-        Log.d("user_info", "$userInfo")
-//        bind.apply {
-//
-//            val arguments = Bundle()
-//            arguments.putString(USER_FULL_NAME, tvFullName.textToString())
-//            arguments.putString(USER_EMAIL, tvEmail.textToString())
-//            arguments.putString(USER_PHONE_NUMBER, tvPhone.textToString())
-//            personalInfoDialog.arguments = arguments
-//
-//            editPersonalInfo.onClick {
-//                showDialog1()
-//            }
-//
-//            editProfession.onClick {
-//                showDialog2()
-//            }
-//
-//            addProfession.onClick {
-//                showDialog2()
-//            }
-//
-//            editAddress.onClick {
-//                navController.navigate(R.id.action_homeMainFragment_to_addressFragment)
-//            }
-//            addAddress.onClick {
-//                navController.navigate(R.id.action_homeMainFragment_to_addressFragment)
-//            }
-//            editDescription.onClick {
-//                navController.navigate(R.id.action_homeMainFragment_to_selfFragment)
-//            }
-//            addDescription.onClick {
-//                navController.navigate(R.id.action_homeMainFragment_to_selfFragment)
-//            }
-//        }
-//        bind.btnSave.onClick {
-//            val resume = ResumeModel()
-//            resume.isCreated = true
-//            resume.resumeID = resume2?.resumeID ?: UUID.randomUUID().toString()
-//            resume.profession = bind.professionName.textToString()
-//            resume.trades = tradeAdapter.models
-//            viewModel.setResume(resume)
-//        }
+        bind.apply {
+            personalData.tvFullName.text = getFullName()
+            personalData.tvPhone.text = getPhoneNumber()
+            personalData.tvEmail.text = getEmail()
+
+            ln2.editProfession.onClick {
+                showProfessionDialog()
+            }
+
+            addProfession.root.onClick {
+                showProfessionDialog()
+            }
+
+            ln3.editAddress.onClick {
+                showAddressDialog()
+            }
+            addAddress.root.onClick {
+                showAddressDialog()
+            }
+            ln4.editDescription.onClick {
+
+            }
+            addDescription.root.onClick {
+
+            }
+
+            tvProfession.observe(requireActivity(), {
+                val t = it != null
+                ln2.root.isVisible = t
+                addProfession.root.isVisible = !t
+                if (t) {
+                    ln2.professionName.text = it
+                    resume!!.profession = it!!
+                } else addProfession.title.setText(R.string.add_profession)
+            })
+
+            rvTrades.observe(requireActivity(), {
+                if (it != null) tradeAdapter.models = it
+
+            })
+            tvAddress.observe(requireActivity(), {
+                val t = it != null
+                ln3.root.isVisible = t
+                addAddress.root.isVisible = !t
+                if (t) {
+                    ln3.tvCountry.text = it!!.countryName
+                    ln3.tvState.text = it.stateName
+                    ln3.tvRegion.text = it.regionName
+                } else addAddress.title.setText(R.string.add_address)
+            })
+            tvDescription.observe(requireActivity(), {
+                val t = it != null
+                ln4.root.isVisible = t
+                addDescription.root.isVisible = !t
+                if (t) {
+                    ln4.tvDescription.text = it
+                } else addDescription.title.setText(R.string.add_description)
+            })
+
+            btnSave.onClick {
+                viewModel.setResume(
+                    resume!!.apply {
+                        createdTime = resume?.createdTime ?: System.currentTimeMillis()
+                        updatedTime = System.currentTimeMillis()
+                        resumeID = resume?.resumeID ?: UUID.randomUUID().toString()
+                    })
+            }
+        }
     }
 
-    fun setUpObserves() {
+    private fun setUpObserves() {
         viewModel.resumeSaved.observe(requireActivity(), {
             when (it.status) {
                 LoadingState.LOADING -> {
@@ -101,46 +134,29 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
         })
     }
 
-//    fun showDialog1() {
-//        personalInfoDialog.show(requireActivity().supportFragmentManager, "tag")
-//        toast("click")
-//        personalInfoDialog.onClickSaveButton { fullname, email, phone ->
-//            this@HomeMainFragment.bind.tvFullName.text = fullname
-//            this@HomeMainFragment.bind.tvEmail.text = email
-//            this@HomeMainFragment.bind.tvPhone.text = phone
-//        }
-//
-//    }
-//fun manageViews(resume:ResumeModel){
-//    if (resume.profession.isNotEmpty()){
-//        bind.professionName.text=resume.profession
-//        tradeAdapter.models=resume.trades
-//        bind.ln2.visibility=View.VISIBLE
-//        bind.addProfession.visibility=View.GONE
-//    }
-//    if (resume.address!=null){
-//        bind.tvAddress.text="${resume.address?.countryName}\n${resume.address?.cityName}"
-//        bind.ln3.visibility=View.VISIBLE
-//        bind.addAddress.visibility=View.GONE
-//    }
-//    if (resume.description.isNotEmpty()){
-//        bind.tvDescription.text=resume.description
-//        bind.ln4.visibility=View.VISIBLE
-//        bind.addDescription.visibility=View.GONE
-//    }
-//}
-//    fun showDialog2() {
-//        professionDialog.show(requireActivity().supportFragmentManager, "tag")
-//        professionDialog.onClickSaveButton { profession, trades ->
-//            bind.professionName.text = profession
-//            tradeAdapter.models = trades
-//            if (bind.professionName.text.isNotEmpty()) {
-//                bind.ln2.visibility = View.VISIBLE
-//                bind.addProfession.visibility = View.GONE
-//            } else {
-//                bind.ln2.visibility = View.GONE
-//                bind.addProfession.visibility = View.VISIBLE
-//            }
-//        }
-//    }
+    private fun manageViews(resume: ResumeModel?) {
+        tvProfession.postValue(resume?.profession)
+        rvTrades.postValue(resume?.trades)
+        tvAddress.postValue(resume?.address)
+        tvDescription.postValue(resume?.description)
+    }
+
+    private fun showProfessionDialog() {
+        val dialog = SelectProfessionDialog()
+        dialog.show(requireActivity().supportFragmentManager, "tag")
+        dialog.onClickSaveButton { profession, trades ->
+            tvProfession.postValue(profession)
+            rvTrades.postValue(trades)
+            resume!!.trades = trades
+        }
+    }
+
+    private fun showAddressDialog() {
+        val dialog = AddressDialog(requireActivity().supportFragmentManager)
+        dialog.onClickSaveButton {
+            resume?.address = it
+            tvAddress.postValue(it)
+        }
+    }
+
 }

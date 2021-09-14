@@ -26,14 +26,6 @@
             android:indeterminateTint="@color/black"
             android:indeterminateTintMode="src_atop" />
 
-        <TextView
-            android:id="@+id/tv_progress_msg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-           android:layout_margin="10dp"
-            android:text="Loading..."
-            android:textColor="@color/design_default_color_primary_dark"
-            tools:ignore="MissingPrefix" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

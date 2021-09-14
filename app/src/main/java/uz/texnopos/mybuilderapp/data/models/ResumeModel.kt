@@ -5,12 +5,13 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class ResumeModel(
-    var userUID:String="",
-    var resumeID:String="",
-    var isCreated: Boolean = false,
-    var isPublished:Boolean=true,
-    var profession:String="",
-    var trades:MutableList<String> = mutableListOf(),
+    var userUID: String? = null,
+    var resumeID: String? = null,
+    var createdTime: Long? = null,
+    var updatedTime: Long? = null,
+    var isPublished: Boolean = true,
+    var profession: String? = null,
+    var trades: MutableList<String>? =null,
     var address: Address? = null,
-    var description: String = ""
+    var description: String? = null
 ):Parcelable

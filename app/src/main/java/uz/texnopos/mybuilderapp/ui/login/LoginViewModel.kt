@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.PhoneAuthCredential
+import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
+import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULL_NAME
+import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
 import uz.texnopos.mybuilderapp.core.getSharedPreferences
 import uz.texnopos.mybuilderapp.data.AuthHelper
@@ -24,7 +27,12 @@ class LoginViewModel(private val authHelper: AuthHelper) : ViewModel() {
         _exists.value = Resource.loading()
         authHelper.getUserData(
             {
-              if (it!=null)  _exists.value=Resource.success(true)
+              if (it!=null)  {
+                  _exists.value=Resource.success(true)
+                  getSharedPreferences().setValue(USER_FULL_NAME,it.fullname)
+                  getSharedPreferences().setValue(USER_PHONE_NUMBER,it.phone)
+                  getSharedPreferences().setValue(USER_EMAIL,it.email)
+              }
                 else _exists.value=Resource.success(false)
             },
             {

@@ -56,14 +56,12 @@ class AuthHelper(
         onFailure: (msg: String?) -> Unit
     ) {
         db.collection("users").document(auth.currentUser!!.uid).get()
-            .addOnCompleteListener {
-                if (it.result.exists())
-                    onSuccess.invoke(it.result.toObject(UserModel::class.java)!!)
-                else {
-                    onSuccess.invoke(null)
-                    onFailure.invoke("User not found")
-                }
+            .addOnSuccessListener {
+                if (it!=null) onSuccess.invoke(it.toObject(UserModel::class.java))
+                else onSuccess.invoke(null)
             }
-
+            .addOnFailureListener {
+                onFailure.invoke(it.localizedMessage)
+            }
     }
 }

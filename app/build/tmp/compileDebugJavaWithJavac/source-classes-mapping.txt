@@ -1,7 +1,7 @@
 uz/texnopos/mybuilderapp/databinding/FragmentPersonalInfo0Binding.java
  uz.texnopos.mybuilderapp.databinding.FragmentPersonalInfo0Binding
-uz/texnopos/mybuilderapp/databinding/ItemSpinnerProfessionBinding.java
- uz.texnopos.mybuilderapp.databinding.ItemSpinnerProfessionBinding
+uz/texnopos/mybuilderapp/databinding/ProgressDialogBinding.java
+ uz.texnopos.mybuilderapp.databinding.ProgressDialogBinding
 uz/texnopos/mybuilderapp/databinding/ItemBuilderCardBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemBuilderCardBinding
 uz/texnopos/mybuilderapp/databinding/EditItemProfessionBinding.java
@@ -32,8 +32,6 @@ uz/texnopos/mybuilderapp/databinding/ActivityVerifyBinding.java
  uz.texnopos.mybuilderapp.databinding.ActivityVerifyBinding
 uz/texnopos/mybuilderapp/databinding/DialogPersonalInfoBinding.java
  uz.texnopos.mybuilderapp.databinding.DialogPersonalInfoBinding
-uz/texnopos/mybuilderapp/databinding/CustomDialogBinding.java
- uz.texnopos.mybuilderapp.databinding.CustomDialogBinding
 uz/texnopos/mybuilderapp/databinding/SelectableJobItemCheckboxBinding.java
  uz.texnopos.mybuilderapp.databinding.SelectableJobItemCheckboxBinding
 uz/texnopos/mybuilderapp/databinding/ActivityCreateRezyumeBinding.java
@@ -58,6 +56,8 @@ uz/texnopos/mybuilderapp/BuildConfig.java
  uz.texnopos.mybuilderapp.BuildConfig
 uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
+uz/texnopos/mybuilderapp/databinding/ItemSpinnerBinding.java
+ uz.texnopos.mybuilderapp.databinding.ItemSpinnerBinding
 uz/texnopos/mybuilderapp/databinding/EditItemPorfolioBinding.java
  uz.texnopos.mybuilderapp.databinding.EditItemPorfolioBinding
 uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java

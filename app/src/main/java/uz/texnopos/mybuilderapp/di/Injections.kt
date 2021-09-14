@@ -11,9 +11,10 @@ import uz.texnopos.mybuilderapp.core.Constants.BASE_URL
 import uz.texnopos.mybuilderapp.data.AuthHelper
 import uz.texnopos.mybuilderapp.data.FirebaseHelper
 import uz.texnopos.mybuilderapp.network.RestApis
-import uz.texnopos.mybuilderapp.repository.UserRepository
+import uz.texnopos.mybuilderapp.repository.Repository
 import uz.texnopos.mybuilderapp.ui.login.LoginViewModel
 import uz.texnopos.mybuilderapp.ui.profile.ProfileViewModel
+import uz.texnopos.mybuilderapp.ui.resume.address.AddressViewModel
 import uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeViewModel
 import uz.texnopos.mybuilderapp.ui.resume.professions.JobsViewModel
 import uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoViewModel
@@ -24,9 +25,10 @@ val viewModelModule = module {
     viewModel { ShortInfoViewModel(get()) }
     viewModel { ResumeViewModel(get()) }
     viewModel { JobsViewModel(get()) }
+    viewModel { AddressViewModel(get()) }
 }
 val repositoryModule = module {
-    single { UserRepository(get()) }
+    single { Repository(get()) }
 }
 
 val apiModule = module {

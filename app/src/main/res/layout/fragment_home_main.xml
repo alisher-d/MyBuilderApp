@@ -48,7 +48,8 @@
 
             <include
                 android:id="@+id/add_profession"
-                layout="@layout/add_title_text" />
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
 
             <include
                 android:id="@+id/ln2"
@@ -57,7 +58,8 @@
 
             <include
                 android:id="@+id/add_address"
-                layout="@layout/add_title_text" />
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
 
             <include
                 android:id="@+id/ln3"
@@ -66,7 +68,8 @@
 
             <include
                 android:id="@+id/add_description"
-                layout="@layout/add_title_text" />
+                layout="@layout/add_title_text"
+                android:visibility="gone"/>
 
             <include
                 android:id="@+id/ln4"
@@ -75,7 +78,9 @@
 
             <include
                 android:id="@+id/add_portfolio"
-                layout="@layout/add_title_text" />
+                layout="@layout/add_title_text"
+                android:visibility="gone"
+                 />
 
             <include
                 android:id="@+id/ln5"

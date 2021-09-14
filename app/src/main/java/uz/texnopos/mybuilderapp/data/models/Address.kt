@@ -5,9 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Address(
-    var lat:Double=0.0,
-    var long:Double=0.0,
-    var cityName:String?="",
-    var countryName:String?="",
-    var stateName:String?=""
+    var regionName: String?=null,
+    var countryName: String?=null,
+    var stateName: String?=null
 ):Parcelable

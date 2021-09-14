@@ -14,7 +14,7 @@ open class AppBaseActivity:AppCompatActivity() {
         if (progressDialog == null) {
             progressDialog = Dialog(this)
             progressDialog?.window?.setBackgroundDrawable(ColorDrawable(0))
-            progressDialog?.setContentView(R.layout.custom_dialog)
+            progressDialog?.setContentView(R.layout.progress_dialog)
         }
     }
     fun showProgress(show: Boolean) {

@@ -112,6 +112,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_progress_dialog.xml.flat",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\progress_dialog.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_facebook_round.png.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable\\facebook_round.png"
     },
@@ -196,6 +200,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_spinner.xml.flat",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_spinner.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home_main.xml.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\fragment_home_main.xml"
     },
@@ -256,10 +264,6 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\edit_item_self.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_dialog.xml.flat",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\custom_dialog.xml"
-    },
-    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sertifikat_2.png.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable-v24\\sertifikat_2.png"
     },
@@ -290,10 +294,6 @@
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_google_icon.xml.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_google_icon.xml"
-    },
-    {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_spinner_profession.xml.flat",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_spinner_profession.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",

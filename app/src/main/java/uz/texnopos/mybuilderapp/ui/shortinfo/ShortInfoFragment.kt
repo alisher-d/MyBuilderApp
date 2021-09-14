@@ -7,13 +7,12 @@ import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import uz.texnopos.mybuilderapp.*
+import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
 import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentPersonalInfo0Binding
-import uz.texnopos.mybuilderapp.data.models.UserModel2
 import uz.texnopos.mybuilderapp.ui.MainActivity
 
 class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
@@ -37,11 +36,11 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
             btnContinue.onClick {
                 if (validate()) {
                     showProgress()
-                    val user = UserModel2(
-                        auth.currentUser!!.uid,
-                        etFullName.textToString(),
-                        etPhone.textToString(),
-                        etEmail.textToString()
+                    val user = mapOf(
+                        "userId" to auth.currentUser!!.uid,
+                        "fullname" to etFullName.textToString(),
+                        "phone" to etPhone.textToString(),
+                        "email" to etEmail.textToString()
                     )
                     viewModel.addNewUser(user)
                 }
@@ -78,7 +77,7 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
                 LoadingState.LOADING-> showProgress()
                 LoadingState.SUCCESS-> {
                     hideProgress()
-                    getSharedPreferences().setValue(USER_EXISTS, 1)
+                    toast(it.data!!)
                     navController.navigate(R.id.action_navigation_username_to_navigation_profile)
                 }
                 LoadingState.ERROR->{

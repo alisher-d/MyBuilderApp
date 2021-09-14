@@ -77,25 +77,11 @@ fun TextInputEditText.showError(error: String) {
 fun getFullName(): String = getSharedPreferences().getStringValue(USER_FULL_NAME)
 fun getPhoneNumber(): String = getSharedPreferences().getStringValue(USER_PHONE_NUMBER)
 fun getEmail(): String = getSharedPreferences().getStringValue(USER_EMAIL)
-fun getCreated(): Boolean = getDescription().isNotEmpty() || getSelectableJobs().isNotEmpty() ||
-        getAddress().isNotEmpty()
-
-fun getPublished(): Boolean = getSharedPreferences().getBooleanValue(PUBLISH)
-fun getDescription(): String = getSharedPreferences().getStringValue(DESCRIPTION)
-fun getProfession(): String = getSharedPreferences().getStringValue(PROFESSION)
-fun getAddress(): String = getSharedPreferences().getStringValue(ADDRESS)
-fun getSelectableJobs(): ArrayList<String> =
-    getSharedPreferences().getStringSetValue(SELECTABLE_JOBS)!!.toCollection(ArrayList())
 
 fun clearLoginPref() {
     getSharedPreferences().removeKey(USER_FULL_NAME)
     getSharedPreferences().removeKey(USER_PHONE_NUMBER)
-    getSharedPreferences().removeKey(CREATED)
-    getSharedPreferences().removeKey(PUBLISH)
-    getSharedPreferences().removeKey(PROFESSION)
-    getSharedPreferences().removeKey(DESCRIPTION)
-    getSharedPreferences().removeKey(ADDRESS)
-    getSharedPreferences().removeKey(SELECTABLE_JOBS)
+    getSharedPreferences().removeKey(USER_EMAIL)
 }
 
 @RequiresPermission(android.Manifest.permission.ACCESS_NETWORK_STATE)

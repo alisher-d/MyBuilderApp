@@ -29,6 +29,9 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final ImageView googleLogin;
 
   @NonNull
+  public final ImageView logo;
+
+  @NonNull
   public final LinearLayout signInGoogle;
 
   @NonNull
@@ -41,11 +44,12 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final ViewPager2 viewPager;
 
   private FragmentLoginBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView ellipse,
-      @NonNull ImageView googleLogin, @NonNull LinearLayout signInGoogle,
+      @NonNull ImageView googleLogin, @NonNull ImageView logo, @NonNull LinearLayout signInGoogle,
       @NonNull TabLayout tabLayout, @NonNull TextView textView7, @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.ellipse = ellipse;
     this.googleLogin = googleLogin;
+    this.logo = logo;
     this.signInGoogle = signInGoogle;
     this.tabLayout = tabLayout;
     this.textView7 = textView7;
@@ -91,6 +95,12 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.logo;
+      ImageView logo = rootView.findViewById(id);
+      if (logo == null) {
+        break missingId;
+      }
+
       id = R.id.sign_in_google;
       LinearLayout signInGoogle = rootView.findViewById(id);
       if (signInGoogle == null) {
@@ -115,7 +125,7 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ConstraintLayout) rootView, ellipse, googleLogin,
+      return new FragmentLoginBinding((ConstraintLayout) rootView, ellipse, googleLogin, logo,
           signInGoogle, tabLayout, textView7, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);

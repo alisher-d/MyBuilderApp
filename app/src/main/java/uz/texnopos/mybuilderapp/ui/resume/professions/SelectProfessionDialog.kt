@@ -10,14 +10,12 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.AppBaseActivity
 import uz.texnopos.mybuilderapp.core.onClick
-import uz.texnopos.mybuilderapp.core.textToString
 import uz.texnopos.mybuilderapp.core.toast
 import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.databinding.DialogSelectProfessionBinding
-import uz.texnopos.mybuilderapp.ui.resume.homeMain.HomeMainFragment
 
-class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
+class SelectProfessionDialog :
     DialogFragment(R.layout.dialog_select_profession) {
     private val viewModel by viewModel<JobsViewModel>()
     private val tradeAdapter = SelectJobsAdapter()
@@ -29,13 +27,10 @@ class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
     override fun onCreate(savedInstanceState: Bundle?) {
         setStyle(STYLE_NORMAL, R.style.FullScreenDialogTheme)
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onStart() {
-        super.onStart()
         viewModel.getJobs()
         setUpObserver()
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,16 +40,13 @@ class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
         bind = DialogSelectProfessionBinding.inflate(layoutInflater)
 
         bind.rvJobsList.adapter = tradeAdapter
-        tradeAdapter.remoteModels = mFragment.tradeAdapter.models
-//        if (mFragment.bind.professionName.textToString().isNotEmpty())
-//            bind.autoComplete.setText(mFragment.bind.professionName.textToString())
 
         bind.btClose.onClick {
             dismiss()
         }
         bind.btSave.onClick {
             onClickSave.invoke(profession, sendList)
-            dismissAllowingStateLoss()
+            dismiss()
         }
 
         bind.autoComplete.setOnItemClickListener { parent, view, position, id ->
@@ -82,7 +74,7 @@ class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
                     remoteList = it.data!!
                     val arrayAdapter = ArrayAdapter(
                         requireContext(),
-                        R.layout.item_spinner_profession,
+                        R.layout.item_spinner,
                         it.data.map { it.name })
                     bind.autoComplete.setAdapter(arrayAdapter)
                 }
@@ -103,4 +95,5 @@ class SelectProfessionDialog(private val mFragment: HomeMainFragment) :
     fun onClickSaveButton(onClickSave: (profession: String, trades: MutableList<String>) -> Unit) {
         this.onClickSave = onClickSave
     }
+
 }

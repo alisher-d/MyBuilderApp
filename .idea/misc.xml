@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/settings_24.xml" value="0.21203703703703702" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_create_rezyume.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_verify.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/add_title_text.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/app_bar_main.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/custom_dialog.xml" value="0.1537037037037037" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_address.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_address.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_personal_info.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_select_profession.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_self.xml" value="0.1537037037037037" />
@@ -27,8 +28,10 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_self.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/image.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_builder_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_spinner_profession.xml" value="0.16296296296296298" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_sign_phone.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/personal_data.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/progress_dialog.xml" value="0.25" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/selectable_job_item_checkbox.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1537037037037037" />
       </map>

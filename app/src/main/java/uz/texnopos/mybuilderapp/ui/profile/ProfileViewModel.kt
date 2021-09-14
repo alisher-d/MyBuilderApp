@@ -3,14 +3,11 @@ package uz.texnopos.mybuilderapp.ui.profile
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mybuilderapp.core.callApi
 import uz.texnopos.mybuilderapp.data.FirebaseHelper
 import uz.texnopos.mybuilderapp.data.Resource
 import uz.texnopos.mybuilderapp.data.models.RequestModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.data.models.UserModel
-import uz.texnopos.mybuilderapp.data.models.UserModel2
-import uz.texnopos.mybuilderapp.repository.UserRepository
 
 class ProfileViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() {
     private var _userData: MutableLiveData<Resource<RequestModel<UserModel>?>> = MutableLiveData()
