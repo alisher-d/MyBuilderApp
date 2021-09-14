@@ -12,16 +12,12 @@ import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.data.models.Address
+import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.databinding.FragmentHomeMainBinding
 import uz.texnopos.mybuilderapp.ui.resume.address.AddressDialog
 import uz.texnopos.mybuilderapp.ui.resume.professions.SelectProfessionDialog
+import uz.texnopos.mybuilderapp.ui.resume.self.SelfDialog
 import java.util.*
-import uz.texnopos.mybuilderapp.data.models.ResumeModel
-
-import kotlin.jvm.internal.Intrinsics
-
-
-
 
 
 class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
@@ -42,7 +38,7 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
         setUpObserves()
 
         resume = requireActivity().intent.getParcelableExtra("resume")?: ResumeModel()
-        manageViews(resume)
+        manageViews(resume!!)
 
         bind.apply {
             personalData.tvFullName.text = getFullName()
@@ -64,10 +60,10 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
                 showAddressDialog()
             }
             ln4.editDescription.onClick {
-
+                showSelfDialog()
             }
             addDescription.root.onClick {
-
+                showSelfDialog()
             }
 
             tvProfession.observe(requireActivity(), {
@@ -111,11 +107,14 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
                         resumeID = resume?.resumeID ?: UUID.randomUUID().toString()
                     })
             }
+            btnRemove.onClick {
+                if (resume != null) resume!!.resumeID?.let { viewModel.removeResume(it) }
+            }
         }
     }
 
     private fun setUpObserves() {
-        viewModel.resumeSaved.observe(requireActivity(), {
+        viewModel.request.observe(requireActivity(),{
             when (it.status) {
                 LoadingState.LOADING -> {
                     showProgress()
@@ -134,16 +133,15 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
         })
     }
 
-    private fun manageViews(resume: ResumeModel?) {
-        tvProfession.postValue(resume?.profession)
-        rvTrades.postValue(resume?.trades)
-        tvAddress.postValue(resume?.address)
-        tvDescription.postValue(resume?.description)
+    private fun manageViews(resume: ResumeModel) {
+        tvProfession.postValue(resume.profession)
+        rvTrades.postValue(resume.trades)
+        tvAddress.postValue(resume.address)
+        tvDescription.postValue(resume.description)
     }
 
     private fun showProfessionDialog() {
-        val dialog = SelectProfessionDialog()
-        dialog.show(requireActivity().supportFragmentManager, "tag")
+        val dialog = SelectProfessionDialog(requireActivity().supportFragmentManager)
         dialog.onClickSaveButton { profession, trades ->
             tvProfession.postValue(profession)
             rvTrades.postValue(trades)
@@ -156,6 +154,14 @@ class HomeMainFragment : BaseFragment(R.layout.fragment_home_main) {
         dialog.onClickSaveButton {
             resume?.address = it
             tvAddress.postValue(it)
+        }
+    }
+
+    private fun showSelfDialog() {
+        val dialog = SelfDialog(requireActivity().supportFragmentManager)
+        dialog.onClickSaveButton {
+            tvDescription.postValue(it)
+            resume?.description = it
         }
     }
 

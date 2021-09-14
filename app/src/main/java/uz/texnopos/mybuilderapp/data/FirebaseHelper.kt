@@ -91,10 +91,25 @@ class FirebaseHelper(
                         when (cv.type) {
                             DocumentChange.Type.ADDED -> onResumeAdded.invoke(resume)
                             DocumentChange.Type.MODIFIED -> onResumeModified.invoke(resume)
-                            DocumentChange.Type.REMOVED->onResumeRemoved.invoke(resume.resumeID!!)
+                            DocumentChange.Type.REMOVED -> onResumeRemoved.invoke(resume.resumeID!!)
                         }
                     }
                 }
+            }
+    }
+
+    fun removeResume(
+        resumeId:String,
+        onSuccess: (msg: String) -> Unit,
+        onFailure: (msg: String?) -> Unit
+    ){
+        db.collection("users/${auth.currentUser!!.uid}/resumes")
+            .document(resumeId).delete()
+            .addOnSuccessListener {
+                onSuccess.invoke("Removed")
+            }
+            .addOnFailureListener {
+                onFailure.invoke(it.localizedMessage)
             }
     }
 }

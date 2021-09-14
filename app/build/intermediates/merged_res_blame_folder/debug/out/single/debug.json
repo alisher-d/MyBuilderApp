@@ -180,6 +180,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete.xml.flat",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable\\ic_delete.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },

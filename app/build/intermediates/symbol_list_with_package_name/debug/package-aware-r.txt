@@ -1820,6 +1820,7 @@ drawable ic_clock_black_24dp
 drawable ic_close_24
 drawable ic_component_1
 drawable ic_dashboard_black_24dp
+drawable ic_delete
 drawable ic_google_icon
 drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
@@ -1989,6 +1990,7 @@ id btnLogin
 id btnPublish
 id btnSave
 id btn_get_code
+id btn_remove
 id buttonPanel
 id cache_measures
 id cancel_button

@@ -24,7 +24,7 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
     private val auth: FirebaseAuth by inject()
     private val viewModel by viewModel<ProfileViewModel>()
     private lateinit var intent: Intent
-    val resumeIsEmpty=MutableLiveData<Boolean>()
+    private val resumeIsEmpty=MutableLiveData<Boolean>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)

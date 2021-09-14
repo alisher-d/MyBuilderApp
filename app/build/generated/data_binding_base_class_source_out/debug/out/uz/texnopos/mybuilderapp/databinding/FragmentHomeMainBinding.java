@@ -4,6 +4,7 @@ package uz.texnopos.mybuilderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -36,6 +37,9 @@ public final class FragmentHomeMainBinding implements ViewBinding {
   public final MaterialButton btnPublish;
 
   @NonNull
+  public final ImageView btnRemove;
+
+  @NonNull
   public final MaterialButton btnSave;
 
   @NonNull
@@ -62,17 +66,18 @@ public final class FragmentHomeMainBinding implements ViewBinding {
   private FragmentHomeMainBinding(@NonNull LinearLayout rootView,
       @NonNull AddTitleTextBinding addAddress, @NonNull AddTitleTextBinding addDescription,
       @NonNull AddTitleTextBinding addPortfolio, @NonNull AddTitleTextBinding addProfession,
-      @NonNull MaterialButton btnPublish, @NonNull MaterialButton btnSave,
-      @NonNull EditItemProfessionBinding ln2, @NonNull EditItemAddressBinding ln3,
-      @NonNull EditItemSelfBinding ln4, @NonNull EditItemPorfolioBinding ln5,
-      @NonNull PersonalDataBinding personalData, @NonNull AppBarLayout toolbar,
-      @NonNull TextView toolbarTitle) {
+      @NonNull MaterialButton btnPublish, @NonNull ImageView btnRemove,
+      @NonNull MaterialButton btnSave, @NonNull EditItemProfessionBinding ln2,
+      @NonNull EditItemAddressBinding ln3, @NonNull EditItemSelfBinding ln4,
+      @NonNull EditItemPorfolioBinding ln5, @NonNull PersonalDataBinding personalData,
+      @NonNull AppBarLayout toolbar, @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
     this.addAddress = addAddress;
     this.addDescription = addDescription;
     this.addPortfolio = addPortfolio;
     this.addProfession = addProfession;
     this.btnPublish = btnPublish;
+    this.btnRemove = btnRemove;
     this.btnSave = btnSave;
     this.ln2 = ln2;
     this.ln3 = ln3;
@@ -144,6 +149,12 @@ public final class FragmentHomeMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_remove;
+      ImageView btnRemove = rootView.findViewById(id);
+      if (btnRemove == null) {
+        break missingId;
+      }
+
       id = R.id.btnSave;
       MaterialButton btnSave = rootView.findViewById(id);
       if (btnSave == null) {
@@ -198,9 +209,9 @@ public final class FragmentHomeMainBinding implements ViewBinding {
       }
 
       return new FragmentHomeMainBinding((LinearLayout) rootView, binding_addAddress,
-          binding_addDescription, binding_addPortfolio, binding_addProfession, btnPublish, btnSave,
-          binding_ln2, binding_ln3, binding_ln4, binding_ln5, binding_personalData, toolbar,
-          toolbarTitle);
+          binding_addDescription, binding_addPortfolio, binding_addProfession, btnPublish,
+          btnRemove, btnSave, binding_ln2, binding_ln3, binding_ln4, binding_ln5,
+          binding_personalData, toolbar, toolbarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1819,6 +1819,7 @@ int drawable ic_clock_black_24dp 0x7f07008d
 int drawable ic_close_24 0x7f07008e
 int drawable ic_component_1 0x7f07008f
 int drawable ic_dashboard_black_24dp 0x7f070090
+int drawable ic_delete 0x7f0700ca
 int drawable ic_google_icon 0x7f070091
 int drawable ic_home_black_24dp 0x7f070092
 int drawable ic_keyboard_black_24dp 0x7f070093
@@ -1988,6 +1989,7 @@ int id btnLogin 0x7f08006c
 int id btnPublish 0x7f08006d
 int id btnSave 0x7f08006e
 int id btn_get_code 0x7f08006f
+int id btn_remove 0x7f080216
 int id buttonPanel 0x7f080070
 int id cache_measures 0x7f080071
 int id cancel_button 0x7f080072
