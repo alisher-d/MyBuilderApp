@@ -6,5 +6,5 @@ data class UserModel(
     var fullname: String = "",
     var phone: String = "",
     var email: String = "",
-    var resumes: MutableList<ResumeModel> = mutableListOf()
+    var resumes: MutableList<ResumeModel>?=null
 )

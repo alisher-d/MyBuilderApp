@@ -4,7 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputSearch"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/search_back"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_16"
+                app:boxCornerRadiusBottomStart="@dimen/margin_16"
+                app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                app:boxCornerRadiusTopStart="@dimen/margin_16"
+                app:boxStrokeWidth="0dp"
+                app:counterMaxLength="0"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toStartOf="@id/filter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/tahoma"
+                    android:hint="Search"
+                    android:inputType="none"
+                    android:paddingVertical="6dp"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/filter"
+                android:layout_width="56dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:cardBackgroundColor="@color/search_back"
+                app:cardCornerRadius="@dimen/margin_16"
+                app:layout_constraintBottom_toBottomOf="@id/inputSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/inputSearch">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_filter" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProfession"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="@dimen/margin_16"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="2"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/inputSearch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

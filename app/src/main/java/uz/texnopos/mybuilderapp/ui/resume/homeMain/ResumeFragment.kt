@@ -15,6 +15,7 @@ import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.data.models.Address
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.databinding.FragmentResumeBinding
+import uz.texnopos.mybuilderapp.ui.MainActivity
 import uz.texnopos.mybuilderapp.ui.resume.address.AddressDialog
 import uz.texnopos.mybuilderapp.ui.resume.professions.SelectProfessionDialog
 import uz.texnopos.mybuilderapp.ui.resume.self.SelfDialog
@@ -182,7 +183,7 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
         }
     }
 
-    fun validate(): Boolean {
+    private fun validate(): Boolean {
         if (resume?.profession == null) {
             toast(getString(R.string.add_profession))
             return false
@@ -196,5 +197,10 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
             return false
         }
         return true
+    }
+
+    override fun onStart() {
+        super.onStart()
+        showNavBar(false)
     }
 }

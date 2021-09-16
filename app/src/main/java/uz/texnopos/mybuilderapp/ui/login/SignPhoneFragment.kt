@@ -40,7 +40,7 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layo
                 btnGetCode.onClick {
                     if (isNetworkAvailable()) {
                         val number = etPhone.textToString().trim()
-                        sendVerificationcode("+998$number")
+                        sendVerificationCode("+998$number")
                         parentFragment.showProgress()
                     }
                 }
@@ -71,7 +71,7 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layo
         }
     }
 
-    private fun sendVerificationcode(number: String) {
+    private fun sendVerificationCode(number: String) {
         val options = PhoneAuthOptions.newBuilder(parentFragment.auth)
             .setPhoneNumber(number) // Phone number to verify
             .setTimeout(120L, TimeUnit.SECONDS) // Timeout and unit

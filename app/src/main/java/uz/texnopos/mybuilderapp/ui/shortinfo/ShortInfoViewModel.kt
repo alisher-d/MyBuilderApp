@@ -3,7 +3,6 @@ package uz.texnopos.mybuilderapp.ui.shortinfo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mybuilderapp.core.Constants
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULL_NAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER

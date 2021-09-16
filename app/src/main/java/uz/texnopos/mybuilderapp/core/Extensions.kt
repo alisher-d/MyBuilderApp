@@ -15,16 +15,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import uz.texnopos.mybuilderapp.App
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.ADDRESS
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.CREATED
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.DESCRIPTION
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.PROFESSION
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.PUBLISH
-import uz.texnopos.mybuilderapp.core.Constants.SharedPref.SELECTABLE_JOBS
+import uz.texnopos.mybuilderapp.App.Companion.getAppInstance
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULL_NAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
-import uz.texnopos.mybuilderapp.App.Companion.getAppInstance
+import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
 
 
 fun Context.toast(text: String, duration: Int = Toast.LENGTH_LONG) =
@@ -82,6 +77,7 @@ fun clearLoginPref() {
     getSharedPreferences().removeKey(USER_FULL_NAME)
     getSharedPreferences().removeKey(USER_PHONE_NUMBER)
     getSharedPreferences().removeKey(USER_EMAIL)
+    getSharedPreferences().removeKey(USER_EXISTS)
 }
 
 @RequiresPermission(android.Manifest.permission.ACCESS_NETWORK_STATE)

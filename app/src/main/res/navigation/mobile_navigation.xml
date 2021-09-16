@@ -68,6 +68,4 @@
         android:name="uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeFragment"
         android:label="ResumeFragment"
         tools:layout="@layout/fragment_resume"/>
-
-
 </navigation>

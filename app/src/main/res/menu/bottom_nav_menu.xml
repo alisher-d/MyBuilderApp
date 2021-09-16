@@ -19,4 +19,5 @@
         android:id="@+id/navigation_information"
         android:icon="@drawable/ic_baseline_library_books_24"
         android:title="@string/title_information" />
+
 </menu>

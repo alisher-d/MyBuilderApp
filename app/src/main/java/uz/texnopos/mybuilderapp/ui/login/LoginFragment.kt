@@ -109,7 +109,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
                         navController.navigate(R.id.action_navigation_login_to_navigation_username)
                     }
                 }
-            } else (activity as MainActivity).navView.visibility = View.GONE
+            } else showNavBar(false)
         })
         viewModel.registration.observe(requireActivity(), {
             when (it.status) {

@@ -1,14 +1,11 @@
 package uz.texnopos.mybuilderapp.data
 
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import uz.texnopos.mybuilderapp.core.Constants.TAG
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
-import uz.texnopos.mybuilderapp.data.models.UserModel
 
 class FirebaseHelper(
     private val auth: FirebaseAuth,
@@ -27,22 +24,6 @@ class FirebaseHelper(
             .addOnFailureListener {
                 onFailure.invoke(it.localizedMessage)
             }
-    }
-
-    fun getUserData(
-        onSuccess: (data: UserModel?) -> Unit,
-        onFailure: (msg: String?) -> Unit
-    ) {
-        db.collection("users").document(auth.currentUser!!.uid).get()
-            .addOnCompleteListener {
-                if (it.result.exists())
-                    onSuccess.invoke(it.result.toObject(UserModel::class.java)!!)
-                else {
-                    onSuccess.invoke(null)
-                    onFailure.invoke("User not found")
-                }
-            }
-
     }
 
     fun setResume(
@@ -96,6 +77,28 @@ class FirebaseHelper(
                             DocumentChange.Type.ADDED -> onResumeAdded.invoke(resume)
                             DocumentChange.Type.MODIFIED -> onResumeModified.invoke(resume)
                             DocumentChange.Type.REMOVED -> onResumeRemoved.invoke(resume.resumeID!!)
+                        }
+                    }
+                }
+            }
+    }
+    fun getJobs(
+        onJobAdded: (JobModel) -> Unit,
+        onJobModified: (JobModel) -> Unit,
+        onJobRemoved: (String) -> Unit,
+        onFailure: (String?) -> Unit
+    ) {
+        db.collection("jobs")
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    onFailure.invoke(e.localizedMessage)
+                } else {
+                    for (cv in snapshot!!.documentChanges) {
+                        val job = cv.document.toObject(JobModel::class.java)
+                        when (cv.type) {
+                            DocumentChange.Type.ADDED -> onJobAdded.invoke(job)
+                            DocumentChange.Type.MODIFIED -> onJobModified.invoke(job)
+                            DocumentChange.Type.REMOVED -> onJobRemoved.invoke(job.jobId!!)
                         }
                     }
                 }

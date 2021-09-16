@@ -89,6 +89,6 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity).navView.visibility = View.VISIBLE
+        showNavBar(true)
     }
     }

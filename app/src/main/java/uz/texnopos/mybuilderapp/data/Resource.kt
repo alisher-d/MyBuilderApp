@@ -1,5 +1,7 @@
 package uz.texnopos.mybuilderapp.data
 
+import uz.texnopos.mybuilderapp.data.models.Country
+
 open class Resource<out T> constructor(val status: LoadingState, val data: T?, val message: String?) {
 
     companion object {
