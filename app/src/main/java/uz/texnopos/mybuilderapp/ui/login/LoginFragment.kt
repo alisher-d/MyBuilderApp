@@ -12,7 +12,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
@@ -22,20 +21,19 @@ import uz.texnopos.mybuilderapp.core.Constants.RC_SIGN_IN
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
 import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentLoginBinding
-import uz.texnopos.mybuilderapp.ui.MainActivity
 
 class LoginFragment : BaseFragment(R.layout.fragment_login) {
     val auth: FirebaseAuth by inject()
     val viewModel by viewModel<LoginViewModel>()
-    lateinit var bind: FragmentLoginBinding
-    lateinit var navController: NavController
+    private lateinit var bind: FragmentLoginBinding
+    private lateinit var navController: NavController
     private lateinit var googleSignInClient: GoogleSignInClient
     private val fragments = listOf(SignPhoneFragment(this), SignGmailFragment(this))
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentLoginBinding.bind(view)
         setUpObserver()
-        navController = Navigation.findNavController(view)
+        navController = Navigation.findNavController(requireActivity(),R.id.nav_host_fragment_activity_main)
         val adapter =
             ViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle, fragments)
         bind.viewPager.adapter = adapter
@@ -102,14 +100,14 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
                     }
                     1 -> {
                         hideProgress()
-                        navController.navigate(R.id.action_navigation_login_to_navigation_profile)
+                        requireActivity().onBackPressed()
                     }
                     -1 -> {
                         hideProgress()
-                        navController.navigate(R.id.action_navigation_login_to_navigation_username)
+                        navController.navigate(R.id.action_loginFragment_to_shortInfoFragment)
                     }
                 }
-            } else showNavBar(false)
+            }
         })
         viewModel.registration.observe(requireActivity(), {
             when (it.status) {

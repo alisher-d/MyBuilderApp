@@ -22,7 +22,7 @@
             android:layout_width="190dp"
             android:layout_height="139dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/landscaping" />
+            android:contentDescription="loading" />
 
         <TextView
             android:id="@+id/name"

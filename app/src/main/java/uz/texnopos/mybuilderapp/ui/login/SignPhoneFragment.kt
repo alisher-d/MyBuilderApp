@@ -2,18 +2,20 @@ package uz.texnopos.mybuilderapp.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.widget.EditText
 import androidx.core.widget.doOnTextChanged
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
-import uz.texnopos.mybuilderapp.ui.profile.VerifyActivity
-import uz.texnopos.mybuilderapp.*
+import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.databinding.PagerSignPhoneBinding
+import uz.texnopos.mybuilderapp.ui.profile.VerifyActivity
 import java.util.concurrent.TimeUnit
 
 class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layout.pager_sign_phone) {
@@ -25,10 +27,16 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layo
         super.onViewCreated(view, savedInstanceState)
         bind = PagerSignPhoneBinding.bind(view)
         bind.apply {
+            inputPhone.setEndIconOnClickListener {
+                etPhone.setText("")
+
+            }
+            etPhone.addTextChangedListener(MaskWatcher.phoneNumber())
+            etPhone.removeTextChangedListener(MaskWatcher.phoneNumber())
             etPhone.doOnTextChanged { text, _, _, _ ->
                 when {
                     text!!.isEmpty() -> btnGetCode.isEnabled = false
-                    text.length == 9 -> {
+                    text.length == 14 -> {
                         etPhone.hideSoftKeyboard()
                         btnGetCode.isEnabled = true
                     }
@@ -39,9 +47,9 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layo
                 }
                 btnGetCode.onClick {
                     if (isNetworkAvailable()) {
-                        val number = etPhone.textToString().trim()
+                        val number = etPhone.textToString().filter { it.isDigit() }
                         sendVerificationCode("+998$number")
-                        parentFragment.showProgress()
+                        showProgress()
                     }
                 }
             }
@@ -80,4 +88,8 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : BaseFragment(R.layo
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
+
 }
+
+
+

@@ -22,12 +22,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         navController=Navigation.findNavController(view)
 
         Handler(Looper.getMainLooper()).postDelayed({
-           navController.navigate(R.id.action_splashFragment2_to_mobile_navigation)
+           navController.navigate(R.id.action_splashFragment2_to_mainFragment)
         }, 1500)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        showNavBar(false)
     }
 }

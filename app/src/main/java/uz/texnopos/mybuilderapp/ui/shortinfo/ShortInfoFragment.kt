@@ -35,7 +35,6 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
 
             btnContinue.onClick {
                 if (validate()) {
-                    showProgress()
                     val user = mapOf(
                         "userId" to auth.currentUser!!.uid,
                         "fullname" to etFullName.textToString(),
@@ -69,7 +68,7 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
 
     override fun onStart() {
         super.onStart()
-        (activity as MainActivity).navView.visibility = View.GONE
+//        showNavBar(this,false)
     }
    private fun setUpObserves(){
         viewModel.created.observe(requireActivity(),{
@@ -78,7 +77,7 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
                 LoadingState.SUCCESS-> {
                     hideProgress()
                     toast(it.data!!)
-                    navController.navigate(R.id.action_navigation_username_to_navigation_profile)
+                    requireActivity().onBackPressed()
                 }
                 LoadingState.ERROR->{
                     hideProgress()

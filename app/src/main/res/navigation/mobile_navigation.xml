@@ -23,49 +23,8 @@
         android:label="@string/title_information"
         tools:layout="@layout/fragment_information" />
     <fragment
-        android:id="@+id/navigation_login"
-        android:name="uz.texnopos.mybuilderapp.ui.login.LoginFragment"
-        android:label="LoginFragment"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_navigation_login_to_navigation_profile"
-            app:destination="@id/navigation_profile"
-            app:popUpTo="@id/navigation_home" />
-        <action
-            android:id="@+id/action_navigation_login_to_navigation_username"
-            app:destination="@id/navigation_username"
-            app:popUpTo="@id/navigation_home" />
-        <argument
-            android:name="storedVerificationId"
-            app:argType="string"
-           />
-    </fragment>
-    <fragment
         android:id="@+id/navigation_profile"
         android:name="uz.texnopos.mybuilderapp.ui.profile.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_navigation_profile_to_navigation_login"
-            app:destination="@id/navigation_login"
-            app:popUpTo="@id/navigation_home" />
-        <action
-            android:id="@+id/action_navigation_profile_to_fragmentResume"
-            app:destination="@id/homeMainFragment2" />
-    </fragment>
-    <fragment
-        android:id="@+id/navigation_username"
-        android:name="uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoFragment"
-        android:label="fragment_username"
-        tools:layout="@layout/fragment_personal_info_0" >
-        <action
-            android:id="@+id/action_navigation_username_to_navigation_profile"
-            app:destination="@id/navigation_profile"
-            app:popUpTo="@id/navigation_home" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeMainFragment2"
-        android:name="uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeFragment"
-        android:label="ResumeFragment"
-        tools:layout="@layout/fragment_resume"/>
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

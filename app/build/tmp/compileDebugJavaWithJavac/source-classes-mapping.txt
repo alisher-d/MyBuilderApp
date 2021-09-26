@@ -1,3 +1,5 @@
+uz/texnopos/mybuilderapp/BuildConfig.java
+ uz.texnopos.mybuilderapp.BuildConfig
 uz/texnopos/mybuilderapp/databinding/FragmentPersonalInfo0Binding.java
  uz.texnopos.mybuilderapp.databinding.FragmentPersonalInfo0Binding
 uz/texnopos/mybuilderapp/databinding/ProgressDialogBinding.java
@@ -18,6 +20,8 @@ uz/texnopos/mybuilderapp/databinding/DialogAddressBinding.java
  uz.texnopos.mybuilderapp.databinding.DialogAddressBinding
 uz/texnopos/mybuilderapp/databinding/FragmentHomeBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentHomeBinding
+uz/texnopos/mybuilderapp/databinding/FragmentMainBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentMainBinding
 uz/texnopos/mybuilderapp/databinding/FragmentLoginBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentLoginBinding
 uz/texnopos/mybuilderapp/databinding/FragmentResumeBinding.java
@@ -50,8 +54,6 @@ uz/texnopos/mybuilderapp/databinding/ActivityMainBinding.java
  uz.texnopos.mybuilderapp.databinding.ActivityMainBinding
 uz/texnopos/mybuilderapp/databinding/DialogSelfBinding.java
  uz.texnopos.mybuilderapp.databinding.DialogSelfBinding
-uz/texnopos/mybuilderapp/BuildConfig.java
- uz.texnopos.mybuilderapp.BuildConfig
 uz/texnopos/mybuilderapp/databinding/FragmentSplashBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentSplashBinding
 uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java

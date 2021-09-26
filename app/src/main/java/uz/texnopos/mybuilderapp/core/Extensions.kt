@@ -72,6 +72,7 @@ fun TextInputEditText.showError(error: String) {
 fun getFullName(): String = getSharedPreferences().getStringValue(USER_FULL_NAME)
 fun getPhoneNumber(): String = getSharedPreferences().getStringValue(USER_PHONE_NUMBER)
 fun getEmail(): String = getSharedPreferences().getStringValue(USER_EMAIL)
+fun isLoggedIn()= getSharedPreferences().getIntValue(USER_EXISTS,0)==1
 
 fun clearLoginPref() {
     getSharedPreferences().removeKey(USER_FULL_NAME)

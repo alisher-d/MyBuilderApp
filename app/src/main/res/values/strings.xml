@@ -2,7 +2,7 @@
     <string name="app_name">My Builder</string>
     <string name="title_home">Home</string>
     <string name="title_favorite">Favorite</string>
-    <string name="title_profile">Profil</string>
+    <string name="title_profile">Profile</string>
     <string name="title_information">Information</string>
     <string name="google_icon">google icon</string>
     <string name="default_country_text">*Select country</string>

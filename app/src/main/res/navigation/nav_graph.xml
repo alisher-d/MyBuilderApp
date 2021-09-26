@@ -11,10 +11,42 @@
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_splashFragment2_to_mobile_navigation"
-            app:destination="@id/mobile_navigation"
+            android:id="@+id/action_splashFragment2_to_mainFragment"
+            app:destination="@id/mainFragment"
             app:launchSingleTop="true"
-            app:popUpTo="@id/nav_graph"/>
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
-    <include app:graph="@navigation/mobile_navigation" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_resumeFragment"
+            app:destination="@id/resumeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeFragment"
+        android:label="ResumeFragment"
+        tools:layout="@layout/fragment_resume"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_shortInfoFragment"
+            app:destination="@id/shortInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shortInfoFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoFragment"
+        android:label="fragment_personal_info_0"
+        tools:layout="@layout/fragment_personal_info_0" />
 </navigation>

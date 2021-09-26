@@ -6,9 +6,7 @@
   },
   {
     "name": "nav_graph",
-    "navigationXmlIds": [
-      "mobile_navigation"
-    ],
+    "navigationXmlIds": [],
     "deepLinks": []
   }
 ]

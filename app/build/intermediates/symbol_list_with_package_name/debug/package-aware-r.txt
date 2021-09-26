@@ -11,6 +11,9 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim alpha_from_out
+anim alpha_from_out2
+anim alpha_to_in
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -28,6 +31,8 @@ anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
 anim fragment_fast_out_extra_slow_in
+anim from_left
+anim from_right
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -35,6 +40,8 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim to_left
+anim to_right
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1916,6 +1923,7 @@ drawable ic_baseline_my_location_24
 drawable ic_baseline_perm_identity_24
 drawable ic_baseline_person_24
 drawable ic_baseline_phone_24
+drawable ic_cancel
 drawable ic_clock_black_24dp
 drawable ic_close_24
 drawable ic_component_1
@@ -2045,17 +2053,15 @@ id action_container
 id action_context_bar
 id action_divider
 id action_image
+id action_loginFragment_to_shortInfoFragment
+id action_mainFragment_to_loginFragment
+id action_mainFragment_to_resumeFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_navigation_login_to_navigation_profile
-id action_navigation_login_to_navigation_username
-id action_navigation_profile_to_fragmentResume
-id action_navigation_profile_to_navigation_login
-id action_navigation_username_to_navigation_profile
-id action_splashFragment2_to_mobile_navigation
+id action_splashFragment2_to_mainFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2237,7 +2243,6 @@ id header_title
 id hideable
 id home
 id homeAsUp
-id homeMainFragment2
 id honorRequest
 id horizontal_only
 id ic_add
@@ -2286,7 +2291,9 @@ id ln2
 id ln3
 id ln4
 id ln5
+id loginFragment
 id logo
+id mainFragment
 id masked
 id match_constraint
 id match_parent
@@ -2349,6 +2356,7 @@ id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
+id nav_host_fragment_fragment_main
 id nav_view
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
@@ -2358,9 +2366,7 @@ id navigation_favorites
 id navigation_header_container
 id navigation_home
 id navigation_information
-id navigation_login
 id navigation_profile
-id navigation_username
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -2402,6 +2408,7 @@ id ratio
 id rectangle
 id rectangles
 id restart
+id resumeFragment
 id resume_card
 id reverse
 id reverseSawtooth
@@ -2441,6 +2448,7 @@ id selection_type
 id settings
 id sharedValueSet
 id sharedValueUnset
+id shortInfoFragment
 id shortcut
 id showCustom
 id showHome
@@ -2677,6 +2685,7 @@ layout fragment_favorite
 layout fragment_home
 layout fragment_information
 layout fragment_login
+layout fragment_main
 layout fragment_personal_info_0
 layout fragment_profile
 layout fragment_resume
