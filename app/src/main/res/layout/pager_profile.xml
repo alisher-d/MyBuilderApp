@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.builder.profile.ProfilePager"
+    android:layout_margin="@dimen/margin_8"
+    >
+<androidx.core.widget.NestedScrollView
+    android:padding="@dimen/margin_8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:justificationMode="inter_word"
+            android:text="We are a Broadstairs and Tunbridge Wells based company undertaking construction work and project management across London and the South East."/>
+        <View
+            android:layout_marginVertical="@dimen/margin_8"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Trades"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrades"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:spanCount="2"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPortfolio"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/callRequest"
+            android:layout_marginHorizontal="32dp"
+            app:icon="@drawable/ic_call"
+            app:iconGravity="textStart"
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+
+</androidx.cardview.widget.CardView>

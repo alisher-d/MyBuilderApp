@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="uz.texnopos.mybuilderapp.ui.MainFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/resumeFragment"
-        android:name="uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.main.profile.resume.homeMain.ResumeFragment"
         android:label="ResumeFragment"
         tools:layout="@layout/fragment_resume"/>
     <fragment
@@ -42,11 +42,20 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_shortInfoFragment"
-            app:destination="@id/shortInfoFragment" />
+            app:destination="@id/shortInfoFragment"
+            app:popUpTo="@id/mainFragment"/>
+        <action
+            android:id="@+id/action_loginFragment_to_verifyFragment"
+            app:destination="@id/verifyFragment" />
     </fragment>
     <fragment
         android:id="@+id/shortInfoFragment"
         android:name="uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoFragment"
         android:label="fragment_personal_info_0"
         tools:layout="@layout/fragment_personal_info_0" />
+    <fragment
+        android:id="@+id/verifyFragment"
+        tools:layout="@layout/fragment_verify"
+        android:name="uz.texnopos.mybuilderapp.ui.login.verify.VerifyFragment"
+        android:label="VerifyFragment" />
 </navigation>

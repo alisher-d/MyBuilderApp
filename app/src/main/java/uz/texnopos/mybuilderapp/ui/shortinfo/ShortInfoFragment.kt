@@ -66,10 +66,6 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-//        showNavBar(this,false)
-    }
    private fun setUpObserves(){
         viewModel.created.observe(requireActivity(),{
             when(it.status){

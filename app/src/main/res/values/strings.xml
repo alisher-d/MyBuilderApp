@@ -8,9 +8,14 @@
     <string name="default_country_text">*Select country</string>
     <string name="default_region_text">*Select city or region</string>
     <string name="default_state_text">*Select state</string>
-    <string name="tv_address">%1$s\10%2$s\10%3$s</string>
+    <string name="tv_address">%1$s, %2$s, %3$s</string>
     <string name="add_address">Add your address</string>
     <string name="add_description">Write about yourself</string>
     <string name="add_portfolio">Add portfolio</string>
     <string name="add_profession">Add your profession</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: buringisina qaytarip qoyiw kerek default_web_client_id -->
+    <string name="default_web_client_id_2" translatable="false">301225272177-n789b4g3bhs00s0s5f3f0e9rihiukqjm.apps.googleusercontent.com</string>
+
 </resources>

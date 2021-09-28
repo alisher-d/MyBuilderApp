@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [androidx.databinding:viewbinding:4.2.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\b28b41beb6250abc12a07a25815d4294\jetified-viewbinding-4.2.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\4f9658c90281f9b3f43e12e9ab217aae\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\d1232ed1a0e8862addb5b597ad9bd7e4\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -33,6 +33,7 @@ MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Админ\.g
 MERGED from [com.google.firebase:firebase-crashlytics:18.2.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\05f6d36cef67905327579a0567e8c982\jetified-firebase-crashlytics-18.2.1\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\baf5abb5b982a154232c16f2b1e61527\jetified-play-services-auth-19.2.0\AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\29af6924f43096561d8fde307ba3cc9d\jetified-play-services-location-18.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\cdfb116dc0f6c1d9beff4f37cb35b281\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\54dbc52889aaf17cad5d7abdf06642cd\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\f0d5f1f63441a94c10626e51af8d136c\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\2727410c9ac7d8064b7409c9d479f52b\jetified-glide-4.12.0\AndroidManifest.xml:2:1-12:12
@@ -73,6 +74,7 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\А�
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\46394e123d42703c70058dc34f49653a\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\83b33db2dabbe1ae17cb5549c279b8f6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\09d044549d8c379ff7dc7c8a9e265774\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\bf2222e2e4ee30491a983e14bd3eb3a9\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\1fd12cfcc5ca69bedeeb8a47f8a39ffe\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\e947bed4d9fd4fc23af92742294ec502\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\e6148fc6825f662acfae4e2fa71c6d30\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -110,20 +112,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Админ\.gradle\caches\tran
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\971b99e60262f21e2016e51031140cbb\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\29aed256aadb1941e46abbc99bed58f6\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\cf0e95c8c5acb13a551e52c7841916b5\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -178,7 +180,7 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Us
 	android:name
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:8:5-31:19
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:8:5-27:19
 MERGED from [io.insert-koin:koin-android:3.1.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\2d41877d3fd2464a14eab4d9c0e74d6f\jetified-koin-android-3.1.2\AndroidManifest.xml:7:5-20
 MERGED from [io.insert-koin:koin-android:3.1.2] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\2d41877d3fd2464a14eab4d9c0e74d6f\jetified-koin-android-3.1.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\3b73194e1f2587f0e45635e14de7963a\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -273,30 +275,24 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\Админ\.g
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:15:9-50
 	android:name
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:9:9-28
-activity#uz.texnopos.mybuilderapp.ui.profile.VerifyActivity
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:17:9-21:20
+activity#uz.texnopos.mybuilderapp.ui.MainActivity
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:exported
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
 		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:19:13-54
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:18:13-54
-activity#uz.texnopos.mybuilderapp.ui.MainActivity
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:9-30:20
-	android:exported
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:24:13-36
-	android:theme
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:23:13-54
-	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:19-50
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:18:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\MyApps\MyBuilderApp\app\src\main\AndroidManifest.xml
@@ -359,6 +355,8 @@ MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\Адми
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\baf5abb5b982a154232c16f2b1e61527\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\29af6924f43096561d8fde307ba3cc9d\jetified-play-services-location-18.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\29af6924f43096561d8fde307ba3cc9d\jetified-play-services-location-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\cdfb116dc0f6c1d9beff4f37cb35b281\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\cdfb116dc0f6c1d9beff4f37cb35b281\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\54dbc52889aaf17cad5d7abdf06642cd\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\54dbc52889aaf17cad5d7abdf06642cd\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\f0d5f1f63441a94c10626e51af8d136c\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
@@ -439,6 +437,8 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Адми�
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\83b33db2dabbe1ae17cb5549c279b8f6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\09d044549d8c379ff7dc7c8a9e265774\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\09d044549d8c379ff7dc7c8a9e265774\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\bf2222e2e4ee30491a983e14bd3eb3a9\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\bf2222e2e4ee30491a983e14bd3eb3a9\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\1fd12cfcc5ca69bedeeb8a47f8a39ffe\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\1fd12cfcc5ca69bedeeb8a47f8a39ffe\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Админ\.gradle\caches\transforms-2\files-2.1\e947bed4d9fd4fc23af92742294ec502\viewpager-1.0.0\AndroidManifest.xml:20:5-44

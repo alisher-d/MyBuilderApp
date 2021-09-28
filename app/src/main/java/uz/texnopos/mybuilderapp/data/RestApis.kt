@@ -2,9 +2,7 @@ package uz.texnopos.mybuilderapp.data
 
 import retrofit2.Call
 import retrofit2.http.*
-import uz.texnopos.mybuilderapp.data.models.Country
-import uz.texnopos.mybuilderapp.data.models.RequestModel
-import uz.texnopos.mybuilderapp.data.models.UserModel
+import uz.texnopos.mybuilderapp.data.models.*
 
 interface RestApis {
     @GET("getUserData")
@@ -12,4 +10,7 @@ interface RestApis {
 
     @GET("getPlaces")
     fun getPlaces():Call<RequestModel<List<Country>>>
+
+    @GET("getAllTrades")
+    fun getAllTrades(@Query("jobName") jobName:String):Call<RequestModel<List<TradeModel>>>
 }

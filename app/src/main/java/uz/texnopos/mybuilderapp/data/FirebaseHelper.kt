@@ -106,14 +106,29 @@ class FirebaseHelper(
     }
 
     fun removeResume(
-        resumeId:String,
+        resumeId: String,
         onSuccess: (msg: String) -> Unit,
         onFailure: (msg: String?) -> Unit
-    ){
+    ) {
         db.collection("users/${auth.currentUser!!.uid}/resumes")
             .document(resumeId).delete()
             .addOnSuccessListener {
                 onSuccess.invoke("Removed")
+            }
+            .addOnFailureListener {
+                onFailure.invoke(it.localizedMessage)
+            }
+    }
+
+    fun getSingleResume(
+        userId: String, resumeId: String,
+        onSuccess: (ResumeModel) -> Unit,
+        onFailure: (msg: String?) -> Unit
+    ) {
+        db.collection("users/${userId}/resumes").document(resumeId).get()
+            .addOnSuccessListener {
+                val resume=it.toObject(ResumeModel::class.java)!!
+                onSuccess.invoke(resume)
             }
             .addOnFailureListener {
                 onFailure.invoke(it.localizedMessage)

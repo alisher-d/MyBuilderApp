@@ -26,10 +26,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyBuilderApp" >
         <activity
-            android:name="uz.texnopos.mybuilderapp.ui.profile.VerifyActivity"
-            android:theme="@style/Theme.MyBuilderApp" >
-        </activity>
-        <activity
             android:name="uz.texnopos.mybuilderapp.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MyBuilderApp" >

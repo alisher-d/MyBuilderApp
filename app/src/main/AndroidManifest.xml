@@ -14,11 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBuilderApp"
         >
-        <activity
-            android:name=".ui.profile.VerifyActivity"
-            android:theme="@style/Theme.MyBuilderApp">
 
-        </activity>
         <activity android:name=".ui.MainActivity"
             android:theme="@style/Theme.MyBuilderApp"
             android:exported="true">

@@ -12,12 +12,15 @@ import uz.texnopos.mybuilderapp.data.AuthHelper
 import uz.texnopos.mybuilderapp.data.FirebaseHelper
 import uz.texnopos.mybuilderapp.data.RestApis
 import uz.texnopos.mybuilderapp.data.repository.Repository
-import uz.texnopos.mybuilderapp.ui.home.HomeViewModel
 import uz.texnopos.mybuilderapp.ui.login.LoginViewModel
-import uz.texnopos.mybuilderapp.ui.profile.ProfileViewModel
-import uz.texnopos.mybuilderapp.ui.resume.address.AddressViewModel
-import uz.texnopos.mybuilderapp.ui.resume.homeMain.ResumeViewModel
-import uz.texnopos.mybuilderapp.ui.resume.professions.JobsViewModel
+import uz.texnopos.mybuilderapp.ui.login.verify.VerifyViewModel
+import uz.texnopos.mybuilderapp.ui.main.builder.BuilderViewModel
+import uz.texnopos.mybuilderapp.ui.main.home.HomeViewModel
+import uz.texnopos.mybuilderapp.ui.main.trades.TradeViewModel
+import uz.texnopos.mybuilderapp.ui.main.profile.ProfileViewModel
+import uz.texnopos.mybuilderapp.ui.main.profile.resume.address.AddressViewModel
+import uz.texnopos.mybuilderapp.ui.main.profile.resume.homeMain.ResumeViewModel
+import uz.texnopos.mybuilderapp.ui.main.profile.resume.professions.JobsViewModel
 import uz.texnopos.mybuilderapp.ui.shortinfo.ShortInfoViewModel
 
 val viewModelModule = module {
@@ -28,6 +31,9 @@ val viewModelModule = module {
     viewModel { JobsViewModel(get()) }
     viewModel { AddressViewModel(get()) }
     viewModel { HomeViewModel(get()) }
+    viewModel { TradeViewModel(get()) }
+    viewModel { VerifyViewModel(get()) }
+    viewModel { BuilderViewModel(get()) }
 }
 val repositoryModule = module {
     single { Repository(get()) }

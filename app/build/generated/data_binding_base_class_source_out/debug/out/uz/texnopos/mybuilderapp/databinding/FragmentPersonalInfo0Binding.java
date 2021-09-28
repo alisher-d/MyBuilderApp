@@ -4,10 +4,12 @@ package uz.texnopos.mybuilderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -18,7 +20,7 @@ import uz.texnopos.mybuilderapp.R;
 
 public final class FragmentPersonalInfo0Binding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final MaterialButton btnContinue;
@@ -42,13 +44,17 @@ public final class FragmentPersonalInfo0Binding implements ViewBinding {
   public final TextInputLayout inputPhone;
 
   @NonNull
-  public final AppBarMainBinding toolbar;
+  public final AppBarLayout toolbar;
 
-  private FragmentPersonalInfo0Binding(@NonNull RelativeLayout rootView,
+  @NonNull
+  public final TextView toolbarTitle;
+
+  private FragmentPersonalInfo0Binding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnContinue, @NonNull TextInputEditText etEmail,
       @NonNull TextInputEditText etFullName, @NonNull TextInputEditText etPhone,
       @NonNull TextInputLayout inputEmail, @NonNull TextInputLayout inputFullName,
-      @NonNull TextInputLayout inputPhone, @NonNull AppBarMainBinding toolbar) {
+      @NonNull TextInputLayout inputPhone, @NonNull AppBarLayout toolbar,
+      @NonNull TextView toolbarTitle) {
     this.rootView = rootView;
     this.btnContinue = btnContinue;
     this.etEmail = etEmail;
@@ -58,11 +64,12 @@ public final class FragmentPersonalInfo0Binding implements ViewBinding {
     this.inputFullName = inputFullName;
     this.inputPhone = inputPhone;
     this.toolbar = toolbar;
+    this.toolbarTitle = toolbarTitle;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -130,14 +137,19 @@ public final class FragmentPersonalInfo0Binding implements ViewBinding {
       }
 
       id = R.id.toolbar;
-      View toolbar = rootView.findViewById(id);
+      AppBarLayout toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
-      AppBarMainBinding binding_toolbar = AppBarMainBinding.bind(toolbar);
 
-      return new FragmentPersonalInfo0Binding((RelativeLayout) rootView, btnContinue, etEmail,
-          etFullName, etPhone, inputEmail, inputFullName, inputPhone, binding_toolbar);
+      id = R.id.toolbar_title;
+      TextView toolbarTitle = rootView.findViewById(id);
+      if (toolbarTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentPersonalInfo0Binding((ConstraintLayout) rootView, btnContinue, etEmail,
+          etFullName, etPhone, inputEmail, inputFullName, inputPhone, toolbar, toolbarTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.resume.self.SelfDialog">
+    tools:context=".ui.main.profile.resume.self.SelfDialog">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
