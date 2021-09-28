@@ -108,6 +108,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_feedback.xml.flat",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_feedback.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_resume.xml.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_resume.xml"
     },
@@ -122,6 +126,10 @@
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete.xml.flat",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_post_feedback.xml.flat",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\dialog_post_feedback.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",

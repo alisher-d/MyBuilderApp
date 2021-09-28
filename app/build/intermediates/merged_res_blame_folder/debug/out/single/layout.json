@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_feedback.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_feedback.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_resume.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_resume.xml"
     },
@@ -26,6 +30,10 @@
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_verify.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\activity_verify.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_post_feedback.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\dialog_post_feedback.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_resume.xml",

@@ -18,6 +18,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/custom_dialog.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_address.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_personal_info.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_post_feedback.xml" value="0.25" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_select_profession.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_self.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/edit_item_address.xml" value="0.20833333333333334" />
@@ -39,6 +40,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_trade.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/image.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_builder_card.xml" value="0.20833333333333334" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_feedback.xml" value="0.5" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_portfolio_image.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_profile_trade.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_resume.xml" value="0.20833333333333334" />
@@ -46,7 +48,8 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_shortinfo_resume_card.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_spinner_profession.xml" value="0.16296296296296298" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_trade.xml" value="0.17962962962962964" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_profile.xml" value="0.33" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_feedback.xml" value="0.20833333333333334" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_profile.xml" value="0.25" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_sign_phone.xml" value="0.46436781609195404" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/personal_data.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/progress_dialog.xml" value="0.25" />

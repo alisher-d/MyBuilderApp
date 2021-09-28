@@ -5,8 +5,6 @@ import retrofit2.http.*
 import uz.texnopos.mybuilderapp.data.models.*
 
 interface RestApis {
-    @GET("getUserData")
-    fun getUserData(@Query("userId") userId:String): Call<RequestModel<UserModel>>
 
     @GET("getPlaces")
     fun getPlaces():Call<RequestModel<List<Country>>>

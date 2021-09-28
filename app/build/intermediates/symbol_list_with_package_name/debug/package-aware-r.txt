@@ -2166,6 +2166,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id cratedTime
 id create_new_resume
 id createdTime
 id currentState
@@ -2234,6 +2235,8 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id feedbackBody
+id feedbackTitle
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2425,6 +2428,7 @@ id progress_circular
 id progress_horizontal
 id radial
 id radio
+id rating
 id ratio
 id rectangle
 id rectangles
@@ -2439,6 +2443,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvFeedbacks
 id rvPortfolio
 id rvProfession
 id rvTrades
@@ -2588,6 +2593,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userAvatar
 id userImage
 id userRating
 id verifyBtn
@@ -2703,6 +2709,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_address
 layout dialog_personal_info
+layout dialog_post_feedback
 layout dialog_select_profession
 layout dialog_self
 layout edit_item_address
@@ -2723,6 +2730,7 @@ layout fragment_splash
 layout fragment_trade
 layout fragment_verify
 layout item_builder_card
+layout item_feedback
 layout item_portfolio_image
 layout item_profile_trade
 layout item_resume
