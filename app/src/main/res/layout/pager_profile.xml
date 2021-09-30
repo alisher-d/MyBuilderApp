@@ -62,7 +62,8 @@
             android:id="@+id/rvPortfolio"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:spanCount="3"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:layout_height="wrap_content"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/callRequest"

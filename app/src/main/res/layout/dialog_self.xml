@@ -57,23 +57,22 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:boxBackgroundColor="@color/white"
-        app:boxBackgroundMode="outline"
-        app:cardElevation="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxStrokeColor="@color/sky"
         app:counterMaxLength="500"
+        app:counterEnabled="true"
         app:errorEnabled="true"
-        app:helperText="*Write Description"
         app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:gravity="top|left|center_vertical|center_horizontal|center|start"
             android:id="@+id/etDescription"
-            android:inputType="none|text|textMultiLine|textEmailAddress"
+            android:inputType="text|textMultiLine"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:cursorVisible="true"
-            android:maxLines="10"
-            android:lines="6"
-            android:minLines="6"
+            android:hint="Description"
+            android:maxLength="500"
             android:scrollbars="none" />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

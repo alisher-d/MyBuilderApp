@@ -11,7 +11,7 @@ import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.databinding.DialogSelfBinding
 
 
-class SelfDialog(fragmentManager: FragmentManager) : DialogFragment(R.layout.fragment_self) {
+class SelfDialog(fragmentManager: FragmentManager) : DialogFragment(R.layout.dialog_self) {
     private lateinit var bind: DialogSelfBinding
 
     init {
@@ -35,11 +35,11 @@ class SelfDialog(fragmentManager: FragmentManager) : DialogFragment(R.layout.fra
             btSave.onClick {
                 val text=etDescription.textToString()
                 val cnt=text.split(' ').count()
-                if (cnt>13){
+                if (cnt>8){
                     onClickSave.invoke(text)
                     dismiss()
                 }
-                else toast("Minimum 15 word!")
+                else toast("Minimum 10 word!")
             }
         }
         return bind.root

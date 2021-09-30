@@ -33,7 +33,6 @@ class SingleBuilderFragment : Fragment(R.layout.fragment_single_builder) {
     private val fragments = listOf(ProfilePager(this), FeedbackPager(this))
     lateinit var trade: TradeModel
     val resume=MutableLiveData<ResumeModel>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         trade = arguments?.getParcelable(RESUME)!!
@@ -49,6 +48,9 @@ class SingleBuilderFragment : Fragment(R.layout.fragment_single_builder) {
         val adapter =
             ViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle, fragments)
         bind = FragmentSingleBuilderBinding.bind(view).apply {
+            toolbar.setNavigationOnClickListener {
+                requireActivity().onBackPressed()
+            }
             tvFullName.text=trade.fullname
                 tvAddress.text = requireContext()
                 .getString(
@@ -79,7 +81,7 @@ class SingleBuilderFragment : Fragment(R.layout.fragment_single_builder) {
             }
         })
         resume.observe(requireActivity(),{
-            bind.createdTime.text=getDate(it.createdTime!!)
+//            bind.createdTime.text=getDate(it.createdTime!!)
         })
     }
     private fun getDate(millis:Long):String{

@@ -23,6 +23,6 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
         Handler(Looper.getMainLooper()).postDelayed({
            navController.navigate(R.id.action_splashFragment2_to_mainFragment)
-        }, 1500)
+        }, 500)
     }
 }

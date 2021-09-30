@@ -2156,6 +2156,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id collapsing
 id confirm_button
 id constraint
 id container
@@ -2267,6 +2268,13 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id htab_appbar
+id htab_collapse_toolbar
+id htab_header
+id htab_maincontent
+id htab_tabs
+id htab_toolbar
+id htab_viewpager
 id ic_add
 id icon
 id icon_group
@@ -2724,7 +2732,6 @@ layout fragment_main
 layout fragment_personal_info_0
 layout fragment_profile
 layout fragment_resume
-layout fragment_self
 layout fragment_single_builder
 layout fragment_splash
 layout fragment_trade
@@ -2893,6 +2900,7 @@ string default_region_text
 string default_state_text
 string default_web_client_id
 string default_web_client_id_2
+string describe
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior

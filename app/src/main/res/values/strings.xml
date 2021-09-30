@@ -17,5 +17,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- TODO: buringisina qaytarip qoyiw kerek default_web_client_id -->
     <string name="default_web_client_id_2" translatable="false">301225272177-n789b4g3bhs00s0s5f3f0e9rihiukqjm.apps.googleusercontent.com</string>
+    <string name="describe">Describe your experience (optional)</string>
 
 </resources>

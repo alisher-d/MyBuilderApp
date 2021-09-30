@@ -25,12 +25,8 @@ class SignPhoneFragment(val parentFragment: LoginFragment) : Fragment(R.layout.p
         super.onViewCreated(view, savedInstanceState)
         bind = PagerSignPhoneBinding.bind(view)
         bind.apply {
-            inputPhone.setEndIconOnClickListener {
-                etPhone.setText("")
 
-            }
             etPhone.addTextChangedListener(MaskWatcher.phoneNumber())
-            etPhone.removeTextChangedListener(MaskWatcher.phoneNumber())
             etPhone.doOnTextChanged { text, _, _, _ ->
                 when {
                     text!!.isEmpty() -> btnGetCode.isEnabled = false

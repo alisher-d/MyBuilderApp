@@ -23,6 +23,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeErrorColor="#D50000"
         app:errorEnabled="true"
+
         android:layout_gravity="center_horizontal"
         app:prefixText="+998"
         app:counterMaxLength="14"

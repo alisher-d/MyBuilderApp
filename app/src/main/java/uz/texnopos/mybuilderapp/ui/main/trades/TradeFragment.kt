@@ -26,6 +26,7 @@ class TradeFragment : Fragment(R.layout.fragment_trade) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         jobName = arguments?.getString(JOB_NAME)!!
+        showProgress()
         refresh()
         setUpObserver()
     }
@@ -56,7 +57,7 @@ class TradeFragment : Fragment(R.layout.fragment_trade) {
     private fun setUpObserver() {
         viewModel.trades.observe(requireActivity(), {
             when (it.status) {
-                LoadingState.LOADING -> showProgress()
+                LoadingState.LOADING -> {}
                 LoadingState.SUCCESS -> {
                     hideProgress()
                     adapter.setData(it.data!!)

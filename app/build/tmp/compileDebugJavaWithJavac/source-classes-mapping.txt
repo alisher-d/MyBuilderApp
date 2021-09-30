@@ -54,8 +54,6 @@ uz/texnopos/mybuilderapp/databinding/FragmentVerifyBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentVerifyBinding
 uz/texnopos/mybuilderapp/databinding/EditItemAddressBinding.java
  uz.texnopos.mybuilderapp.databinding.EditItemAddressBinding
-uz/texnopos/mybuilderapp/databinding/FragmentSelfBinding.java
- uz.texnopos.mybuilderapp.databinding.FragmentSelfBinding
 uz/texnopos/mybuilderapp/databinding/ItemPortfolioImageBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemPortfolioImageBinding
 uz/texnopos/mybuilderapp/databinding/AppBarMainBinding.java

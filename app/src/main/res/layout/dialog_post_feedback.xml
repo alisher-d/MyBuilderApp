@@ -65,4 +65,38 @@
                 android:textColor="@android:color/black" />
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
+    <RatingBar
+        android:id="@+id/rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_main"
+        android:layout_width="wrap_content"
+        android:stepSize="1"
+        android:layout_margin="@dimen/margin_8"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxStrokeColor="@color/sky"
+        app:counterMaxLength="500"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:gravity="top|left|center_vertical|center_horizontal|center|start"
+            android:id="@+id/etDescription"
+            android:inputType="text|textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:hint="@string/describe"
+            android:maxLength="500"
+            android:scrollbars="none" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
