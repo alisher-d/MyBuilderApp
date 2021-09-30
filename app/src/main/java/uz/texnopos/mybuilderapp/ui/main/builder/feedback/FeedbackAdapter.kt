@@ -3,6 +3,7 @@ package uz.texnopos.mybuilderapp.ui.main.builder.feedback
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import uz.texnopos.mybuilderapp.core.toDate
 import uz.texnopos.mybuilderapp.data.models.Feedback
 import uz.texnopos.mybuilderapp.databinding.ItemFeedbackBinding
 
@@ -12,7 +13,7 @@ class FeedbackAdapter : RecyclerView.Adapter<FeedbackAdapter.ItemViewHolder>() {
             bind.apply {
                 feedbackBody.text=feedback.text
                 rating.rating=feedback.rating!!.toFloat()
-                createdTime.text=feedback.createdTime.toString()
+                createdTime.text=feedback.createdTime!!.toDate()
                 tvFullName.text=feedback.authorId!!.dropLast(15)
             }
         }

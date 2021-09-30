@@ -28,6 +28,7 @@ class FeedbackPager(val parentFragment: SingleBuilderFragment) : Fragment(R.layo
 
         bind = PagerFeedbackBinding.bind(view).apply {
             rvFeedbacks.adapter = feedbackAdapter
+
             rating.setOnRatingBarChangeListener { ratingBar, fl, b ->
                 if (auth.currentUser != null)
                     PostFeedbackDialog(this@FeedbackPager)

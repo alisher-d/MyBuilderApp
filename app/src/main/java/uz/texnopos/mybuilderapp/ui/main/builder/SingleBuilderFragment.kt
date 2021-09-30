@@ -14,6 +14,7 @@ import uz.texnopos.mybuilderapp.core.Constants.RESUME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULLNAME
 import uz.texnopos.mybuilderapp.core.hideProgress
 import uz.texnopos.mybuilderapp.core.showProgress
+import uz.texnopos.mybuilderapp.core.toDate
 import uz.texnopos.mybuilderapp.core.toast
 import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
@@ -81,12 +82,7 @@ class SingleBuilderFragment : Fragment(R.layout.fragment_single_builder) {
             }
         })
         resume.observe(requireActivity(),{
-//            bind.createdTime.text=getDate(it.createdTime!!)
+            bind.createdTime.text=it.createdTime!!.toDate()
         })
-    }
-    private fun getDate(millis:Long):String{
-        val calendar=Calendar.getInstance()
-        calendar.timeInMillis=millis
-        return calendar.time.toString()
     }
 }

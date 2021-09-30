@@ -102,6 +102,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private fun updateUI() {
         if (auth.currentUser != null) {
             if (!isLoggedIn()) navController.navigate(R.id.action_loginFragment_to_shortInfoFragment)
+            else requireActivity().onBackPressed()
         }
     }
 }

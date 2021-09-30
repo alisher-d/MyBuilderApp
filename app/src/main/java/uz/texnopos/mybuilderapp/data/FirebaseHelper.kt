@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
 import uz.texnopos.mybuilderapp.core.Constants.TAG
 import uz.texnopos.mybuilderapp.data.models.Feedback
@@ -161,7 +162,7 @@ class FirebaseHelper(
         onRemoved: (String) -> Unit,
         onFailure: (String?) -> Unit
     ) {
-        db.collection("users/${userId}/resumes/${resumeId}/feedbacks")
+        db.collection("users/${userId}/resumes/${resumeId}/feedbacks").orderBy("createdTime",Query.Direction.DESCENDING)
             .addSnapshotListener { docs, e ->
                 if (e!=null){
                     onFailure.invoke(e.localizedMessage)
@@ -169,7 +170,6 @@ class FirebaseHelper(
                     if (docs!!.documents.isNotEmpty())
                     for (doc in docs.documentChanges){
                         val feedback=doc.document.toObject(Feedback::class.java)
-                        Log.d(TAG, "getAllFeedbacks: ${feedback} ")
                         when(doc.type) {
                             DocumentChange.Type.ADDED -> onAdded.invoke(feedback)
                             DocumentChange.Type.MODIFIED -> onModified.invoke(feedback)

@@ -20,6 +20,7 @@ import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULLNAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
+import java.util.*
 
 
 fun Context.toast(text: String, duration: Int = Toast.LENGTH_LONG) =
@@ -120,4 +121,10 @@ fun <T> callApi(
         }
 
     })
+}
+
+fun Long.toDate(): String {
+    val calendar = Calendar.getInstance()
+    calendar.timeInMillis = this
+    return calendar.time.toString()
 }
