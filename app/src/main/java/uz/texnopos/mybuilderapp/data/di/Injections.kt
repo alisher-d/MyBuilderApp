@@ -15,6 +15,8 @@ import uz.texnopos.mybuilderapp.data.repository.Repository
 import uz.texnopos.mybuilderapp.ui.login.LoginViewModel
 import uz.texnopos.mybuilderapp.ui.login.verify.VerifyViewModel
 import uz.texnopos.mybuilderapp.ui.main.builder.BuilderViewModel
+import uz.texnopos.mybuilderapp.ui.main.builder.feedback.FeedbackViewModel
+import uz.texnopos.mybuilderapp.ui.main.builder.feedback.post.PostViewModel
 import uz.texnopos.mybuilderapp.ui.main.home.HomeViewModel
 import uz.texnopos.mybuilderapp.ui.main.trades.TradeViewModel
 import uz.texnopos.mybuilderapp.ui.main.profile.ProfileViewModel
@@ -34,6 +36,8 @@ val viewModelModule = module {
     viewModel { TradeViewModel(get()) }
     viewModel { VerifyViewModel(get()) }
     viewModel { BuilderViewModel(get()) }
+    viewModel { FeedbackViewModel(get()) }
+    viewModel { PostViewModel(get()) }
 }
 val repositoryModule = module {
     single { Repository(get()) }

@@ -1,6 +1,34 @@
 package uz.texnopos.mybuilderapp.ui.main.builder.feedback
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import uz.texnopos.mybuilderapp.data.FirebaseHelper
+import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.data.models.Feedback
 
-class FeedbackViewModel():ViewModel() {
+class FeedbackViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() {
+
+    fun getAllFeedbacks(
+        userId: String, resumeId: String,
+        onAdded: (Feedback) -> Unit,
+        onModified: (Feedback) -> Unit,
+        onRemoved: (String) -> Unit,
+        onFailure: (String?) -> Unit
+    ){
+        firebaseHelper.getAllFeedbacks(
+            userId,resumeId,
+            {
+                onAdded.invoke(it)
+            },
+            {
+                onModified.invoke(it)
+            },
+            {
+                onRemoved.invoke(it)
+            },
+            {
+                onFailure.invoke(it)
+            }
+        )
+    }
 }

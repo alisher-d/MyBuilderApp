@@ -1,9 +1,12 @@
 package uz.texnopos.mybuilderapp.data
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import uz.texnopos.mybuilderapp.core.Constants.TAG
+import uz.texnopos.mybuilderapp.data.models.Feedback
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 
@@ -127,11 +130,55 @@ class FirebaseHelper(
     ) {
         db.collection("users/${userId}/resumes").document(resumeId).get()
             .addOnSuccessListener {
-                val resume=it.toObject(ResumeModel::class.java)!!
+                val resume = it.toObject(ResumeModel::class.java)!!
                 onSuccess.invoke(resume)
             }
             .addOnFailureListener {
                 onFailure.invoke(it.localizedMessage)
             }
+    }
+
+    fun postFeedback(
+        feedback: Feedback,
+        onSuccess: (String) -> Unit,
+        onFailure: (msg: String?) -> Unit
+    ) {
+        feedback.authorId = auth.currentUser!!.uid
+        db.collection("users/${feedback.receiverId}/resumes/${feedback.resumeId}/feedbacks")
+            .document(feedback.id!!).set(feedback)
+            .addOnSuccessListener {
+                onSuccess.invoke("Thanks")
+            }
+            .addOnFailureListener {
+                onFailure.invoke(it.localizedMessage)
+            }
+    }
+
+    fun getAllFeedbacks(
+        userId: String, resumeId: String,
+        onAdded: (Feedback) -> Unit,
+        onModified: (Feedback) -> Unit,
+        onRemoved: (String) -> Unit,
+        onFailure: (String?) -> Unit
+    ) {
+        db.collection("users/${userId}/resumes/${resumeId}/feedbacks")
+            .addSnapshotListener { docs, e ->
+                if (e!=null){
+                    onFailure.invoke(e.localizedMessage)
+                }else{
+                    if (docs!!.documents.isNotEmpty())
+                    for (doc in docs.documentChanges){
+                        val feedback=doc.document.toObject(Feedback::class.java)
+                        Log.d(TAG, "getAllFeedbacks: ${feedback} ")
+                        when(doc.type) {
+                            DocumentChange.Type.ADDED -> onAdded.invoke(feedback)
+                            DocumentChange.Type.MODIFIED -> onModified.invoke(feedback)
+                            DocumentChange.Type.REMOVED-> onRemoved.invoke(feedback.id!!)
+                        }
+                    }
+                }
+
+            }
+
     }
 }

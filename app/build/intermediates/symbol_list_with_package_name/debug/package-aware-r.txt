@@ -2125,6 +2125,7 @@ id bt_close
 id bt_save
 id btnContinue
 id btnLogin
+id btnPost
 id btnPublish
 id btnSave
 id btn_get_code
@@ -2167,9 +2168,9 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
-id cratedTime
 id create_new_resume
 id createdTime
+id created_time
 id currentState
 id custom
 id customPanel
@@ -2228,6 +2229,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id etDescription
 id etEmail
+id etFeedback
 id etFullName
 id etPassword
 id etPhone

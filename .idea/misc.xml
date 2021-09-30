@@ -18,7 +18,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/custom_dialog.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_address.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_personal_info.xml" value="0.1537037037037037" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_post_feedback.xml" value="0.25" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_post_feedback.xml" value="0.33" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_select_profession.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/dialog_self.xml" value="0.33" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/edit_item_address.xml" value="0.20833333333333334" />
@@ -35,12 +35,12 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_profile.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_resume.xml" value="0.1" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_self.xml" value="0.1537037037037037" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_single_builder.xml" value="0.2" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_single_builder.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_splash.xml" value="0.18" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_trade.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/image.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_builder_card.xml" value="0.20833333333333334" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_feedback.xml" value="0.5" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_feedback.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_portfolio_image.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_profile_trade.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_resume.xml" value="0.20833333333333334" />

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/white"
     tools:context=".ui.main.builder.SingleBuilderFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,7 +19,8 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/white"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
@@ -50,10 +52,12 @@
                             style="@style/Widget.AppCompat.RatingBar.Indicator"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:isIndicator="false"
+                            android:isIndicator="true"
                             android:numStars="5"
+                            android:progressBackgroundTint="#777373"
                             android:progressTint="@color/black"
-                            android:rating="3.5"
+                            android:stepSize="0.1"
+                            android:rating="3"
                             android:scaleX=".7"
                             android:scaleY=".7"
                             app:layout_constraintEnd_toEndOf="parent"

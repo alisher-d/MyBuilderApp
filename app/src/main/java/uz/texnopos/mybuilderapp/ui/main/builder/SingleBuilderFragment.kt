@@ -27,7 +27,7 @@ import java.util.*
 
 class SingleBuilderFragment : Fragment(R.layout.fragment_single_builder) {
 
-    private lateinit var bind: FragmentSingleBuilderBinding
+    lateinit var bind: FragmentSingleBuilderBinding
     private lateinit var navController: NavController
     private val viewModel by viewModel<BuilderViewModel>()
     private val fragments = listOf(ProfilePager(this), FeedbackPager(this))
