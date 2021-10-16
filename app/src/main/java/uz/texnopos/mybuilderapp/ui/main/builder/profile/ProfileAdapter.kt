@@ -3,7 +3,6 @@ package uz.texnopos.mybuilderapp.ui.main.builder.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import uz.texnopos.mybuilderapp.databinding.ItemProfileTradeBinding
 import uz.texnopos.mybuilderapp.databinding.ItemTradeBinding
 
 class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ItemViewHolder>() {
@@ -23,11 +22,6 @@ class ProfileAdapter : RecyclerView.Adapter<ProfileAdapter.ItemViewHolder>() {
             this.models.add(i)
             notifyItemInserted(this.models.lastIndex)
         }
-    }
-
-    private var onClick: (String) -> Unit = {}
-    fun onItemClickListener(onClick: (String) -> Unit) {
-        this.onClick = onClick
     }
 
     override fun getItemCount() = models.size

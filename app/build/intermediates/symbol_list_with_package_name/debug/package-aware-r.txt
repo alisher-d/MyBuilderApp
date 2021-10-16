@@ -2062,6 +2062,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_homeFragment_to_tradeFragment2
 id action_image
 id action_loginFragment_to_shortInfoFragment
 id action_loginFragment_to_verifyFragment
@@ -2072,10 +2073,9 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_navigation_home_to_tradeFragment
 id action_splashFragment2_to_mainFragment
 id action_text
-id action_tradeFragment_to_singleBuilderFragment
+id action_tradeFragment2_to_singleBuilderFragment2
 id actions
 id activity_chooser_view_content
 id add
@@ -2097,6 +2097,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id app_bar_main
+id appbar
 id arc
 id asConfigured
 id async
@@ -2104,7 +2105,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back
+id backdrop
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2158,6 +2159,7 @@ id clockwise
 id closest
 id collapseActionView
 id collapsing
+id collapsing_toolbar
 id confirm_button
 id constraint
 id container
@@ -2239,7 +2241,6 @@ id expand_activities_button
 id expanded_menu
 id fade
 id feedbackBody
-id feedbackTitle
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2268,15 +2269,10 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id homeFragment
+id home_nav_graph
 id honorRequest
 id horizontal_only
-id htab_appbar
-id htab_collapse_toolbar
-id htab_header
-id htab_maincontent
-id htab_tabs
-id htab_toolbar
-id htab_viewpager
 id ic_add
 id icon
 id icon_group
@@ -2326,6 +2322,7 @@ id ln5
 id loginFragment
 id logo
 id mainFragment
+id main_content
 id masked
 id match_constraint
 id match_parent
@@ -2385,11 +2382,12 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id nav_activity_main
 id nav_controller_view_tag
+id nav_fragment_main
 id nav_graph
-id nav_host_fragment_activity_main
+id nav_home
 id nav_host_fragment_container
-id nav_host_fragment_fragment_main
 id nav_view
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
@@ -2444,6 +2442,7 @@ id rectangle
 id rectangles
 id restart
 id resumeFragment
+id resumeRating
 id resume_card
 id reverse
 id reverseSawtooth
@@ -2493,7 +2492,7 @@ id showHome
 id showTitle
 id sign_in_google
 id sin
-id singleBuilderFragment
+id singleBuilderFragment2
 id skipCollapsed
 id skipped
 id slide
@@ -2574,7 +2573,7 @@ id toolbar_title
 id top
 id topPanel
 id touch_outside
-id tradeFragment
+id tradeFragment2
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -2595,9 +2594,11 @@ id tvFullName
 id tvPhone
 id tvProfession
 id tvPublish
+id tvRatingValue
 id tvRegion
 id tvState
 id tvTrade
+id txt
 id unchecked
 id uniform
 id unlabeled
@@ -2605,7 +2606,6 @@ id up
 id useLogo
 id userAvatar
 id userImage
-id userRating
 id verifyBtn
 id verifyFragment
 id vertical_only
@@ -2728,6 +2728,7 @@ layout edit_item_profession
 layout edit_item_self
 layout fragment_favorite
 layout fragment_home
+layout fragment_home_in
 layout fragment_information
 layout fragment_login
 layout fragment_main
@@ -2835,6 +2836,7 @@ menu bottom_nav_menu
 menu toolbar_settings
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation home_nav_graph
 navigation mobile_navigation
 navigation nav_graph
 plurals mtrl_badge_content_description
@@ -2981,12 +2983,15 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
 string search_menu_title
+string sign_up_in_with_google
 string status_bar_notification_info_overflow
+string the_better_way_nto_find_a_builder
 string title_favorite
 string title_home
 string title_information
 string title_profile
 string tv_address
+string tv_feedback_count
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3719,6 +3724,8 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style collapsingToolbarLayoutTitleColor
+style expandingToolbarLayoutTitleColor
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

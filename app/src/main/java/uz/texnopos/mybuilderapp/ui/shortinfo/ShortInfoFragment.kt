@@ -2,23 +2,17 @@ package uz.texnopos.mybuilderapp.ui.shortinfo
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
-import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
-import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentPersonalInfo0Binding
-import uz.texnopos.mybuilderapp.ui.MainActivity
 
-class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
+class ShortInfoFragment : Fragment(R.layout.fragment_personal_info_0) {
     lateinit var bind: FragmentPersonalInfo0Binding
-    private val auth:FirebaseAuth by inject()
-    lateinit var navController: NavController
+    private val auth: FirebaseAuth by inject()
     private val viewModel by viewModel<ShortInfoViewModel>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,7 +25,6 @@ class ShortInfoFragment : BaseFragment(R.layout.fragment_personal_info_0) {
             etFullName.setText(displayName)
             etPhone.setText(auth.currentUser!!.phoneNumber ?: "")
             etEmail.setText(auth.currentUser!!.email ?: "")
-            navController = Navigation.findNavController(view)
 
             btnContinue.onClick {
                 if (validate()) {

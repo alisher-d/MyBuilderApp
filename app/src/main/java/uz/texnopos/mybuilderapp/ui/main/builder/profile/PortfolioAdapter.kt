@@ -13,16 +13,7 @@ class PortfolioAdapter : RecyclerView.Adapter<PortfolioAdapter.ItemViewHolder>()
         }
     }
 
-    var models = mutableListOf<String>(
-        "Trade1",
-        "Trade1",
-        "Trade1",
-        "Trade1",
-        "Trade1",
-        "Trade1",
-        "Trade1",
-        "Trade1",
-    )
+    var models = mutableListOf<String>()
 
     fun setData(models: List<String>) {
         for (i in models) {

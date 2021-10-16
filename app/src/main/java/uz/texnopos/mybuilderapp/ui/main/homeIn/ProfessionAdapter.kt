@@ -1,9 +1,8 @@
-package uz.texnopos.mybuilderapp.ui.main.home
+package uz.texnopos.mybuilderapp.ui.main.homeIn
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_builder_card.view.*
 import uz.texnopos.mybuilderapp.core.onClick

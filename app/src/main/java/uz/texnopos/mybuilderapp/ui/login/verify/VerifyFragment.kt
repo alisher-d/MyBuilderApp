@@ -13,9 +13,8 @@ import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.core.hideProgress
 import uz.texnopos.mybuilderapp.core.showProgress
 import uz.texnopos.mybuilderapp.core.toast
-import uz.texnopos.mybuilderapp.data.LoadingState
+import uz.texnopos.mybuilderapp.core.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentVerifyBinding
-import uz.texnopos.mybuilderapp.ui.login.LoginViewModel
 
 class VerifyFragment : Fragment(R.layout.fragment_verify) {
     private val viewModel by viewModel<VerifyViewModel>()

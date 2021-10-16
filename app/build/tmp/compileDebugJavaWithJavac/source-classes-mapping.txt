@@ -72,6 +72,8 @@ uz/texnopos/mybuilderapp/databinding/FragmentSplashBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentSplashBinding
 uz/texnopos/mybuilderapp/databinding/ItemProfileTradeBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemProfileTradeBinding
+uz/texnopos/mybuilderapp/databinding/FragmentHomeInBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentHomeInBinding
 uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
 uz/texnopos/mybuilderapp/databinding/ItemSpinnerBinding.java

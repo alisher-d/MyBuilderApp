@@ -1,6 +1,7 @@
 package uz.texnopos.mybuilderapp.ui.main.trades
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -9,11 +10,11 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.core.Constants.JOB_NAME
 import uz.texnopos.mybuilderapp.core.Constants.RESUME
+import uz.texnopos.mybuilderapp.core.Constants.TAG
 import uz.texnopos.mybuilderapp.core.hideProgress
-import uz.texnopos.mybuilderapp.core.onClick
 import uz.texnopos.mybuilderapp.core.showProgress
 import uz.texnopos.mybuilderapp.core.toast
-import uz.texnopos.mybuilderapp.data.LoadingState
+import uz.texnopos.mybuilderapp.core.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentTradeBinding
 
 
@@ -38,16 +39,16 @@ class TradeFragment : Fragment(R.layout.fragment_trade) {
             container.setOnRefreshListener {
                 refresh()
             }
-            toolbarTitle.text =
-                if (jobName.length > 20) jobName.substring(0, 20) + "..." else jobName
+            collapsingToolbar.title=jobName
             rvTrades.adapter = adapter
-            back.onClick {
+            toolbar.setNavigationOnClickListener{
                 requireActivity().onBackPressed()
             }
             adapter.onItemClickListener {
+                Log.d(TAG, "onViewCreated: $it")
                 val bundle = Bundle()
                 bundle.putParcelable(RESUME, it)
-                navController.navigate(R.id.action_tradeFragment_to_singleBuilderFragment, bundle)
+                navController.navigate(R.id.action_tradeFragment2_to_singleBuilderFragment2, bundle)
             }
         }
     }

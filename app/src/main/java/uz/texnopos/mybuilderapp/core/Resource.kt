@@ -1,6 +1,4 @@
-package uz.texnopos.mybuilderapp.data
-
-import uz.texnopos.mybuilderapp.data.models.Country
+package uz.texnopos.mybuilderapp.core
 
 open class Resource<out T> constructor(val status: LoadingState, val data: T?, val message: String?) {
 

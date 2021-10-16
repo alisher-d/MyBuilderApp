@@ -8,18 +8,23 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
+import okhttp3.Cache
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import uz.texnopos.mybuilderapp.App
 import uz.texnopos.mybuilderapp.App.Companion.getAppInstance
+import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.AppBaseActivity
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULLNAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
+import uz.texnopos.mybuilderapp.core.Constants.TAG
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
+import uz.texnopos.mybuilderapp.core.Constants.USER_ID
 import java.util.*
 
 
@@ -73,19 +78,28 @@ fun TextInputEditText.showError(error: String) {
 fun getFullName(): String = getSharedPreferences().getStringValue(USER_FULLNAME)
 fun getPhoneNumber(): String = getSharedPreferences().getStringValue(USER_PHONE_NUMBER)
 fun getEmail(): String = getSharedPreferences().getStringValue(USER_EMAIL)
-fun isLoggedIn()= getSharedPreferences().getIntValue(USER_EXISTS,0)==1
+fun isLoggedIn() = getSharedPreferences().getIntValue(USER_EXISTS, 0) == 1
+
+var curUserUid = getSharedPreferences().getStringValue(USER_ID)
+    set(value) {
+        field = value
+        getSharedPreferences().setValue(USER_ID, value)
+    }
+
 
 fun clearLoginPref() {
     getSharedPreferences().removeKey(USER_FULLNAME)
     getSharedPreferences().removeKey(USER_PHONE_NUMBER)
     getSharedPreferences().removeKey(USER_EMAIL)
     getSharedPreferences().removeKey(USER_EXISTS)
+    getSharedPreferences().removeKey(USER_ID)
 }
 
-fun Fragment.showProgress(){
+fun Fragment.showProgress() {
     (requireActivity() as AppBaseActivity).showProgress(true)
 }
-fun Fragment.hideProgress(){
+
+fun Fragment.hideProgress() {
     (requireActivity() as AppBaseActivity).showProgress(false)
 }
 
@@ -101,9 +115,9 @@ fun Context.getConnectivityManager() =
 fun <T> callApi(
     call: Call<T>,
     onApiSuccess: (T?) -> Unit = {},
-    onApiError: (errorMsg: String) -> Unit = {}
+    onApiError: (errorMsg: String) -> Unit = {},
 ) {
-    Log.d("api_calling", call.request().url().toString())
+    Log.d("api_calling", call.request().url.toString())
     call.enqueue(object : Callback<T> {
         override fun onResponse(call: Call<T>, response: Response<T>) {
             when {
@@ -128,3 +142,19 @@ fun Long.toDate(): String {
     calendar.timeInMillis = this
     return calendar.time.toString()
 }
+
+fun Fragment.setStatusBarColor(colorId: Int) {
+    when (colorId) {
+        R.color.sky -> requireActivity().window.decorView.systemUiVisibility = 0
+        R.color.white -> requireActivity().window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+    }
+    requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), colorId)
+}
+
+fun showLog(msg: String) {
+    Log.d(TAG, msg)
+}
+
+const val cacheSize = (5 * 1024 * 1024).toLong()
+val myCache = Cache(getAppInstance().cacheDir, cacheSize)

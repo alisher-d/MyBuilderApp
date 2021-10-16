@@ -28,10 +28,6 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_verify.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\activity_verify.xml"
-    },
-    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_post_feedback.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\dialog_post_feedback.xml"
     },
@@ -60,12 +56,12 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\edit_item_address.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_spinner.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_spinner.xml"
-    },
-    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_profile_trade.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_profile_trade.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_spinner.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_spinner.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_main.xml",
@@ -76,24 +72,20 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\add_title_text.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\edit_item_porfolio.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\edit_item_porfolio.xml"
-    },
-    {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\selectable_job_item_checkbox.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\selectable_job_item_checkbox.xml"
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pager_profile.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\pager_profile.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_verify.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\fragment_verify.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pager_profile.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\pager_profile.xml"
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\edit_item_porfolio.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\edit_item_porfolio.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_self.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\fragment_self.xml"
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\selectable_job_item_checkbox.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\selectable_job_item_checkbox.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pager_sign_gmail.xml",
@@ -124,16 +116,20 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_trade.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home_in.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\fragment_home_in.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_self.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\dialog_self.xml"
     },
     {
-        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\personal_data.xml",
-        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\personal_data.xml"
-    },
-    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pager_feedback.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\pager_feedback.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\personal_data.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\personal_data.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_information.xml",

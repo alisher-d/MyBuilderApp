@@ -3,16 +3,22 @@ package uz.texnopos.mybuilderapp.ui.main.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.core.onClick
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
 
 class ResumeAdapter : RecyclerView.Adapter<ResumeAdapter.ItemViewHolder>() {
-    inner class ItemViewHolder(private val item: ItemResumeBinding) : RecyclerView.ViewHolder(item.root) {
+    inner class ItemViewHolder(private val bind: ItemResumeBinding) : RecyclerView.ViewHolder(bind.root) {
         fun populateModel(resume: ResumeModel) {
-            item.tvProfession.text = resume.profession
-            item.resumeCard.onClick {
-            cardOnClick.invoke(resume)
+            bind.apply {
+                resume.apply {
+                    tvCountFeedback.text=bind.root.context.getString(R.string.tv_feedback_count,if (feedbackCount!=null) feedbackCount else 0)
+                    tvProfession.text = profession
+                    resumeCard.onClick {
+                        cardOnClick.invoke(resume)
+                    }
+                }
             }
         }
     }
@@ -41,13 +47,13 @@ class ResumeAdapter : RecyclerView.Adapter<ResumeAdapter.ItemViewHolder>() {
     }
 
     fun modify(resume: ResumeModel) {
-        val index = models.map { it.resumeID }.indexOf(resume.resumeID)
+        val index = models.map { it.resumeId }.indexOf(resume.resumeId)
         models[index] = resume
         notifyItemChanged(index, resume)
     }
 
     fun remove(id: String) {
-        val index = models.map { it.resumeID }.indexOf(id)
+        val index = models.map { it.resumeId }.indexOf(id)
         models.removeAt(index)
         notifyItemRemoved(index)
     }

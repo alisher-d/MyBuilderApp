@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.texnopos.mybuilderapp.ui.main.homeIn.HomeInFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_in" >
+        <action
+            android:id="@+id/action_homeFragment_to_tradeFragment2"
+            app:destination="@id/tradeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeFragment2"
+        android:name="uz.texnopos.mybuilderapp.ui.main.trades.TradeFragment"
+        android:label="fragment_trade"
+        tools:layout="@layout/fragment_trade" >
+        <action
+            android:id="@+id/action_tradeFragment2_to_singleBuilderFragment2"
+            app:destination="@id/singleBuilderFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleBuilderFragment2"
+        android:name="uz.texnopos.mybuilderapp.ui.main.builder.SingleBuilderFragment"
+        android:label="fragment_single_builder"
+        tools:layout="@layout/fragment_single_builder" />
+</navigation>

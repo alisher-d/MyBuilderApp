@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:linksClickable="true"
             android:textSize="16sp"
             android:justificationMode="inter_word"
             android:text="We are a Broadstairs and Tunbridge Wells based company undertaking construction work and project management across London and the South East."/>

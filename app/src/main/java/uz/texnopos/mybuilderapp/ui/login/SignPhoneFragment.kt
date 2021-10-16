@@ -10,7 +10,6 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.STORED_VERIFICATION_ID
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER

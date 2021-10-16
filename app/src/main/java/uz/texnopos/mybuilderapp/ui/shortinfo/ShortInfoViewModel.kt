@@ -6,9 +6,9 @@ import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULLNAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
+import uz.texnopos.mybuilderapp.core.Resource
 import uz.texnopos.mybuilderapp.core.getSharedPreferences
-import uz.texnopos.mybuilderapp.data.FirebaseHelper
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.data.firebase.FirebaseHelper
 
 class ShortInfoViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() {
 

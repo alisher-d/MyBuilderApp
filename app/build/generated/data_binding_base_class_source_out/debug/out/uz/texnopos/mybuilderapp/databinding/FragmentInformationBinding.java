@@ -4,59 +4,20 @@ package uz.texnopos.mybuilderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewpager.widget.ViewPager;
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 import uz.texnopos.mybuilderapp.R;
 
 public final class FragmentInformationBinding implements ViewBinding {
   @NonNull
   private final CoordinatorLayout rootView;
 
-  @NonNull
-  public final AppBarLayout htabAppbar;
-
-  @NonNull
-  public final CollapsingToolbarLayout htabCollapseToolbar;
-
-  @NonNull
-  public final ImageView htabHeader;
-
-  @NonNull
-  public final CoordinatorLayout htabMaincontent;
-
-  @NonNull
-  public final TabLayout htabTabs;
-
-  @NonNull
-  public final MaterialToolbar htabToolbar;
-
-  @NonNull
-  public final ViewPager htabViewpager;
-
-  private FragmentInformationBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppBarLayout htabAppbar, @NonNull CollapsingToolbarLayout htabCollapseToolbar,
-      @NonNull ImageView htabHeader, @NonNull CoordinatorLayout htabMaincontent,
-      @NonNull TabLayout htabTabs, @NonNull MaterialToolbar htabToolbar,
-      @NonNull ViewPager htabViewpager) {
+  private FragmentInformationBinding(@NonNull CoordinatorLayout rootView) {
     this.rootView = rootView;
-    this.htabAppbar = htabAppbar;
-    this.htabCollapseToolbar = htabCollapseToolbar;
-    this.htabHeader = htabHeader;
-    this.htabMaincontent = htabMaincontent;
-    this.htabTabs = htabTabs;
-    this.htabToolbar = htabToolbar;
-    this.htabViewpager = htabViewpager;
   }
 
   @Override
@@ -82,52 +43,10 @@ public final class FragmentInformationBinding implements ViewBinding {
 
   @NonNull
   public static FragmentInformationBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    int id;
-    missingId: {
-      id = R.id.htab_appbar;
-      AppBarLayout htabAppbar = rootView.findViewById(id);
-      if (htabAppbar == null) {
-        break missingId;
-      }
-
-      id = R.id.htab_collapse_toolbar;
-      CollapsingToolbarLayout htabCollapseToolbar = rootView.findViewById(id);
-      if (htabCollapseToolbar == null) {
-        break missingId;
-      }
-
-      id = R.id.htab_header;
-      ImageView htabHeader = rootView.findViewById(id);
-      if (htabHeader == null) {
-        break missingId;
-      }
-
-      CoordinatorLayout htabMaincontent = (CoordinatorLayout) rootView;
-
-      id = R.id.htab_tabs;
-      TabLayout htabTabs = rootView.findViewById(id);
-      if (htabTabs == null) {
-        break missingId;
-      }
-
-      id = R.id.htab_toolbar;
-      MaterialToolbar htabToolbar = rootView.findViewById(id);
-      if (htabToolbar == null) {
-        break missingId;
-      }
-
-      id = R.id.htab_viewpager;
-      ViewPager htabViewpager = rootView.findViewById(id);
-      if (htabViewpager == null) {
-        break missingId;
-      }
-
-      return new FragmentInformationBinding((CoordinatorLayout) rootView, htabAppbar,
-          htabCollapseToolbar, htabHeader, htabMaincontent, htabTabs, htabToolbar, htabViewpager);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    String missingId = rootView.getResources().getResourceName(id);
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    return new FragmentInformationBinding((CoordinatorLayout) rootView);
   }
 }

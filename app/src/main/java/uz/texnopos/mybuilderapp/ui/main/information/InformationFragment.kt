@@ -1,8 +1,8 @@
 package uz.texnopos.mybuilderapp.ui.main.information
 
+import androidx.fragment.app.Fragment
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.BaseFragment
 
-class InformationFragment : BaseFragment(R.layout.fragment_information) {
+class InformationFragment : Fragment(R.layout.fragment_information) {
 
 }

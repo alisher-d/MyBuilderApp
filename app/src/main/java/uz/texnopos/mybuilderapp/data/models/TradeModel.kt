@@ -11,5 +11,5 @@ data class TradeModel(
     val email: String,
     val fullname: String,
     val phone: String,
-    val resumeID: String
+    val resumeId: String
 ):Parcelable

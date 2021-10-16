@@ -1,4 +1,4 @@
-package uz.texnopos.mybuilderapp.ui.main.profile.resume.homeMain
+package uz.texnopos.mybuilderapp.ui.main.profile.resume.resumeMain
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

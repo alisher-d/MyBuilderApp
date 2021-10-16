@@ -13,12 +13,9 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.MutableLiveData
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.AppBaseActivity
+import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.TAG
-import uz.texnopos.mybuilderapp.core.onClick
-import uz.texnopos.mybuilderapp.core.textToString
-import uz.texnopos.mybuilderapp.core.toast
-import uz.texnopos.mybuilderapp.data.LoadingState
+import uz.texnopos.mybuilderapp.core.LoadingState
 import uz.texnopos.mybuilderapp.data.models.Address
 import uz.texnopos.mybuilderapp.data.models.Country
 import uz.texnopos.mybuilderapp.databinding.DialogAddressBinding
@@ -98,14 +95,14 @@ class AddressDialog(fragmentManager: FragmentManager) : DialogFragment(R.layout.
         viewModel.places.observe(requireActivity(), {
             when (it.status) {
                 LoadingState.LOADING -> {
-                    (requireActivity() as AppBaseActivity).showProgress(true)
+                    showProgress()
                 }
                 LoadingState.SUCCESS -> {
                     countries.postValue(it.data!!)
-                    (requireActivity() as AppBaseActivity).showProgress(false)
+                    hideProgress()
                 }
                 LoadingState.ERROR -> {
-                    (requireActivity() as AppBaseActivity).showProgress(false)
+                    hideProgress()
                     toast(it.message!!)
                 }
             }

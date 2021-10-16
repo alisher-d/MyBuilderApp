@@ -4,11 +4,11 @@ package uz.texnopos.mybuilderapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewpager2.widget.ViewPager2;
@@ -23,13 +23,13 @@ public final class FragmentLoginBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView ellipse;
+  public final AppCompatImageView ellipse;
 
   @NonNull
-  public final ImageView googleLogin;
+  public final AppCompatImageView googleLogin;
 
   @NonNull
-  public final ImageView logo;
+  public final AppCompatImageView logo;
 
   @NonNull
   public final LinearLayout signInGoogle;
@@ -41,11 +41,16 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final TextView textView7;
 
   @NonNull
+  public final TextView txt;
+
+  @NonNull
   public final ViewPager2 viewPager;
 
-  private FragmentLoginBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView ellipse,
-      @NonNull ImageView googleLogin, @NonNull ImageView logo, @NonNull LinearLayout signInGoogle,
-      @NonNull TabLayout tabLayout, @NonNull TextView textView7, @NonNull ViewPager2 viewPager) {
+  private FragmentLoginBinding(@NonNull ConstraintLayout rootView,
+      @NonNull AppCompatImageView ellipse, @NonNull AppCompatImageView googleLogin,
+      @NonNull AppCompatImageView logo, @NonNull LinearLayout signInGoogle,
+      @NonNull TabLayout tabLayout, @NonNull TextView textView7, @NonNull TextView txt,
+      @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.ellipse = ellipse;
     this.googleLogin = googleLogin;
@@ -53,6 +58,7 @@ public final class FragmentLoginBinding implements ViewBinding {
     this.signInGoogle = signInGoogle;
     this.tabLayout = tabLayout;
     this.textView7 = textView7;
+    this.txt = txt;
     this.viewPager = viewPager;
   }
 
@@ -84,19 +90,19 @@ public final class FragmentLoginBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.ellipse;
-      ImageView ellipse = rootView.findViewById(id);
+      AppCompatImageView ellipse = rootView.findViewById(id);
       if (ellipse == null) {
         break missingId;
       }
 
       id = R.id.googleLogin;
-      ImageView googleLogin = rootView.findViewById(id);
+      AppCompatImageView googleLogin = rootView.findViewById(id);
       if (googleLogin == null) {
         break missingId;
       }
 
       id = R.id.logo;
-      ImageView logo = rootView.findViewById(id);
+      AppCompatImageView logo = rootView.findViewById(id);
       if (logo == null) {
         break missingId;
       }
@@ -119,6 +125,12 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txt;
+      TextView txt = rootView.findViewById(id);
+      if (txt == null) {
+        break missingId;
+      }
+
       id = R.id.view_pager;
       ViewPager2 viewPager = rootView.findViewById(id);
       if (viewPager == null) {
@@ -126,7 +138,7 @@ public final class FragmentLoginBinding implements ViewBinding {
       }
 
       return new FragmentLoginBinding((ConstraintLayout) rootView, ellipse, googleLogin, logo,
-          signInGoogle, tabLayout, textView7, viewPager);
+          signInGoogle, tabLayout, textView7, txt, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

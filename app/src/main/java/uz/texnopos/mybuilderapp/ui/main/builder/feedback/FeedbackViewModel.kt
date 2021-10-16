@@ -1,9 +1,7 @@
 package uz.texnopos.mybuilderapp.ui.main.builder.feedback
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mybuilderapp.data.FirebaseHelper
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.data.firebase.FirebaseHelper
 import uz.texnopos.mybuilderapp.data.models.Feedback
 
 class FeedbackViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() {

@@ -1,4 +1,4 @@
-package uz.texnopos.mybuilderapp.data
+package uz.texnopos.mybuilderapp.data.firebase
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
@@ -9,6 +9,8 @@ import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_EMAIL
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_FULLNAME
 import uz.texnopos.mybuilderapp.core.Constants.SharedPref.USER_PHONE_NUMBER
 import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
+import uz.texnopos.mybuilderapp.core.Constants.USER_ID
+import uz.texnopos.mybuilderapp.core.curUserUid
 import uz.texnopos.mybuilderapp.core.getSharedPreferences
 import uz.texnopos.mybuilderapp.data.models.UserModel
 

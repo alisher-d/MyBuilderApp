@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/add_24.xml" value="0.22447916666666667" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic__arrow_back.xml" value="0.1962962962962963" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.22447916666666667" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.22447916666666667" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_component_1.xml" value="0.221025641025641" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_delete.xml" value="0.221025641025641" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_filter.xml" value="0.22447916666666667" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/settings_24.xml" value="0.21203703703703702" />
@@ -27,6 +29,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/edit_item_self.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_favorite.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home_in.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_home_main.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_information.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/fragment_login.xml" value="0.2" />
@@ -50,7 +53,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/item_trade.xml" value="0.17962962962962964" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_feedback.xml" value="0.20833333333333334" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_profile.xml" value="0.25" />
-        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_sign_phone.xml" value="0.46436781609195404" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/pager_sign_phone.xml" value="0.22" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/personal_data.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/progress_dialog.xml" value="0.25" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/selectable_job_item_checkbox.xml" value="0.20833333333333334" />

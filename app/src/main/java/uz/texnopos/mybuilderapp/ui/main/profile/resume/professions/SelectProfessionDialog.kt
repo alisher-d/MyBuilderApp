@@ -6,25 +6,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.AppBaseActivity
-import uz.texnopos.mybuilderapp.core.onClick
-import uz.texnopos.mybuilderapp.core.toast
-import uz.texnopos.mybuilderapp.data.LoadingState
+import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.databinding.DialogSelectProfessionBinding
 
-class SelectProfessionDialog(fragmentManager: FragmentManager) :
+class SelectProfessionDialog(fragment: Fragment) :
     DialogFragment(R.layout.dialog_select_profession) {
     private val viewModel by viewModel<JobsViewModel>()
     private val tradeAdapter = SelectJobsAdapter()
     private var tradeList = MutableLiveData<List<JobModel>>()
     private lateinit var bind: DialogSelectProfessionBinding
+
     init {
-        show(fragmentManager, "tag")
+        show(fragment.requireActivity().supportFragmentManager, "tag")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,16 +72,16 @@ class SelectProfessionDialog(fragmentManager: FragmentManager) :
         viewModel.jobs.observe(requireActivity(), {
             when (it.status) {
                 LoadingState.LOADING -> {
-                    (requireActivity() as AppBaseActivity).showProgress(true)
+                    showProgress()
                 }
                 LoadingState.SUCCESS -> {
-                    (requireActivity() as AppBaseActivity).showProgress(false)
+                    hideProgress()
                     tradeList.postValue(it.data!!)
                 }
                LoadingState.ERROR -> {
-                    (requireActivity() as AppBaseActivity).showProgress(false)
-                    toast(it.message!!)
-                }
+                   hideProgress()
+                   toast(it.message!!)
+               }
             }
         })
     }

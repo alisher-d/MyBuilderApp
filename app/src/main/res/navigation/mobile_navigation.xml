@@ -9,11 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="uz.texnopos.mybuilderapp.ui.main.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_tradeFragment"
-            app:destination="@id/tradeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_favorites"
@@ -31,18 +27,4 @@
         android:name="uz.texnopos.mybuilderapp.ui.main.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/tradeFragment"
-        android:name="uz.texnopos.mybuilderapp.ui.main.trades.TradeFragment"
-        android:label="fragment_trade"
-        tools:layout="@layout/fragment_trade" >
-        <action
-            android:id="@+id/action_tradeFragment_to_singleBuilderFragment"
-            app:destination="@id/singleBuilderFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/singleBuilderFragment"
-        android:name="uz.texnopos.mybuilderapp.ui.main.builder.SingleBuilderFragment"
-        android:label="fragment_single_builder"
-        tools:layout="@layout/fragment_single_builder" />
 </navigation>

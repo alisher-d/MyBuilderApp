@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.PhoneAuthCredential
 import uz.texnopos.mybuilderapp.core.Constants.TAG
-import uz.texnopos.mybuilderapp.data.AuthHelper
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.core.Resource
+import uz.texnopos.mybuilderapp.data.firebase.AuthHelper
 
 class LoginViewModel(private val authHelper: AuthHelper) : ViewModel() {
 
@@ -22,7 +22,7 @@ class LoginViewModel(private val authHelper: AuthHelper) : ViewModel() {
                 _exists.value = Resource.success(true)
             },
             {
-                _exists.value=Resource.error(it)
+                _exists.value = Resource.error(it)
             }
         )
     }
@@ -54,7 +54,7 @@ class LoginViewModel(private val authHelper: AuthHelper) : ViewModel() {
 
 
     fun signInWithGoogle(email:String,password:String){
-        _exists.value=Resource.loading()
+        _exists.value = Resource.loading()
             authHelper.signInWithGoogle(email,password,
                 {
                     _exists.value = Resource.success(true)

@@ -3,6 +3,7 @@ package uz.texnopos.mybuilderapp.ui.main.profile
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -10,24 +11,23 @@ import com.google.firebase.auth.FirebaseAuth
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.RESUME
 import uz.texnopos.mybuilderapp.databinding.FragmentProfileBinding
 
 
-class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
+class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var navController: NavController
     private lateinit var childNavController: NavController
     private lateinit var bind: FragmentProfileBinding
     private val resumeAdapter = ResumeAdapter()
     private val auth: FirebaseAuth by inject()
     private val viewModel by viewModel<ProfileViewModel>()
-    private val resumeIsEmpty=MutableLiveData<Boolean>()
-    val bundle=Bundle()
+    private val resumeIsEmpty = MutableLiveData<Boolean>()
+    val bundle = Bundle()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main)
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_activity_main)
         childNavController = Navigation.findNavController(view)
         bind = FragmentProfileBinding.bind(view)
         setHasOptionsMenu(true)
@@ -35,13 +35,12 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
             tvFullName.text = getFullName()
             tvPhone.text = getPhoneNumber()
             tvEmail.text = getEmail()
-            settings.onClick {
+            settings.setOnLongClickListener {
                 auth.signOut()
-                getSharedPreferences().removeKey("succes")
                 clearLoginPref()
                 requireActivity().onBackPressed()
+                true
             }
-
             firstCreateResume.onClick {
                 bundle.clear()
                 navController.navigate(R.id.action_mainFragment_to_resumeFragment)
@@ -52,7 +51,6 @@ class ProfileFragment : BaseFragment(R.layout.fragment_profile) {
                 navController.navigate(R.id.action_mainFragment_to_resumeFragment)
             }
             rvResumes.adapter = resumeAdapter
-
             resumeAdapter.resumeCardOnClickListener {
                 bundle.putParcelable(RESUME, it)
                 navController.navigate(R.id.action_mainFragment_to_resumeFragment, bundle)

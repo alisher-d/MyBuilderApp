@@ -19,7 +19,7 @@ import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.RC_SIGN_IN
 import uz.texnopos.mybuilderapp.core.Constants.TAG
-import uz.texnopos.mybuilderapp.data.LoadingState
+import uz.texnopos.mybuilderapp.core.LoadingState
 import uz.texnopos.mybuilderapp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -31,9 +31,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private val fragments = listOf(SignPhoneFragment(this), SignGmailFragment(this))
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setStatusBarColor(R.color.sky)
         setUpObserver()
         navController =
-            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main)
+            Navigation.findNavController(requireActivity(), R.id.nav_activity_main)
         val adapter =
             ViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle, fragments)
         bind = FragmentLoginBinding.bind(view).apply {
@@ -101,6 +102,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun updateUI() {
         if (auth.currentUser != null) {
+            curUserUid=auth.currentUser!!.uid
             if (!isLoggedIn()) navController.navigate(R.id.action_loginFragment_to_shortInfoFragment)
             else requireActivity().onBackPressed()
         }

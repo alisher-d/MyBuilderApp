@@ -28,6 +28,7 @@
         app:prefixText="+998"
         app:counterMaxLength="14"
         app:prefixTextColor="@color/black"
+
         app:startIconDrawable="@drawable/ic_baseline_phone_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,7 +37,7 @@
             android:layout_height="match_parent"
             android:inputType="phone"
             android:maxLength="14"
-            android:padding="16dp" />
+            android:paddingVertical="@dimen/margin_16" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_get_code"

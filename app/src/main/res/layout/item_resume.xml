@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tvCountFeedback"
-            android:text="0\nFeedbacks"
+            android:text="@string/tv_feedback_count"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:layout_weight="1"

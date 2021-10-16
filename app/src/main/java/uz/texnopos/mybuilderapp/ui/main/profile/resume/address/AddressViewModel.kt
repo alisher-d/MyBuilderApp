@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import uz.texnopos.mybuilderapp.core.callApi
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.core.Resource
 import uz.texnopos.mybuilderapp.data.models.Country
 import uz.texnopos.mybuilderapp.data.repository.Repository
 

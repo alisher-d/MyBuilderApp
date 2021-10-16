@@ -1,18 +1,17 @@
-package uz.texnopos.mybuilderapp.ui.main.profile.resume.homeMain
+package uz.texnopos.mybuilderapp.ui.main.profile.resume.resumeMain
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
-import uz.texnopos.mybuilderapp.base.BaseFragment
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.RESUME
-import uz.texnopos.mybuilderapp.data.LoadingState
 import uz.texnopos.mybuilderapp.data.models.Address
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.databinding.FragmentResumeBinding
@@ -22,7 +21,7 @@ import uz.texnopos.mybuilderapp.ui.main.profile.resume.self.SelfDialog
 import java.util.*
 
 
-class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
+class ResumeFragment : Fragment(R.layout.fragment_resume) {
     lateinit var bind: FragmentResumeBinding
     private lateinit var navController: NavController
     private val tradeAdapter = TradeAdapter()
@@ -40,13 +39,13 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
         setUpObserves()
 
         resume=if (arguments!=null) requireArguments().getParcelable(RESUME) else ResumeModel()
-        manageViews(resume!!)
+        manageViews(resume)
 
         bind.apply {
             personalData.tvFullName.text = getFullName()
             personalData.tvPhone.text = getPhoneNumber()
             personalData.tvEmail.text = getEmail()
-            btnRemove.isVisible = resume?.resumeID != null
+            btnRemove.isVisible = resume?.resumeId != null
             ln2.editProfession.onClick {
                 showProfessionDialog()
             }
@@ -74,7 +73,7 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
                 addProfession.root.isVisible = !t
                 if (t) {
                     ln2.professionName.text = it
-                    resume!!.profession = it!!
+                    resume?.profession = it!!
                 } else addProfession.title.setText(R.string.add_profession)
             })
 
@@ -107,7 +106,7 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
                         resume!!.apply {
                             createdTime = resume?.createdTime ?: System.currentTimeMillis()
                             updatedTime = System.currentTimeMillis()
-                            resumeID = resume?.resumeID ?: UUID.randomUUID().toString()
+                            resumeId = resume?.resumeId ?: UUID.randomUUID().toString()
                         })
                 }
             }
@@ -117,7 +116,7 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
                     setTitle("Delete resume")
                     setMessage("Are you really want to delete this resume?")
                     setPositiveButton("DELETE") { dialog, _ ->
-                        resume!!.resumeID?.let {
+                        resume!!.resumeId?.let {
                             viewModel.removeResume(it) { dialog.dismiss() }
                         }
                     }
@@ -151,19 +150,19 @@ class ResumeFragment : BaseFragment(R.layout.fragment_resume) {
         })
     }
 
-    private fun manageViews(resume: ResumeModel) {
-        tvProfession.postValue(resume.profession)
-        rvTrades.postValue(resume.trades)
-        tvAddress.postValue(resume.address)
-        tvDescription.postValue(resume.description)
+    private fun manageViews(resume: ResumeModel?) {
+        tvProfession.postValue(resume?.profession)
+        rvTrades.postValue(resume?.trades)
+        tvAddress.postValue(resume?.address)
+        tvDescription.postValue(resume?.description)
     }
 
     private fun showProfessionDialog() {
-        val dialog = SelectProfessionDialog(requireActivity().supportFragmentManager)
+        val dialog = SelectProfessionDialog(this)
         dialog.onClickSaveButton { profession, trades ->
             tvProfession.postValue(profession)
             rvTrades.postValue(trades)
-            resume!!.trades = trades
+            resume?.trades = trades
         }
     }
 

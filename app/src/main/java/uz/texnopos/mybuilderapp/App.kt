@@ -8,11 +8,11 @@ import org.koin.android.ext.koin.androidFileProperties
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import uz.texnopos.mybuilderapp.core.SharedPrefUtils
-import uz.texnopos.mybuilderapp.data.di.*
+import uz.texnopos.mybuilderapp.di.*
 
 class App : MultiDexApplication() {
     private val modules = listOf(
-        repositoryModule, viewModelModule, retrofitModule, apiModule,
+        repositoryModule, viewModelModule, networkModule,
         firebaseModule
     )
 

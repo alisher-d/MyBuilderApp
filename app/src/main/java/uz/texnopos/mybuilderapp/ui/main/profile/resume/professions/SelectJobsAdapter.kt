@@ -1,6 +1,7 @@
 package uz.texnopos.mybuilderapp.ui.main.profile.resume.professions
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +27,7 @@ class SelectJobsAdapter : RecyclerView.Adapter<SelectJobsAdapter.ItemViewHolder>
         this.onClick = onClick
     }
     var models = mutableListOf<String>()
+        @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()

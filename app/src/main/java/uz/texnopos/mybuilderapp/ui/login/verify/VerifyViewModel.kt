@@ -6,10 +6,8 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import uz.texnopos.mybuilderapp.core.Constants
-import uz.texnopos.mybuilderapp.core.Constants.USER_EXISTS
-import uz.texnopos.mybuilderapp.core.getSharedPreferences
-import uz.texnopos.mybuilderapp.data.AuthHelper
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.core.Resource
+import uz.texnopos.mybuilderapp.data.firebase.AuthHelper
 
 class VerifyViewModel(private val authHelper: AuthHelper) : ViewModel() {
     private var _verify = MutableLiveData<Resource<String>>()
@@ -36,7 +34,7 @@ class VerifyViewModel(private val authHelper: AuthHelper) : ViewModel() {
                 _verify.value = Resource.success("User found")
             },
             {
-                _verify.value=Resource.error(it)
+                _verify.value = Resource.error(it)
             }
         )
     }

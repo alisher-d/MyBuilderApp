@@ -1,12 +1,11 @@
-package uz.texnopos.mybuilderapp.data
+package uz.texnopos.mybuilderapp.data.firebase
 
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
-import uz.texnopos.mybuilderapp.core.Constants.TAG
+import uz.texnopos.mybuilderapp.core.curUserUid
 import uz.texnopos.mybuilderapp.data.models.Feedback
 import uz.texnopos.mybuilderapp.data.models.JobModel
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
@@ -35,8 +34,8 @@ class FirebaseHelper(
         onSuccess: (msg: String) -> Unit,
         onFailure: (msg: String?) -> Unit
     ) {
-        db.collection("users/${auth.currentUser?.uid}/resumes")
-            .document(resume.resumeID!!).set(resume, SetOptions.merge())
+        db.collection("users/$curUserUid/resumes")
+            .document(resume.resumeId!!).set(resume, SetOptions.merge())
             .addOnSuccessListener {
                 onSuccess.invoke("Saved")
             }
@@ -69,7 +68,7 @@ class FirebaseHelper(
         onResumesSize:(Int)->Unit,
         onFailure: (String?) -> Unit
     ) {
-        db.collection("users/${auth.currentUser!!.uid}/resumes")
+        db.collection("users/$curUserUid/resumes")
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     onFailure.invoke(e.localizedMessage)
@@ -80,7 +79,7 @@ class FirebaseHelper(
                         when (cv.type) {
                             DocumentChange.Type.ADDED -> onResumeAdded.invoke(resume)
                             DocumentChange.Type.MODIFIED -> onResumeModified.invoke(resume)
-                            DocumentChange.Type.REMOVED -> onResumeRemoved.invoke(resume.resumeID!!)
+                            DocumentChange.Type.REMOVED -> onResumeRemoved.invoke(resume.resumeId!!)
                         }
                     }
                 }
@@ -114,41 +113,10 @@ class FirebaseHelper(
         onSuccess: (msg: String) -> Unit,
         onFailure: (msg: String?) -> Unit
     ) {
-        db.collection("users/${auth.currentUser!!.uid}/resumes")
+        db.collection("users/$curUserUid/resumes")
             .document(resumeId).delete()
             .addOnSuccessListener {
                 onSuccess.invoke("Removed")
-            }
-            .addOnFailureListener {
-                onFailure.invoke(it.localizedMessage)
-            }
-    }
-
-    fun getSingleResume(
-        userId: String, resumeId: String,
-        onSuccess: (ResumeModel) -> Unit,
-        onFailure: (msg: String?) -> Unit
-    ) {
-        db.collection("users/${userId}/resumes").document(resumeId).get()
-            .addOnSuccessListener {
-                val resume = it.toObject(ResumeModel::class.java)!!
-                onSuccess.invoke(resume)
-            }
-            .addOnFailureListener {
-                onFailure.invoke(it.localizedMessage)
-            }
-    }
-
-    fun postFeedback(
-        feedback: Feedback,
-        onSuccess: (String) -> Unit,
-        onFailure: (msg: String?) -> Unit
-    ) {
-        feedback.authorId = auth.currentUser!!.uid
-        db.collection("users/${feedback.receiverId}/resumes/${feedback.resumeId}/feedbacks")
-            .document(feedback.id!!).set(feedback)
-            .addOnSuccessListener {
-                onSuccess.invoke("Thanks")
             }
             .addOnFailureListener {
                 onFailure.invoke(it.localizedMessage)
@@ -162,23 +130,22 @@ class FirebaseHelper(
         onRemoved: (String) -> Unit,
         onFailure: (String?) -> Unit
     ) {
-        db.collection("users/${userId}/resumes/${resumeId}/feedbacks").orderBy("createdTime",Query.Direction.DESCENDING)
+        db.collection("users/${userId}/resumes/${resumeId}/feedbacks")
+            .orderBy("createdTime", Query.Direction.ASCENDING)
             .addSnapshotListener { docs, e ->
-                if (e!=null){
-                    onFailure.invoke(e.localizedMessage)
-                }else{
+                if (e != null) onFailure.invoke(e.localizedMessage)
+                else {
                     if (docs!!.documents.isNotEmpty())
-                    for (doc in docs.documentChanges){
-                        val feedback=doc.document.toObject(Feedback::class.java)
-                        when(doc.type) {
-                            DocumentChange.Type.ADDED -> onAdded.invoke(feedback)
-                            DocumentChange.Type.MODIFIED -> onModified.invoke(feedback)
-                            DocumentChange.Type.REMOVED-> onRemoved.invoke(feedback.id!!)
+                        for (doc in docs.documentChanges) {
+                            val feedback = doc.document.toObject(Feedback::class.java)
+                            when (doc.type) {
+                                DocumentChange.Type.ADDED -> onAdded.invoke(feedback)
+                                DocumentChange.Type.MODIFIED -> onModified.invoke(feedback)
+                                DocumentChange.Type.REMOVED -> onRemoved.invoke(feedback.id!!)
+                            }
                         }
-                    }
                 }
 
             }
-
     }
 }

@@ -1,9 +1,9 @@
-package uz.texnopos.mybuilderapp.ui.main.profile.resume.homeMain
+package uz.texnopos.mybuilderapp.ui.main.profile.resume.resumeMain
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mybuilderapp.data.FirebaseHelper
-import uz.texnopos.mybuilderapp.data.Resource
+import uz.texnopos.mybuilderapp.core.Resource
+import uz.texnopos.mybuilderapp.data.firebase.FirebaseHelper
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 
 class ResumeViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel() {

@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -19,38 +16,20 @@ import uz.texnopos.mybuilderapp.R;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final SwipeRefreshLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
-  public final SwipeRefreshLayout container;
+  public final FragmentContainerView navHome;
 
-  @NonNull
-  public final TextInputEditText etSearch;
-
-  @NonNull
-  public final MaterialCardView filter;
-
-  @NonNull
-  public final TextInputLayout inputSearch;
-
-  @NonNull
-  public final RecyclerView rvProfession;
-
-  private FragmentHomeBinding(@NonNull SwipeRefreshLayout rootView,
-      @NonNull SwipeRefreshLayout container, @NonNull TextInputEditText etSearch,
-      @NonNull MaterialCardView filter, @NonNull TextInputLayout inputSearch,
-      @NonNull RecyclerView rvProfession) {
+  private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
+      @NonNull FragmentContainerView navHome) {
     this.rootView = rootView;
-    this.container = container;
-    this.etSearch = etSearch;
-    this.filter = filter;
-    this.inputSearch = inputSearch;
-    this.rvProfession = rvProfession;
+    this.navHome = navHome;
   }
 
   @Override
   @NonNull
-  public SwipeRefreshLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -75,34 +54,13 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      SwipeRefreshLayout container = (SwipeRefreshLayout) rootView;
-
-      id = R.id.etSearch;
-      TextInputEditText etSearch = rootView.findViewById(id);
-      if (etSearch == null) {
+      id = R.id.nav_home;
+      FragmentContainerView navHome = rootView.findViewById(id);
+      if (navHome == null) {
         break missingId;
       }
 
-      id = R.id.filter;
-      MaterialCardView filter = rootView.findViewById(id);
-      if (filter == null) {
-        break missingId;
-      }
-
-      id = R.id.inputSearch;
-      TextInputLayout inputSearch = rootView.findViewById(id);
-      if (inputSearch == null) {
-        break missingId;
-      }
-
-      id = R.id.rvProfession;
-      RecyclerView rvProfession = rootView.findViewById(id);
-      if (rvProfession == null) {
-        break missingId;
-      }
-
-      return new FragmentHomeBinding((SwipeRefreshLayout) rootView, container, etSearch, filter,
-          inputSearch, rvProfession);
+      return new FragmentHomeBinding((ConstraintLayout) rootView, navHome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

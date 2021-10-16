@@ -2,11 +2,8 @@ package uz.texnopos.mybuilderapp.ui
 
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.base.AppBaseActivity
 import uz.texnopos.mybuilderapp.databinding.ActivityMainBinding
@@ -20,7 +17,7 @@ class MainActivity : AppBaseActivity() {
         bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bind.root)
         bind.apply {
-            navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+            navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_activity_main) as NavHostFragment
             navController = navHostFragment.findNavController()
         }
     }

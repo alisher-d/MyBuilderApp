@@ -11,10 +11,11 @@ class FeedbackAdapter : RecyclerView.Adapter<FeedbackAdapter.ItemViewHolder>() {
     inner class ItemViewHolder(val bind:ItemFeedbackBinding) : RecyclerView.ViewHolder(bind.root) {
         fun populateModel(feedback:Feedback) {
             bind.apply {
+
                 feedbackBody.text=feedback.text
                 rating.rating=feedback.rating!!.toFloat()
                 createdTime.text=feedback.createdTime!!.toDate()
-                tvFullName.text=feedback.authorId!!.dropLast(15)
+                tvFullName.text=feedback.authorFullname
             }
         }
     }
