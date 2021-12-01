@@ -89,12 +89,12 @@
             <include
                 android:id="@+id/add_portfolio"
                 layout="@layout/add_title_text"
-                android:visibility="gone"
+                android:visibility="visible"
                  />
 
             <include
                 android:id="@+id/ln5"
-                layout="@layout/edit_item_porfolio"
+                layout="@layout/edit_item_portfolio"
                 android:visibility="gone" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

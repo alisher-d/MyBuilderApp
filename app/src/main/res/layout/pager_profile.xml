@@ -59,11 +59,14 @@
             android:textSize="15sp"
             android:textStyle="bold"
             android:text="Portfolios"/>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPortfolio"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:spanCount="3"
+            tools:listitem="@layout/item_portfolio_image"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:layout_height="wrap_content"/>
         <com.google.android.material.button.MaterialButton

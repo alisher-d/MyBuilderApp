@@ -12,6 +12,7 @@ object Constants {
     const val RESUME_ID="resumeId"
     const val RESUME="resume"
     const val appTimeOut = 50L
+    const val RESUME_IS_NULL = "You can only add a portfolio once your resume has been saved!"
     object SharedPref{
         const val USER_EMAIL = "user_email"
         const val USER_FULLNAME = "user_first_name"

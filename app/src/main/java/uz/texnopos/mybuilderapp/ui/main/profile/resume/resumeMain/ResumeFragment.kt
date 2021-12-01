@@ -12,10 +12,12 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import uz.texnopos.mybuilderapp.R
 import uz.texnopos.mybuilderapp.core.*
 import uz.texnopos.mybuilderapp.core.Constants.RESUME
+import uz.texnopos.mybuilderapp.core.Constants.RESUME_IS_NULL
 import uz.texnopos.mybuilderapp.data.models.Address
 import uz.texnopos.mybuilderapp.data.models.ResumeModel
 import uz.texnopos.mybuilderapp.databinding.FragmentResumeBinding
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.address.AddressDialog
+import uz.texnopos.mybuilderapp.ui.main.profile.resume.portfolio.PortfolioDialog
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.professions.SelectProfessionDialog
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.self.SelfDialog
 import java.util.*
@@ -25,12 +27,13 @@ class ResumeFragment : Fragment(R.layout.fragment_resume) {
     lateinit var bind: FragmentResumeBinding
     private lateinit var navController: NavController
     private val tradeAdapter = TradeAdapter()
-    private var resume: ResumeModel? = null
+    var resume: ResumeModel? = null
     private val viewModel by viewModel<ResumeViewModel>()
     private val tvProfession = MutableLiveData<String?>()
     private val rvTrades = MutableLiveData<MutableList<String>?>()
     private val tvAddress = MutableLiveData<Address?>()
     private val tvDescription = MutableLiveData<String?>()
+    private val tvPortfolio = MutableLiveData<List<String>?>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bind = FragmentResumeBinding.bind(view)
@@ -67,6 +70,13 @@ class ResumeFragment : Fragment(R.layout.fragment_resume) {
                 showSelfDialog()
             }
 
+            ln5.editPortfolio.onClick {
+                showPortfolioDialog()
+            }
+            addPortfolio.root.onClick {
+                if (resume?.resumeId != null) showPortfolioDialog()
+                else toast(RESUME_IS_NULL)
+            }
             tvProfession.observe(requireActivity(), {
                 val t = it != null
                 ln2.root.isVisible = t
@@ -99,6 +109,17 @@ class ResumeFragment : Fragment(R.layout.fragment_resume) {
                     ln4.tvDescription.text = it
                 } else addDescription.title.setText(R.string.add_description)
             })
+
+            tvPortfolio.observe(requireActivity(), {
+                val t = it != null
+                ln5.root.isVisible = t
+                addPortfolio.root.isVisible = !t
+                if (t) {
+
+                } else addPortfolio.title.setText(R.string.add_portfolio)
+            })
+
+
 
             btnSave.onClick {
                 if (validate()) {
@@ -155,6 +176,7 @@ class ResumeFragment : Fragment(R.layout.fragment_resume) {
         rvTrades.postValue(resume?.trades)
         tvAddress.postValue(resume?.address)
         tvDescription.postValue(resume?.description)
+        tvPortfolio.postValue(resume?.portfolioImages)
     }
 
     private fun showProfessionDialog() {
@@ -179,6 +201,13 @@ class ResumeFragment : Fragment(R.layout.fragment_resume) {
         dialog.onClickSaveButton {
             tvDescription.postValue(it)
             resume?.description = it
+        }
+    }
+
+    private fun showPortfolioDialog() {
+        val dialog = PortfolioDialog(this)
+        dialog.onClickSaveButton {
+
         }
     }
 

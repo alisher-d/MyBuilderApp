@@ -35,11 +35,11 @@ class SelfDialog(fragmentManager: FragmentManager) : DialogFragment(R.layout.dia
             btSave.onClick {
                 val text=etDescription.textToString()
                 val cnt=text.split(' ').count()
-                if (cnt>8){
+                if (cnt>3){
                     onClickSave.invoke(text)
                     dismiss()
                 }
-                else toast("Minimum 10 word!")
+                else toast("Minimum 5 word!")
             }
         }
         return bind.root

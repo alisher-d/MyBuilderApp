@@ -3,6 +3,7 @@ package uz.texnopos.mybuilderapp.di
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.gson.GsonBuilder
+import com.google.firebase.storage.FirebaseStorage
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -26,6 +27,7 @@ import uz.texnopos.mybuilderapp.ui.main.builder.feedback.post.PostViewModel
 import uz.texnopos.mybuilderapp.ui.main.homeIn.HomeInViewModel
 import uz.texnopos.mybuilderapp.ui.main.profile.ProfileViewModel
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.address.AddressViewModel
+import uz.texnopos.mybuilderapp.ui.main.profile.resume.portfolio.PortfolioViewModel
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.professions.JobsViewModel
 import uz.texnopos.mybuilderapp.ui.main.profile.resume.resumeMain.ResumeViewModel
 import uz.texnopos.mybuilderapp.ui.main.trades.TradeViewModel
@@ -45,6 +47,8 @@ val viewModelModule = module {
     viewModel { BuilderViewModel(get()) }
     viewModel { FeedbackViewModel(get()) }
     viewModel { PostViewModel(get()) }
+    viewModel { PortfolioViewModel(get()) }
+    viewModel { uz.texnopos.mybuilderapp.ui.main.builder.profile.PortfolioViewModel(get()) }
 }
 val repositoryModule = module {
     single { Repository(get()) }
@@ -93,6 +97,7 @@ val networkModule = module {
 val firebaseModule = module {
     single { FirebaseAuth.getInstance() }
     single { FirebaseFirestore.getInstance() }
-    single { FirebaseHelper(get(), get()) }
+    single { FirebaseStorage.getInstance() }
+    single { FirebaseHelper(get(), get(),get()) }
     single { AuthHelper(get(), get()) }
 }

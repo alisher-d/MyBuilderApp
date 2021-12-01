@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.texnopos.mybuilderapp.R
@@ -21,10 +21,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         setStatusBarColor(R.color.white)
         bind = FragmentMainBinding.bind(view)
-        navController =
-            Navigation.findNavController(requireActivity(), R.id.nav_activity_main)
-        childNavController =
-            Navigation.findNavController(requireActivity(), R.id.nav_fragment_main)
+        navController = findNavController(requireActivity(), R.id.nav_activity_main)
+        childNavController = findNavController(requireActivity(), R.id.nav_fragment_main)
         navView = bind.navView
         NavigationUI.setupWithNavController(navView, childNavController)
         navView.menu.getItem(2).setOnMenuItemClickListener {

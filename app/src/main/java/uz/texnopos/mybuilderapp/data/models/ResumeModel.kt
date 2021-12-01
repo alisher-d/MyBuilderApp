@@ -11,9 +11,10 @@ data class ResumeModel(
     var updatedTime: Long? = null,
     var isPublished: Boolean = true,
     var profession: String? = null,
-    var trades: MutableList<String>? =null,
+    var trades: MutableList<String>? = null,
     var address: Address? = null,
     var description: String? = null,
-    var rating:Float?= null,
-    var feedbackCount:Int?=null
+    var rating: Float? = null,
+    var feedbackCount: Int? = null,
+    var portfolioImages: List<String>? = null
 ):Parcelable

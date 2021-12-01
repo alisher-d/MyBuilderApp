@@ -12,7 +12,7 @@
     <string name="tv_feedback_count">%1$d\nFeedbacks</string>
     <string name="add_address">Add your address</string>
     <string name="add_description">Write about yourself</string>
-    <string name="add_portfolio">Add portfolio</string>
+    <string name="add_portfolio">Add your portfolio</string>
     <string name="add_profession">Add your profession</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
