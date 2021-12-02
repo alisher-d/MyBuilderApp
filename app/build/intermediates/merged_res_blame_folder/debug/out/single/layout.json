@@ -52,6 +52,10 @@
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\progress_dialog.xml"
     },
     {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_demo_styling.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\activity_demo_styling.xml"
+    },
+    {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_builder_card.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\item_builder_card.xml"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\selectable_job_item_checkbox.xml",
         "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\selectable_job_item_checkbox.xml"
+    },
+    {
+        "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\view_poster_overlay.xml",
+        "source": "D:\\MyApps\\MyBuilderApp\\app\\src\\main\\res\\layout\\view_poster_overlay.xml"
     },
     {
         "merged": "D:\\MyApps\\MyBuilderApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pager_sign_gmail.xml",

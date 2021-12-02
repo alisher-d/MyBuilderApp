@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable-v24/shape_placeholder.xml" value="0.21510416666666668" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/add_24.xml" value="0.22447916666666667" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic__arrow_back.xml" value="0.1962962962962963" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/ic_arrow_back.xml" value="0.22447916666666667" />
@@ -15,6 +16,7 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/shape.xml" value="0.1" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/drawable/wave.xml" value="0.2117948717948718" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_create_rezyume.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_demo_styling.xml" value="0.19895833333333332" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/activity_verify.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/add_title_text.xml" value="0.1537037037037037" />
@@ -60,7 +62,9 @@
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/personal_data.xml" value="0.1537037037037037" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/progress_dialog.xml" value="0.25" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/selectable_job_item_checkbox.xml" value="0.20833333333333334" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/layout/view_poster_overlay.xml" value="0.19895833333333332" />
         <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1537037037037037" />
+        <entry key="..\:/MyApps/MyBuilderApp/app/src/main/res/menu/styling_options_menu.xml" value="0.19895833333333332" />
       </map>
     </option>
   </component>

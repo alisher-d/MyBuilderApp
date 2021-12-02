@@ -5,9 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.favorites.FavoriteFragment">
-<include
-    android:id="@+id/toolbar"
-    layout="@layout/app_bar_main"/>
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"

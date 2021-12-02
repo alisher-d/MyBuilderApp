@@ -21,14 +21,10 @@ public final class FragmentFavoriteBinding implements ViewBinding {
   @NonNull
   public final TextView textNotifications;
 
-  @NonNull
-  public final AppBarMainBinding toolbar;
-
   private FragmentFavoriteBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textNotifications, @NonNull AppBarMainBinding toolbar) {
+      @NonNull TextView textNotifications) {
     this.rootView = rootView;
     this.textNotifications = textNotifications;
-    this.toolbar = toolbar;
   }
 
   @Override
@@ -64,15 +60,7 @@ public final class FragmentFavoriteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.toolbar;
-      View toolbar = rootView.findViewById(id);
-      if (toolbar == null) {
-        break missingId;
-      }
-      AppBarMainBinding binding_toolbar = AppBarMainBinding.bind(toolbar);
-
-      return new FragmentFavoriteBinding((ConstraintLayout) rootView, textNotifications,
-          binding_toolbar);
+      return new FragmentFavoriteBinding((ConstraintLayout) rootView, textNotifications);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

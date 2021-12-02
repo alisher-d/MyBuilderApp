@@ -1,6 +1,8 @@
 package uz.texnopos.mybuilderapp.core
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.util.Log
@@ -8,6 +10,8 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.DrawableRes
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
@@ -154,6 +158,18 @@ fun Fragment.setStatusBarColor(colorId: Int) {
 
 fun showLog(msg: String) {
     Log.d(TAG, msg)
+}
+
+fun Context.getDrawableCompat(@DrawableRes drawableRes: Int): Drawable? {
+    return AppCompatResources.getDrawable(this, drawableRes)
+}
+
+fun Context.sendShareIntent(text: String) {
+    startActivity(Intent().apply {
+        action = Intent.ACTION_SEND
+        putExtra(Intent.EXTRA_TEXT, text)
+        type = "text/plain"
+    })
 }
 
 const val cacheSize = (5 * 1024 * 1024).toLong()

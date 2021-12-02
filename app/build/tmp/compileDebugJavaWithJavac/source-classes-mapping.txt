@@ -10,8 +10,8 @@ uz/texnopos/mybuilderapp/databinding/ItemBuilderCardBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemBuilderCardBinding
 uz/texnopos/mybuilderapp/databinding/EditItemProfessionBinding.java
  uz.texnopos.mybuilderapp.databinding.EditItemProfessionBinding
-uz/texnopos/mybuilderapp/databinding/FragmentFavoriteBinding.java
- uz.texnopos.mybuilderapp.databinding.FragmentFavoriteBinding
+uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java
+ uz.texnopos.mybuilderapp.databinding.SelectableJobItemRadiobuttonBinding
 uz/texnopos/mybuilderapp/databinding/PagerFeedbackBinding.java
  uz.texnopos.mybuilderapp.databinding.PagerFeedbackBinding
 uz/texnopos/mybuilderapp/databinding/DialogSelectProfessionBinding.java
@@ -26,12 +26,16 @@ uz/texnopos/mybuilderapp/databinding/FragmentTradeBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentTradeBinding
 uz/texnopos/mybuilderapp/databinding/DialogAddressBinding.java
  uz.texnopos.mybuilderapp.databinding.DialogAddressBinding
+uz/texnopos/mybuilderapp/databinding/ActivityDemoStylingBinding.java
+ uz.texnopos.mybuilderapp.databinding.ActivityDemoStylingBinding
 uz/texnopos/mybuilderapp/databinding/FragmentHomeBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentHomeBinding
 uz/texnopos/mybuilderapp/databinding/FragmentMainBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentMainBinding
 uz/texnopos/mybuilderapp/databinding/ItemFeedbackBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemFeedbackBinding
+uz/texnopos/mybuilderapp/databinding/ViewPosterOverlayBinding.java
+ uz.texnopos.mybuilderapp.databinding.ViewPosterOverlayBinding
 uz/texnopos/mybuilderapp/databinding/FragmentLoginBinding.java
  uz.texnopos.mybuilderapp.databinding.FragmentLoginBinding
 uz/texnopos/mybuilderapp/databinding/EditItemPortfolioBinding.java
@@ -82,5 +86,5 @@ uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
 uz/texnopos/mybuilderapp/databinding/ItemSpinnerBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemSpinnerBinding
-uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java
- uz.texnopos.mybuilderapp.databinding.SelectableJobItemRadiobuttonBinding
+uz/texnopos/mybuilderapp/databinding/FragmentFavoriteBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentFavoriteBinding
