@@ -6,4 +6,5 @@ data class ImageP(
     var resumeId: String? = null,
     var imageUrl: String? = null,
     var createdTime: Long? = null,
+    var description: String = "",
 )

@@ -8,6 +8,7 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
 import uz.texnopos.mybuilderapp.core.curUserUid
+import uz.texnopos.mybuilderapp.core.showLog
 import uz.texnopos.mybuilderapp.data.models.Feedback
 import uz.texnopos.mybuilderapp.data.models.ImageP
 import uz.texnopos.mybuilderapp.data.models.JobModel
@@ -152,6 +153,31 @@ class FirebaseHelper(
             }
     }
 
+    fun deleteImage(
+        imageP: ImageP,
+        onSuccess: (String) -> Unit,
+        onFailure: (String?) -> Unit,
+    ) {
+        val storageRef = storage.reference
+        val ref = storageRef.child("portfolios/$curUserUid/${imageP.id}")
+        ref.delete()
+            .addOnSuccessListener {
+                db.collection("users/$curUserUid/resumes/${imageP.resumeId}/portfolios")
+                    .document(imageP.id!!)
+                    .delete()
+                    .addOnSuccessListener {
+                        onSuccess("Deleted")
+                    }
+                    .addOnFailureListener {
+                        onFailure(it.localizedMessage)
+                    }
+
+            }
+            .addOnFailureListener {
+                onFailure(it.localizedMessage)
+            }
+    }
+
     fun uploadImage(
         uri: Uri,
         imageP: ImageP,
@@ -162,10 +188,10 @@ class FirebaseHelper(
         val ref = storageRef.child("portfolios/$curUserUid/${imageP.id}")
         ref.putFile(uri)
             .addOnSuccessListener {
-                ref.downloadUrl.addOnSuccessListener {
+                ref.downloadUrl.addOnSuccessListener { uri ->
                     db.collection("users/$curUserUid/resumes/${imageP.resumeId}/portfolios")
                         .document(imageP.id!!)
-                        .set(imageP.copy(imageUrl = it.toString()))
+                        .set(imageP.copy(imageUrl = uri.toString()))
                         .addOnSuccessListener {
                             onSuccess("Uploaded!")
                         }
@@ -182,7 +208,7 @@ class FirebaseHelper(
         userId: String, resumeId: String,
         onAdded: (ImageP) -> Unit,
         onModified: (ImageP) -> Unit,
-        onRemoved: (String) -> Unit,
+        onRemoved: (ImageP) -> Unit,
         onFailure: (String?) -> Unit
     ) {
         db.collection("users/${userId}/resumes/${resumeId}/portfolios")
@@ -190,13 +216,15 @@ class FirebaseHelper(
             .addSnapshotListener { docs, e ->
                 if (e != null) onFailure.invoke(e.localizedMessage)
                 else {
-                    if (docs!!.documents.isNotEmpty())
-                        for (doc in docs.documentChanges) {
+                        for (doc in docs!!.documentChanges) {
                             val feedback = doc.document.toObject(ImageP::class.java)
                             when (doc.type) {
                                 DocumentChange.Type.ADDED -> onAdded.invoke(feedback)
                                 DocumentChange.Type.MODIFIED -> onModified.invoke(feedback)
-                                DocumentChange.Type.REMOVED -> onRemoved.invoke(feedback.id!!)
+                                DocumentChange.Type.REMOVED -> {
+                                    showLog("removed firebasehelper")
+                                    onRemoved.invoke(feedback)
+                                }
                             }
                         }
                 }

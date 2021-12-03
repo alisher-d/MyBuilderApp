@@ -10,8 +10,8 @@ uz/texnopos/mybuilderapp/databinding/ItemBuilderCardBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemBuilderCardBinding
 uz/texnopos/mybuilderapp/databinding/EditItemProfessionBinding.java
  uz.texnopos.mybuilderapp.databinding.EditItemProfessionBinding
-uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java
- uz.texnopos.mybuilderapp.databinding.SelectableJobItemRadiobuttonBinding
+uz/texnopos/mybuilderapp/databinding/FragmentFavoriteBinding.java
+ uz.texnopos.mybuilderapp.databinding.FragmentFavoriteBinding
 uz/texnopos/mybuilderapp/databinding/PagerFeedbackBinding.java
  uz.texnopos.mybuilderapp.databinding.PagerFeedbackBinding
 uz/texnopos/mybuilderapp/databinding/DialogSelectProfessionBinding.java
@@ -86,5 +86,5 @@ uz/texnopos/mybuilderapp/databinding/ItemResumeBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemResumeBinding
 uz/texnopos/mybuilderapp/databinding/ItemSpinnerBinding.java
  uz.texnopos.mybuilderapp.databinding.ItemSpinnerBinding
-uz/texnopos/mybuilderapp/databinding/FragmentFavoriteBinding.java
- uz.texnopos.mybuilderapp.databinding.FragmentFavoriteBinding
+uz/texnopos/mybuilderapp/databinding/SelectableJobItemRadiobuttonBinding.java
+ uz.texnopos.mybuilderapp.databinding.SelectableJobItemRadiobuttonBinding

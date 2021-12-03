@@ -11,38 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
+        <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
+            android:id="@+id/toolbar"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:orientation="horizontal">
+            app:menu="@menu/menu_portfolio_toolbar"
+            app:navigationIcon="@drawable/ic_close_24"
+            />
 
-            <ImageButton
-                android:id="@+id/bt_close"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_close_24" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="Portfolio"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                android:textColor="@android:color/black" />
-
-            <Button
-                android:id="@+id/bt_save"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="save"
-                android:textColor="@android:color/black" />
-        </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView

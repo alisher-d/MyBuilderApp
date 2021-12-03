@@ -1,9 +1,6 @@
 package uz.texnopos.mybuilderapp.ui.main.builder.profile
 
-import android.net.Uri
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import uz.texnopos.mybuilderapp.core.Resource
 import uz.texnopos.mybuilderapp.data.firebase.FirebaseHelper
 import uz.texnopos.mybuilderapp.data.models.ImageP
 
@@ -14,7 +11,7 @@ class PortfolioViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel
         resumeId: String,
         onImageAdded: (ImageP) -> Unit,
         onImageModified: (ImageP) -> Unit,
-        onImageRemoved: (String) -> Unit,
+        onImageRemoved: (ImageP) -> Unit,
         onFailure: (String?) -> Unit,
     ) {
         firebaseHelper.getAllPictures(

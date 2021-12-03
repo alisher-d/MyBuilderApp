@@ -3000,6 +3000,8 @@ layout view_poster_overlay
 menu bottom_nav_menu
 menu example_menu
 menu example_menu2
+menu menu_portfolio_toolbar
+menu menu_selected_resume
 menu styling_options_menu
 menu toolbar_settings
 menu ucrop_menu_activity

@@ -2999,9 +2999,11 @@ int layout view_poster_overlay 0x7f0d00af
 int menu bottom_nav_menu 0x7f0e0000
 int menu example_menu 0x7f0e0001
 int menu example_menu2 0x7f0e0002
-int menu styling_options_menu 0x7f0e0003
-int menu toolbar_settings 0x7f0e0004
-int menu ucrop_menu_activity 0x7f0e0005
+int menu menu_portfolio_toolbar 0x7f0e0003
+int menu menu_selected_resume 0x7f0e0004
+int menu styling_options_menu 0x7f0e0005
+int menu toolbar_settings 0x7f0e0006
+int menu ucrop_menu_activity 0x7f0e0007
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int navigation home_nav_graph 0x7f100000

@@ -76,7 +76,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center_horizontal"
-                        android:text="Quentin Jones Construction Ltd"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:layout_constraintTop_toBottomOf="@id/resumeRating" />
@@ -88,7 +87,6 @@
                         android:layout_marginHorizontal="@dimen/margin_8"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:gravity="center_horizontal"
-                        android:text="Republic of Karakalpakstan, Shimbay"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         app:layout_constraintTop_toBottomOf="@id/tvFullName" />
@@ -98,10 +96,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/margin_8"
-
                         android:layout_marginTop="@dimen/margin_16"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Member since September 17, 2020"
                         android:textColor="@color/black"
                         app:layout_constraintTop_toBottomOf="@id/tvAddress" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -115,6 +111,7 @@
                 android:layout_gravity="top"
                 android:layout_marginBottom="48dp"
                 app:layout_collapseMode="pin"
+                app:menu="@menu/menu_selected_resume"
                 app:navigationIcon="@drawable/ic_arrow_back"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 

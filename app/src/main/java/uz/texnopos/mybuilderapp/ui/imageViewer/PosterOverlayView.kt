@@ -7,8 +7,9 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.view_poster_overlay.view.*
 import uz.texnopos.mybuilderapp.R
+import uz.texnopos.mybuilderapp.core.onClick
 import uz.texnopos.mybuilderapp.core.sendShareIntent
-import uz.texnopos.mybuilderapp.data.models.Poster
+import uz.texnopos.mybuilderapp.data.models.ImageP
 
 class PosterOverlayView @JvmOverloads constructor(
     context: Context,
@@ -16,16 +17,16 @@ class PosterOverlayView @JvmOverloads constructor(
     defStyleAttr: Int = 0,
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    var onDeleteClick: (Poster) -> Unit = {}
+    var onDeleteClick: (ImageP) -> Unit = {}
 
     init {
         View.inflate(context, R.layout.view_poster_overlay, this)
         setBackgroundColor(Color.TRANSPARENT)
     }
 
-    fun update(poster: Poster) {
+    fun update(poster: ImageP) {
         posterOverlayDescriptionText.text = poster.description
-        posterOverlayShareButton.setOnClickListener { context.sendShareIntent(poster.url) }
-        posterOverlayDeleteButton.setOnClickListener { onDeleteClick(poster) }
+        posterOverlayShareButton.onClick { context.sendShareIntent(poster.imageUrl!!) }
+        posterOverlayDeleteButton.onClick { onDeleteClick(poster) }
     }
 }

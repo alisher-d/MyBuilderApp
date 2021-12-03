@@ -12,6 +12,22 @@ class PortfolioViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel
     private val _uploadTask = MutableLiveData<Resource<Any>>()
     val uploadTask get() = _uploadTask
 
+    private val _deleteTask = MutableLiveData<Resource<Any>>()
+    val deleteTask get() = _deleteTask
+
+    fun deleteImage(imageP: ImageP) {
+        _deleteTask.value = Resource.loading()
+        firebaseHelper.deleteImage(
+            imageP = imageP,
+            onSuccess = {
+                _deleteTask.value= Resource.success(it)
+            },
+            onFailure = {
+                _deleteTask.value= Resource.error(it)
+            }
+        )
+    }
+
     fun uploadImage(
         uri: Uri,
         imageP: ImageP,
@@ -34,7 +50,7 @@ class PortfolioViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel
         resumeId: String,
         onImageAdded: (ImageP) -> Unit,
         onImageModified: (ImageP) -> Unit,
-        onImageRemoved: (String) -> Unit,
+        onImageRemoved: (ImageP) -> Unit,
         onFailure: (String?) -> Unit,
     ) {
         firebaseHelper.getAllPictures(
@@ -54,5 +70,7 @@ class PortfolioViewModel(private val firebaseHelper: FirebaseHelper) : ViewModel
             }
         )
     }
+
+
 
 }
